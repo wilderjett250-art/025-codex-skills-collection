@@ -1,0 +1,4 @@
+interface:
+  display_name: "SYH Project Routing"
+  short_description: "Classify projects and route the right rules"
+  default_prompt: "Use $syhprojectskill to classify this project and apply the correct project operating mode."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Large Project Operations"
+  short_description: "Decompose a large project into evidence-bound work packages"
+  default_prompt: "Use $large-project-ops to create the minimum control documents and one ready work package for this large project."

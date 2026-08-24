@@ -1,0 +1,4 @@
+interface:
+  display_name: "External Browser"
+  short_description: "Use the already-open browser session through the local MCP"
+  default_prompt: "Use $external-browser to complete this web task in my existing logged-in browser with compact DOM actions and verification."

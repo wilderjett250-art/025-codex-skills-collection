@@ -1,0 +1,4 @@
+interface:
+  display_name: "Work Handoff"
+  short_description: "Create and resume evidence-based work handoffs"
+  default_prompt: "Use $work-handoff to create or update a verified handoff for the current project."

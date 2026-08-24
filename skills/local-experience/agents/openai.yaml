@@ -1,0 +1,4 @@
+interface:
+  display_name: "Local Experience"
+  short_description: "Retrieve bounded, operator-owned operating lessons"
+  default_prompt: "Use $local-experience to retrieve only the relevant historical lesson, then verify live state."
