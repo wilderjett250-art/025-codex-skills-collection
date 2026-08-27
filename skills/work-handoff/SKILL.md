@@ -1,26 +1,20 @@
 ---
 name: work-handoff
-description: Create, audit, or resume the canonical project handoff when work changes phase, moves to another agent or computer, or needs safe server and current-state continuity. Keep it evidence-backed, compact, and free of credentials.
+description: Keep one compact, evidence-backed project handoff when work changes phase, operator, machine, or deployment state. Use for resumable current state, not project diaries.
 ---
 
 # Work Handoff
 
-Maintain one canonical continuity artifact for the confirmed project, normally `HANDOFF.md` or an existing equivalent. It must let the next operator resume without rediscovering the project boundary, connection route, completed evidence, or already-known blockers.
+Maintain one canonical continuity record, normally `HANDOFF.md` or an existing equivalent.
 
-## Minimal operating flow
+1. Confirm the project boundary and reuse the existing handoff before creating another.
+2. Inspect only the state needed to resume: working tree, current implementation or runtime, and relevant remote, device, or console route.
+3. Put a resume card first: what to read, one focused first check, and the next safe action.
+4. Classify material facts as `verified-current`, `historical`, `user-provided`, or `open`; record freshness and an evidence cutoff.
+5. Link to commands, revisions, paths, and URLs instead of copying logs. Update this same record after approved state changes.
 
-1. Locate the existing handoff, status, release, and deployment records before creating another file. Confirm the project boundary.
-2. Make only the observations needed for this handoff: working-tree and branch state, current implementation or runtime evidence, and the relevant deployment, console, or device route. Old notes are leads, not current proof.
-3. Mark each material claim as `verified-current`, `historical`, `user-provided`, or `open`. Record an evidence cutoff time and set freshness to `current`, `stale`, or `blocked`.
-4. Put a short resume card first: exactly what to read or run next, then the next safe action. Keep detailed proof as file paths, revisions, commands, or URLs rather than copying logs or architecture.
-5. Describe connection routes reproducibly but never include passwords, private keys, tokens, cookies, session values, or secret URLs. Record only non-secret identifiers, expected credential location or variable name, and manual gates.
-6. After approved work changes the state, update the same canonical handoff. Do not leave completed work in its next-actions list.
-
-## Boundaries
-
-- If a missing fact would change the project boundary, connection target, ownership, or next external action, ask one concise question before writing it as fact. Leave non-blocking unknowns explicitly `open` rather than delaying the whole handoff.
+- Describe access reproducibly without secrets; preserve login, MFA, CAPTCHA, payment, permission, deletion, and publication as explicit gates.
 - Distinguish local validation, remote deployment, and real user or device acceptance.
-- A next action is context, not permission to mutate external systems. Preserve login, MFA, CAPTCHA, payment, publication, permission, deletion, and irreversible confirmation as explicit gates.
-- For a small task, update the compact current-state section instead of creating an elaborate project diary.
+- Ask one concise question only when an unknown changes the project boundary, connection target, ownership, or next external action.
 
-Read [references/handoff-schema.md](references/handoff-schema.md) only when creating, normalizing, or auditing the document structure.
+Read [references/handoff-schema.md](references/handoff-schema.md) only when creating, normalizing, or auditing the document shape.
