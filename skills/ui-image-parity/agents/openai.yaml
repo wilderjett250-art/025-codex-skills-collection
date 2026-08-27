@@ -1,0 +1,4 @@
+interface:
+  display_name: "UI Image Parity"
+  short_description: "Rebuild and verify UI against visual references"
+  default_prompt: "Use $ui-image-parity to match this screenshot through real screenshot comparison and iterative correction."

@@ -11,6 +11,7 @@ A compact, safety-conscious collection of reusable Skills for Codex-compatible a
 | large-project-ops | agent-ready decomposition of complex projects | uses a compact map, queue, decisions, and bounded work packages instead of copying a whole codebase into context |
 | external-browser | tasks in an already logged-in Chrome or Edge session | requires an external-browser MCP and uses DOM references, not coordinates, screenshots, cookies, or passwords |
 | local-experience | recurring machine-specific lessons | searches an operator-owned, sanitized manual in a bounded way and live-verifies the result |
+| ui-image-parity | rebuilding a web UI from a screenshot or visual reference | uses a real capture-and-correction loop at the exact reference viewport rather than inventing a new design |
 
 ## Install one Skill
 
