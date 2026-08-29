@@ -2,6 +2,21 @@
 
 这不是把几百个提示词全部塞进 Codex，而是一套可迁移的“能力层 + 路由层 + 工具层”。它复刻当前工作方式，同时避免把知识库、聊天记录、登录状态、密钥和机器路径带给其他人。
 
+## 一键安装（macOS）
+
+1. 登录有权访问本私有仓库的 GitHub 账号，下载 ZIP 或克隆仓库。
+2. 在 Finder 中双击 `INSTALL.command`；如果 macOS 首次阻止执行，右键选择“打开”。
+3. 安装结束后完全退出 Codex，重新打开并新建一个任务。
+4. 双击 `DOCTOR.command` 检查结果。
+
+也可以在终端运行：
+
+```bash
+bash ./scripts/install.sh --profile full
+```
+
+macOS 安装器会同时安装 9 个常驻 Skill、277 个冷库 Skill、跨平台 Node 路由器、MCP Profile 和插件预设；不是只复制 `skills/` 目录。
+
 ## 一键安装（Windows）
 
 1. 登录有权访问本私有仓库的 GitHub 账号，下载 ZIP 或克隆仓库。
@@ -32,7 +47,12 @@ Codex 自带的系统 Skill 不复制进仓库，因为它们随 Codex 版本提
 
 ## MCP Profiles
 
-双击 `INSTALL.cmd` 使用完整 Profile。也可以在 PowerShell 中选择更轻的分组：
+双击 `INSTALL.command`（macOS）或 `INSTALL.cmd`（Windows）使用完整 Profile。也可以在命令行选择更轻的分组：
+
+```bash
+bash ./scripts/install.sh --profile recommended
+bash ./scripts/install.sh --profile development --filesystem-root "$HOME/workspace"
+```
 
 ```powershell
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\install.ps1 -Profile recommended
@@ -53,7 +73,11 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\install.ps1 -P
 
 ## 更新
 
-仓库更新后重新运行 `INSTALL.cmd` 即可。同名内容会先备份再覆盖；已有 MCP 默认保留，传入 `-Force` 才会按当前 Profile 重建：
+仓库更新后重新运行 `INSTALL.command` 或 `INSTALL.cmd` 即可。同名内容会先备份再覆盖；已有 MCP 默认保留，显式传入强制参数才会按当前 Profile 重建：
+
+```bash
+bash ./scripts/install.sh --profile full --force
+```
 
 ```powershell
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\install.ps1 -Profile full -Force

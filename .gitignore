@@ -10,3 +10,6 @@ skill-library/catalog.json
 skill-library/dashboard/
 skill-library/migration-manifest.json
 .test-home/
+.test-mac-home/
+.test-bash-home/
+.test-*/
