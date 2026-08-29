@@ -1,0 +1,4 @@
+interface:
+  display_name: "AutoCAD CAD Homework"
+  short_description: "Native AutoCAD automation for CAD coursework."
+  default_prompt: "Use AutoCAD native scripting, AutoCAD MCP, and focused validation to create CAD coursework DWG, DXF, and PDF deliverables."

@@ -1,0 +1,14 @@
+# 编辑器临时文件
+*.swp
+*.swo
+*~
+
+# macOS
+.DS_Store
+
+# 日志文件
+*.log
+
+# 临时文件
+tmp/
+temp/

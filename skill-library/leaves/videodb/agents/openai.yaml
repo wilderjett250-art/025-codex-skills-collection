@@ -1,0 +1,6 @@
+interface:
+  display_name: "VideoDB"
+  short_description: "Process media through an explicitly selected VideoDB route"
+  default_prompt: "Use $videodb for this explicitly requested VideoDB ingest, search, edit, or monitoring workflow."
+policy:
+  allow_implicit_invocation: false

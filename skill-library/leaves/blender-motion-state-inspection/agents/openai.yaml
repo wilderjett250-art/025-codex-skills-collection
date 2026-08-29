@@ -1,0 +1,6 @@
+interface:
+  display_name: "Blender Motion State Inspection"
+  short_description: "Inspect motion in an explicitly selected Blender workflow"
+  default_prompt: "Use $blender-motion-state-inspection for this explicitly requested Blender motion inspection."
+policy:
+  allow_implicit_invocation: false

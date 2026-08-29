@@ -1,0 +1,9 @@
+interface:
+  display_name: "Semgrep Rule Creator"
+  short_description: "Create or port custom Semgrep rules"
+  icon_small: "assets/trail-of-bits-mark.svg"
+  icon_large: "assets/trail-of-bits-mark.svg"
+  brand_color: "#D83A34"
+  default_prompt: "Use $semgrep-rule-creator to create or port this Semgrep rule with tests."
+policy:
+  allow_implicit_invocation: false

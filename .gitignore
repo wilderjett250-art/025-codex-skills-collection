@@ -6,3 +6,7 @@ Thumbs.db
 *.key
 coverage/
 node_modules/
+skill-library/catalog.json
+skill-library/dashboard/
+skill-library/migration-manifest.json
+.test-home/

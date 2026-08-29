@@ -1,0 +1,6 @@
+interface:
+  display_name: "Manim Video"
+  short_description: "Build an explicitly requested Manim explainer"
+  default_prompt: "Use $manim-video to build this Manim-based animated explainer."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,6 @@
+interface:
+  display_name: "MoneyPrinterTurbo Video"
+  short_description: "Use the explicitly selected MoneyPrinterTurbo pipeline"
+  default_prompt: "Use $moneyprinterturbo-video for this explicitly requested MoneyPrinterTurbo workflow."
+policy:
+  allow_implicit_invocation: false

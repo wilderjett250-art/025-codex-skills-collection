@@ -1,0 +1,6 @@
+interface:
+  display_name: "HIPAA Compliance"
+  short_description: "Review explicit HIPAA and PHI risks"
+  default_prompt: "Use $hipaa-compliance to review this explicitly HIPAA-scoped workflow."
+policy:
+  allow_implicit_invocation: false

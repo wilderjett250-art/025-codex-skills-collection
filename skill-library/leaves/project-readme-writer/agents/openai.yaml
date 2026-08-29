@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project README Writer"
+  short_description: "Write concise evidence-based bilingual project READMEs"
+  default_prompt: "Analyze this repository and write a concise Chinese-first README with verified highlights, screenshots, and ZIP reproduction steps."

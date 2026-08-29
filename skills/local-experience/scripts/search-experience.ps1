@@ -4,7 +4,6 @@ param(
     [string]$Topic = 'all',
     [string]$Query,
     [switch]$ListTopics,
-    [string]$ManualPath = $env:CODEX_EXPERIENCE_MANUAL_PATH,
     [ValidateRange(0, 5)]
     [int]$Context = 0,
     [ValidateRange(1, 50)]
@@ -12,6 +11,16 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
+$manualPath = 'E:\codex_experience_manual.txt'
+$indexPath = 'E:\codex_experience_manual_index.md'
+
+if (-not (Test-Path -LiteralPath $manualPath -PathType Leaf)) {
+    throw "Experience manual was not found: $manualPath"
+}
+
+if (-not (Get-Command rg -ErrorAction SilentlyContinue)) {
+    throw 'The local-experience Skill requires rg.exe for bounded manual search.'
+}
 
 $patternsByTopic = [ordered]@{
     windows = @('PowerShell', 'GBK', 'UTF-8', 'LASTEXITCODE', 'automatic variable', 'Windows')
@@ -29,19 +38,6 @@ $patternsByTopic = [ordered]@{
 if ($ListTopics) {
     $patternsByTopic.Keys | ForEach-Object { Write-Output $_ }
     return
-}
-
-if ([string]::IsNullOrWhiteSpace($ManualPath)) {
-    throw 'Set CODEX_EXPERIENCE_MANUAL_PATH or pass -ManualPath <sanitized-manual-path>.'
-}
-
-$manualPath = $ManualPath
-if (-not (Test-Path -LiteralPath $manualPath -PathType Leaf)) {
-    throw "Experience manual was not found: $manualPath"
-}
-
-if (-not (Get-Command rg -ErrorAction SilentlyContinue)) {
-    throw 'The local-experience Skill requires rg.exe for bounded manual search.'
 }
 
 if ([string]::IsNullOrWhiteSpace($Query) -and $Topic -eq 'all') {

@@ -1,0 +1,9 @@
+interface:
+  display_name: "Legacy Artifact Tool Excel"
+  short_description: "Use the preserved legacy Excel route"
+  icon_small: "./assets/file-spreadsheet.png"
+  icon_large: "./assets/file-spreadsheet.png"
+  brand_color: "#107C41"
+  default_prompt: "Use $artifact-tool-excel-legacy for this preserved legacy Artifact Tool workbook workflow."
+policy:
+  allow_implicit_invocation: false

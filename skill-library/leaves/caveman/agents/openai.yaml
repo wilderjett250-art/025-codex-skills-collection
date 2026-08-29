@@ -1,0 +1,6 @@
+interface:
+  display_name: "Caveman Mode"
+  short_description: "Use an explicitly requested compressed style"
+  default_prompt: "Use $caveman to answer in the explicitly requested compact communication mode."
+policy:
+  allow_implicit_invocation: false

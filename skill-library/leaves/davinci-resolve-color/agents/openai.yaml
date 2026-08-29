@@ -1,0 +1,12 @@
+interface:
+  display_name: "DaVinci Resolve Color"
+  short_description: "Use DaVinci Resolve scripting for color workflows."
+  default_prompt: "Use $davinci-resolve-color to grade this image or video through DaVinci Resolve with a verified local workflow."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "davinci_resolve"
+      description: "Local DaVinci Resolve MCP server for path checks, launch, and scripting status."
+      transport: "stdio"
+policy:
+  allow_implicit_invocation: false

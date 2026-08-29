@@ -1,0 +1,6 @@
+interface:
+  display_name: "Remotion Video Creation"
+  short_description: "Build an explicitly requested Remotion video"
+  default_prompt: "Use $remotion-video-creation to create this video with Remotion."
+policy:
+  allow_implicit_invocation: false

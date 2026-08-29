@@ -1,0 +1,8 @@
+interface:
+  display_name: "Local Python DOCX"
+  short_description: "Use the local python-docx fallback"
+  icon_small: "./assets/doc-small.svg"
+  icon_large: "./assets/doc.png"
+  default_prompt: "Use $python-docx-local for this local python-docx task."
+policy:
+  allow_implicit_invocation: false

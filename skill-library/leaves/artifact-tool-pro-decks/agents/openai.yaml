@@ -1,0 +1,9 @@
+interface:
+  display_name: "Artifact Tool Pro Decks"
+  short_description: "Use the local pro-deck toolchain"
+  icon_small: "./assets/file-presentation.png"
+  icon_large: "./assets/file-presentation.png"
+  brand_color: "#C43E1C"
+  default_prompt: "Use $artifact-tool-pro-decks for this specialized local pro-deck workflow."
+policy:
+  allow_implicit_invocation: false

@@ -1,4 +1,4 @@
 interface:
   display_name: "Local Experience"
-  short_description: "Retrieve bounded, operator-owned operating lessons"
-  default_prompt: "Use $local-experience to retrieve only the relevant historical lesson, then verify live state."
+  short_description: "Retrieve bounded Windows and Codex operating lessons"
+  default_prompt: "Use $local-experience to retrieve only the local lesson relevant to this task, then verify live state."

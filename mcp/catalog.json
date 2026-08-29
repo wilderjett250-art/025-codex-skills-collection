@@ -1,0 +1,241 @@
+[
+  {
+    "name": "openaiDeveloperDocs",
+    "category": "core",
+    "installMode": "auto",
+    "type": "http",
+    "url": "https://developers.openai.com/mcp",
+    "requirements": []
+  },
+  {
+    "name": "photoshop_basic",
+    "category": "design",
+    "installMode": "manual",
+    "requirements": ["Adobe Photoshop", "matching local MCP bridge"],
+    "note": "Machine-specific desktop bridge; configure its installed command path locally."
+  },
+  {
+    "name": "photoshop_mcp",
+    "category": "design",
+    "installMode": "manual",
+    "requirements": ["Adobe Photoshop", "Photoshop MCP server"],
+    "note": "Requires local application paths and may require a bridge-specific environment."
+  },
+  {
+    "name": "davinci_resolve_basic",
+    "category": "video",
+    "installMode": "manual",
+    "requirements": ["DaVinci Resolve", "matching local MCP bridge"]
+  },
+  {
+    "name": "davinci_resolve",
+    "category": "video",
+    "installMode": "manual",
+    "requirements": ["DaVinci Resolve", "DaVinci Resolve scripting environment"]
+  },
+  {
+    "name": "davinci_resolve_advanced",
+    "category": "video",
+    "installMode": "manual",
+    "requirements": ["DaVinci Resolve", "advanced Resolve MCP bridge"]
+  },
+  {
+    "name": "filesystem",
+    "category": "development",
+    "installMode": "parameter",
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-filesystem"],
+    "requirements": ["Node.js", "explicit -FilesystemRoot value"],
+    "note": "No directory is exposed unless the installer receives an explicit root."
+  },
+  {
+    "name": "pdf",
+    "category": "documents",
+    "installMode": "auto",
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "--silent", "--registry=https://registry.npmjs.org/", "@modelcontextprotocol/server-pdf", "--stdio"],
+    "requirements": ["Node.js"]
+  },
+  {
+    "name": "crossref",
+    "category": "research",
+    "installMode": "auto",
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@botanicastudios/crossref-mcp"],
+    "requirements": ["Node.js"]
+  },
+  {
+    "name": "arxiv",
+    "category": "research",
+    "installMode": "auto",
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@fre4x/arxiv"],
+    "requirements": ["Node.js"]
+  },
+  {
+    "name": "zotero",
+    "category": "research",
+    "installMode": "auto",
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@xevos117/mcp-zotero"],
+    "requirements": ["Node.js", "Zotero for live library access"]
+  },
+  {
+    "name": "papers",
+    "category": "research",
+    "installMode": "auto",
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@sura_ai/papers"],
+    "requirements": ["Node.js"]
+  },
+  {
+    "name": "desktop_control",
+    "category": "desktop",
+    "installMode": "manual",
+    "requirements": ["approved desktop control bridge"],
+    "note": "Intentionally not auto-enabled because it can control the user's desktop."
+  },
+  {
+    "name": "autocad_mcp",
+    "category": "cad",
+    "installMode": "manual",
+    "requirements": ["AutoCAD", "AutoCAD MCP bridge"]
+  },
+  {
+    "name": "autocad_coreconsole",
+    "category": "cad",
+    "installMode": "manual",
+    "requirements": ["AutoCAD Core Console", "matching bridge"]
+  },
+  {
+    "name": "playwright_mcp",
+    "category": "browser",
+    "installMode": "auto",
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@playwright/mcp@latest"],
+    "requirements": ["Node.js"]
+  },
+  {
+    "name": "external_browser",
+    "category": "browser",
+    "installMode": "manual",
+    "requirements": ["external-browser bridge", "browser extension or authenticated bridge setup"],
+    "note": "Must be paired with the friend's own browser session; no cookies or profiles are copied."
+  },
+  {
+    "name": "context7",
+    "category": "development",
+    "installMode": "auto",
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@upstash/context7-mcp"],
+    "requirements": ["Node.js"]
+  },
+  {
+    "name": "sequential_thinking",
+    "category": "core",
+    "installMode": "auto",
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-sequential-thinking"],
+    "requirements": ["Node.js"]
+  },
+  {
+    "name": "serena",
+    "category": "development",
+    "installMode": "manual",
+    "requirements": ["uv or uvx", "Serena MCP installation"],
+    "note": "Kept manual because launch options and project context vary by machine."
+  },
+  {
+    "name": "github",
+    "category": "development",
+    "installMode": "auto",
+    "type": "http",
+    "url": "https://api.githubcopilot.com/mcp/",
+    "bearerTokenEnvVar": "GITHUB_PAT",
+    "requirements": ["GITHUB_PAT environment variable for authenticated operations"]
+  },
+  {
+    "name": "firecrawl",
+    "category": "web",
+    "installMode": "auto",
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "firecrawl-mcp"],
+    "requirements": ["Node.js", "FIRECRAWL_API_KEY for authenticated use"]
+  },
+  {
+    "name": "baidu_netdisk",
+    "category": "storage",
+    "installMode": "manual",
+    "requirements": ["friend's own Baidu Netdisk authorization"],
+    "note": "No access token or authorized URL is included."
+  },
+  {
+    "name": "baidu_netdisk_local_uploader",
+    "category": "storage",
+    "installMode": "manual",
+    "requirements": ["local uploader bridge", "friend's own authorization"]
+  },
+  {
+    "name": "drawio",
+    "category": "design",
+    "installMode": "auto",
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@drawio/mcp"],
+    "requirements": ["Node.js"]
+  },
+  {
+    "name": "biorender",
+    "category": "design",
+    "installMode": "auto",
+    "type": "http",
+    "url": "https://mcp.services.biorender.com/mcp",
+    "requirements": ["BioRender account when requested by the service"]
+  },
+  {
+    "name": "canva_dev",
+    "category": "design",
+    "installMode": "auto",
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@canva/cli@latest", "mcp"],
+    "requirements": ["Node.js", "Canva developer login when requested"]
+  },
+  {
+    "name": "codegraph",
+    "category": "development",
+    "installMode": "manual",
+    "requirements": ["CodeGraph local server"],
+    "note": "Local launch path differs by machine."
+  },
+  {
+    "name": "node_repl",
+    "category": "development",
+    "installMode": "manual",
+    "requirements": ["Node.js", "Node REPL MCP runtime"],
+    "note": "Local runtime path and policy differ by machine."
+  },
+  {
+    "name": "jlceda",
+    "category": "eda",
+    "installMode": "manual",
+    "requirements": ["JLCEDA/LCEDA", "matching MCP bridge"]
+  },
+  {
+    "name": "figma_console_local",
+    "category": "design",
+    "installMode": "manual",
+    "requirements": ["Figma desktop", "Figma console MCP bridge"],
+    "note": "Requires a local port/bridge and the friend's own Figma session."
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "name": "codex-skills-mcp-toolkit",
+  "version": "1.0.0",
+  "description": "A context-efficient Codex toolkit with active skills, an on-demand skill library, and portable MCP profiles.",
+  "author": {
+    "name": "wilderjett250-art",
+    "url": "https://github.com/wilderjett250-art"
+  },
+  "homepage": "https://github.com/wilderjett250-art/codex-skills-collection",
+  "repository": "https://github.com/wilderjett250-art/codex-skills-collection",
+  "license": "MIT",
+  "keywords": ["codex", "skills", "mcp", "windows", "context-engineering"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Codex Skills + MCP Toolkit",
+    "shortDescription": "Full skill library with portable MCP profiles.",
+    "longDescription": "Installs a compact active skill layer, a large on-demand skill library, and reproducible MCP profiles without copying credentials or personal knowledge.",
+    "developerName": "wilderjett250-art",
+    "category": "Developer Tools",
+    "capabilities": ["Skills", "MCP", "Windows automation"],
+    "defaultPrompt": [
+      "Route this task to the smallest useful Skill and tool path.",
+      "Check this work with direct evidence before calling it complete."
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Office Quality Gate"
+  short_description: "Verify professional Office deliverables"
+  default_prompt: "Use $office-quality-gate to inspect and verify this completed Office deliverable."

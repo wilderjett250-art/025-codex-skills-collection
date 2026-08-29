@@ -1,0 +1,6 @@
+interface:
+  display_name: "Science Illustration"
+  short_description: "Create clean research-paper schematic figures"
+  default_prompt: "Use $science-illustration-skill to create a clean research-paper-style conceptual figure from this source material."
+policy:
+  allow_implicit_invocation: true

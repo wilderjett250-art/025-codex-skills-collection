@@ -11,6 +11,7 @@ Use only when the external-browser MCP tools are registered and connected; an en
 2. Select a tab only when necessary, then take one compact observation. Reuse its valid references; if state is unchanged, do not observe again.
 3. Act only through returned references. Use post-action state first and run focused verification only when the outcome needs proof.
 4. Treat a timeout on submit, publish, delete, permission, or payment as possibly complete: verify before any retry.
+5. When the user must authenticate or confirm, leave the connected browser on the real site prompt; do not export a QR/code to another app or wait invisibly in a background route.
 
 - Reuse the existing session without reading or exporting passwords, cookies, storage, tokens, keys, or password-field values.
 - Ask one concise question when account, tab, target, submitted value, or consequence is materially ambiguous.

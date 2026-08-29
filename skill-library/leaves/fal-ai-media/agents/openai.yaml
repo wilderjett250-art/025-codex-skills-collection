@@ -1,0 +1,6 @@
+interface:
+  display_name: "fal.ai Media"
+  short_description: "Generate media through fal.ai"
+  default_prompt: "Use $fal-ai-media with the explicitly selected fal.ai media route."
+policy:
+  allow_implicit_invocation: false

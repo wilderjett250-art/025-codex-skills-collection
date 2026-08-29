@@ -1,0 +1,8 @@
+interface:
+  display_name: "PptxGenJS Slides"
+  short_description: "Author editable decks with PptxGenJS"
+  icon_small: "./assets/slides-small.svg"
+  icon_large: "./assets/slides.png"
+  default_prompt: "Use $pptxgenjs-slides to create or update this editable deck and validate its layout."
+policy:
+  allow_implicit_invocation: false

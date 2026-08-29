@@ -1,0 +1,6 @@
+interface:
+  display_name: "Photoshop Editing"
+  short_description: "Edit through an explicitly selected Photoshop route"
+  default_prompt: "Use $photoshop-editing for this explicitly requested Photoshop workflow."
+policy:
+  allow_implicit_invocation: false

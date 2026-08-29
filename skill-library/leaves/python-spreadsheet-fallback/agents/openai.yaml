@@ -1,0 +1,8 @@
+interface:
+  display_name: "Python Spreadsheet Fallback"
+  short_description: "Use openpyxl or pandas explicitly"
+  icon_small: "./assets/spreadsheet-small.svg"
+  icon_large: "./assets/spreadsheet.png"
+  default_prompt: "Use $python-spreadsheet-fallback for this openpyxl or pandas spreadsheet task."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=1080, height=1920" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+  :root {
+    --ink: #1A1A1C;
+    --accent: #F2C94C;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body {
+    width: 1080px; height: 1920px; overflow: hidden;
+    background: transparent;
+    font-family: "Inter", "PingFang SC", system-ui, -apple-system, sans-serif;
+  }
+  [data-composition-id="main"] {
+    position: relative; width: 1080px; height: 1920px;
+  }
+  /* TOP POSITIONING — y=16% center (≈y=307)，避开 y<250 的平台 UI 死区
+     （Dynamic Island / 状态栏 / 关注按钮）。
+     pill 高度约 140px → 顶边 ≈ y=237、底边 ≈ y=377，处于"顶部叠层起点带"。
+     ★ 不要把 top 改回 5% / 10% — 历史上反复被用户抱怨"被刘海切了"。 */
+  .chyron-wrap {
+    position: absolute;
+    left: 50%; top: 16%;
+    transform: translate(-50%, -50%);
+    will-change: transform, opacity;
+  }
+  .chyron-text {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--ink);
+    /* SIZE RULE（现已由底部 autofit 脚本自动执行，无需手动改）:
+         English (≤6 char): 130px
+         Long Chinese (5+ chars): 96px → 实测超 920px 安全框再逐级降
+         Same type/language MUST share size — never mix */
+    font-size: 130px; font-weight: 900;
+    letter-spacing: -0.02em;
+    padding: 18px 52px;
+    border-radius: 22px;
+    /* Hard offset only — 40px blur leaks gold into alpha channel and reads as yellow halo when composited */
+    box-shadow: 0 8px 0 rgba(0, 0, 0, 0.85);
+    line-height: 1.05;
+    white-space: nowrap;
+    transform: skewX(-4deg);
+  }
+</style>
+</head>
+<body>
+<!-- data-duration controls clip length. Tune to 1.5–2.0s based on speech beat. -->
+<div id="root" data-composition-id="main"
+     data-start="0" data-duration="1.6" data-width="1080" data-height="1920">
+  <div class="chyron-wrap" id="cw">
+    <div class="chyron-text">{{TEXT}}</div>
+  </div>
+</div>
+
+<script>
+// ★ AUTOFIT（底层修复 2026-06-10）——SIZE RULE 代码化，填 {{TEXT}} 不用再手动改字号。
+//   历史上"长中文忘降 96px → 胶囊撑满屏破安全区"反复发生（ep1 下集预告 / ep2 下集预告）。
+//   两步：① CJK ≥5 字 → 直接落 96px 档；② 实测胶囊宽（含 skew），仍超 920px 安全框就 -4px 逐级降，地板 56px。
+(async function fitChyron() {
+  var el = document.querySelector(".chyron-text");
+  if (!el) return;
+  if (document.fonts && document.fonts.ready) { try { await document.fonts.ready; } catch (e) {} }
+  var MAX = 920;  // 1080 − 80×2 安全边
+  var txt = el.textContent || "";
+  var cjk = (txt.match(/[一-鿿　-ヿ＀-￯]/g) || []).length;
+  var size = parseFloat(getComputedStyle(el).fontSize) || 130;
+  if (cjk >= 5 && size > 96) { size = 96; el.style.fontSize = size + "px"; }
+  var guard = 24;
+  while (el.getBoundingClientRect().width > MAX && size > 56 && guard-- > 0) {
+    size -= 4;
+    el.style.fontSize = size + "px";
+  }
+})();
+
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+
+// POP animation — pwr3.out fade+scale in (0.22s) → hold → pwr2.in fade-out (0.30s)
+// Total (1.6s default): 0.0–0.22 in, 0.22–1.30 hold, 1.30–1.60 out
+// For longer chyrons, extend the hold portion only.
+tl.from("#cw", { opacity: 0, y: 24, scale: 0.9, duration: 0.22, ease: "power3.out" }, 0.0);
+tl.to(  "#cw", { opacity: 1, y: 0,  scale: 1,   duration: 0.0 }, 0.22);
+tl.to(  "#cw", { opacity: 0, y: -16, duration: 0.30, ease: "power2.in" }, 1.30);
+
+window.__timelines["main"] = tl;
+
+window.addEventListener("load", function () {
+  if (!window.__hyperframes_runtime) {
+    tl.repeat(-1).repeatDelay(0.8); tl.play();  // 预览循环：避免播完淡出停在透明态 → iframe 预览黑屏
+  }
+});
+</script>
+</body>
+</html>

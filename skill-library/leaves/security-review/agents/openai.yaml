@@ -1,0 +1,4 @@
+interface:
+  display_name: "Security Review"
+  short_description: "Review and harden code security"
+  default_prompt: "Use $security-review to perform a focused security review of this code or design."

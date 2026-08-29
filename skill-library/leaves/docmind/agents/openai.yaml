@@ -1,0 +1,4 @@
+interface:
+  display_name: "DocMind"
+  short_description: "Complete document review and comparison"
+  default_prompt: "Use $docmind to fully read, extract, compare, and report on this document bundle."
