@@ -1,6 +1,6 @@
 ---
 name: tool-session-optimizer
-description: Choose the shortest authorized route across connected APIs/MCP, official CLIs, authenticated browser sessions, and native desktop apps. Use when login state, human confirmation, GUI/CLI pairing, or competing tool paths could cause needless reauthentication, background waiting, or indirect workarounds. Do not replace the task's domain Skill.
+description: Choose an authorized API/MCP, CLI, logged-in browser, or desktop-app route. Use when login, human confirmation, or GUI/CLI pairing affects execution; keep the task's domain Skill as owner.
 metadata:
   role: access-control
   inspirations: external-browser, agent-browser, Browser Use, Browserbase skills

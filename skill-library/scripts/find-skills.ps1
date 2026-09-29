@@ -1,68 +1,42 @@
 [CmdletBinding()]
 param(
     [ValidateSet('domain', 'control')][string]$Plane = 'domain',
-    [string]$Domain = '',
-    [string]$Discipline = '',
-    [string]$Family = '',
-    [switch]$ListDisciplines,
-    [switch]$ListFamilies,
-    [string]$Query = '',
-    [ValidateRange(1, 20)][int]$Limit = 8,
-    [string]$CatalogPath = (Join-Path $env:USERPROFILE '.codex\skill-library\catalog.json')
+    [string]$Domain = '', [string]$Discipline = '', [string]$Family = '',
+    [switch]$ListDisciplines, [switch]$ListFamilies,
+    [string]$Query = '', [ValidateRange(1, 20)][int]$Limit = 3,
+    [string]$CatalogPath = (Join-Path $env:USERPROFILE '.codex\skill-library\catalog.json'),
+    [string]$DiscoveryPath = (Join-Path $env:USERPROFILE '.codex\skill-library\discovery-profile.json'),
+    [switch]$AsJson
 )
-
 $ErrorActionPreference = 'Stop'
-if (-not (Test-Path -LiteralPath $CatalogPath)) { throw "Skill catalog is missing: $CatalogPath. Run build-catalog.ps1 first." }
-$catalog = Get-Content -LiteralPath $CatalogPath -Raw | ConvertFrom-Json
-
-if ([string]::IsNullOrWhiteSpace($Domain)) {
-    if ([string]::IsNullOrWhiteSpace($Query)) { throw 'Provide -Domain for a taxonomy drill-down or -Query for prompt routing.' }
-    $router = Join-Path (Split-Path -Parent $PSCommandPath) 'route-task.ps1'
-    & $router -Prompt $Query -Limit $Limit -CatalogPath $CatalogPath
-    exit $LASTEXITCODE
+$catalog = Get-Content -LiteralPath $CatalogPath -Raw -Encoding UTF8 | ConvertFrom-Json
+if ($Domain) {
+    $valid = if ($Plane -eq 'control') { @($catalog.controlDomains) } else { @($catalog.domains) }
+    if ($valid -notcontains $Domain) { throw "Unknown domain: $Domain" }
 }
-$validDomains = if ($Plane -eq 'control') { @($catalog.controlDomains) } else { @($catalog.domains) }
-if ($validDomains -notcontains $Domain) { throw "Unknown $Plane domain '$Domain'. Valid values: $($validDomains -join ', ')" }
-
-$tokens = @($Query.ToLowerInvariant().Split([char[]]' ,;:/\|()[]{}-_', [System.StringSplitOptions]::RemoveEmptyEntries) | Where-Object { $_.Length -ge 2 } | Select-Object -Unique)
-$domainSkills = @($catalog.skills | Where-Object { $_.plane -eq $Plane -and $_.domain -eq $Domain })
-
-if ($ListDisciplines) {
-    $domainSkills | Group-Object discipline | Sort-Object Name | ForEach-Object {
-        [pscustomobject]@{ domain = $Domain; discipline = $_.Name; skills = $_.Count }
-    } | Format-Table -AutoSize
-    exit 0
+$scope = @($catalog.skills | Where-Object { $_.plane -eq $Plane -and (-not $Domain -or $_.domain -eq $Domain) -and (-not $Discipline -or $_.discipline -eq $Discipline) -and (-not $Family -or $_.family -eq $Family) })
+if ($ListDisciplines -or $ListFamilies) {
+    $groupBy = if ($ListDisciplines) { 'discipline' } else { 'family' }
+    $groups = @($scope | Group-Object $groupBy | Select-Object Name, Count)
+    if ($AsJson) { ConvertTo-Json -InputObject $groups; return }
+    $groups | Format-Table -AutoSize; return
 }
-
-if (-not [string]::IsNullOrWhiteSpace($Discipline)) {
-    $domainSkills = @($domainSkills | Where-Object { $_.discipline -eq $Discipline })
-    if ($domainSkills.Count -eq 0) {
-        throw "No discipline '$Discipline' exists in domain '$Domain'. Use -ListDisciplines to inspect valid disciplines."
-    }
-}
-
-if ($ListFamilies) {
-    $domainSkills | Group-Object family | Sort-Object Name | ForEach-Object {
-        [pscustomobject]@{ domain = $Domain; discipline = if ([string]::IsNullOrWhiteSpace($Discipline)) { '*' } else { $Discipline }; family = $_.Name; skills = $_.Count }
-    } | Format-Table -AutoSize
-    exit 0
-}
-
-if (-not [string]::IsNullOrWhiteSpace($Family)) {
-    $domainSkills = @($domainSkills | Where-Object { $_.family -eq $Family })
-    if ($domainSkills.Count -eq 0) {
-        throw "No Skill family '$Family' exists in the selected domain/discipline. Use -ListFamilies to inspect valid families."
-    }
-}
-
-$candidates = foreach ($skill in $domainSkills) {
-    $score = 100
-    if ($skill.source -eq 'active') { $score += 2 }
-    $haystack = (($skill.name + ' ' + ($skill.tags -join ' ') + ' ' + $skill.trigger).ToLowerInvariant())
-    foreach ($token in $tokens) { if ($haystack.Contains($token)) { $score += 12 } }
-    [pscustomobject][ordered]@{
-        score = $score; discipline = $skill.discipline; family = $skill.family; name = $skill.name; role = $skill.role; source = $skill.source
-        tags = ($skill.tags -join ', '); skillPath = $skill.skillPath; trigger = $skill.trigger
-    }
-}
-$candidates | Sort-Object @{ Expression = 'score'; Descending = $true }, name | Select-Object -First $Limit | Format-Table -AutoSize -Wrap
+if ([string]::IsNullOrWhiteSpace($Query)) { throw 'Provide a task-focused -Query, or use a listing switch.' }
+$options = @{limit=$Limit;domain=$Domain;discipline=$Discipline;family=$Family}
+if ($PSBoundParameters.ContainsKey('Plane') -or $Domain) { $options.plane=$Plane }
+$request = @{query=$Query;catalogPath=$CatalogPath;discoveryPath=$DiscoveryPath;options=$options} | ConvertTo-Json -Compress
+# ASCII JSON escapes survive Windows PowerShell 5.1 native-pipeline encodings.
+$request = [regex]::Replace($request, '[^\x00-\x7F]', { param($m) '\u{0:x4}' -f [int][char]$m.Value })
+$node = Get-Command node -CommandType Application | Select-Object -First 1
+$previousEncoding = $OutputEncoding
+$previousConsoleEncoding = [Console]::OutputEncoding
+try {
+    $OutputEncoding = New-Object Text.UTF8Encoding($false)
+    [Console]::OutputEncoding = New-Object Text.UTF8Encoding($false)
+    $raw = $request | & $node.Source (Join-Path $PSScriptRoot 'search-skills.mjs')
+    if ($LASTEXITCODE -ne 0) { throw 'Metadata search failed' }
+} finally { $OutputEncoding=$previousEncoding; [Console]::OutputEncoding=$previousConsoleEncoding }
+$result=$raw | ConvertFrom-Json
+if ($AsJson) { $result | ConvertTo-Json -Depth 8; return }
+$result | Select-Object status,candidateCount,next | Format-List
+$result.candidates | Select-Object name,description,path,matched | Format-Table -AutoSize -Wrap

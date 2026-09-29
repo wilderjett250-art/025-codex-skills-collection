@@ -9,7 +9,7 @@ param(
 $ErrorActionPreference = 'Stop'
 
 $profile = if (Test-Path -LiteralPath $ProfilePath) {
-    Get-Content -LiteralPath $ProfilePath -Raw | ConvertFrom-Json
+    Get-Content -LiteralPath $ProfilePath -Raw -Encoding UTF8 | ConvertFrom-Json
 } else {
     [pscustomobject]@{ skillOverrides = @() }
 }
@@ -242,7 +242,7 @@ function Get-SkillRecord {
     param([System.IO.DirectoryInfo]$Directory, [string]$Source, [string]$LeavesRoot)
     $skillPath = Join-Path $Directory.FullName 'SKILL.md'
     if (-not (Test-Path -LiteralPath $skillPath)) { return $null }
-    $raw = Get-Content -LiteralPath $skillPath -Raw
+    $raw = Get-Content -LiteralPath $skillPath -Raw -Encoding UTF8
     $name = Get-FrontMatterValue -Content $raw -Key 'name'
     if ([string]::IsNullOrWhiteSpace($name)) { $name = $Directory.Name }
     $description = Get-FrontMatterValue -Content $raw -Key 'description'
@@ -264,15 +264,27 @@ function Get-SkillRecord {
     $domain = if ($plane -eq 'control') { 'execution-governance' } else { Get-Layer1Domain -Discipline $discipline }
     $relativePath = if ($Source -eq 'library') { $Directory.FullName.Substring($LeavesRoot.Length).TrimStart('\', '/') } else { $Directory.Name }
     $canonicalPath = ($plane, $domain, $discipline, $family, $name) -join '/'
+    $aliases = [string[]]@()
+    $projectTypes = [string[]]@()
+    $phases = [string[]]@()
+    $platforms = [string[]]@()
+    $riskTags = [string[]]@()
+    if ($null -ne $override) {
+        $aliases = [string[]]@($override.aliases)
+        $projectTypes = [string[]]@($override.projectTypes)
+        $phases = [string[]]@($override.phases)
+        $platforms = [string[]]@($override.platforms)
+        $riskTags = [string[]]@($override.riskTags)
+    }
     return [pscustomobject][ordered]@{
         name = $name; directory = $Directory.Name; plane = $plane; domain = $domain; discipline = $discipline; family = $family
         canonicalPath = $canonicalPath
         tags = @(Get-Tags -Name $name -Description $description -Domain $discipline)
-        aliases = if ($null -ne $override) { @($override.aliases) } else { @() }
-        projectTypes = if ($null -ne $override) { @($override.projectTypes) } else { @() }
-        phases = if ($null -ne $override) { @($override.phases) } else { @() }
-        platforms = if ($null -ne $override) { @($override.platforms) } else { @() }
-        riskTags = if ($null -ne $override) { @($override.riskTags) } else { @() }
+        aliases = $aliases
+        projectTypes = $projectTypes
+        phases = $phases
+        platforms = $platforms
+        riskTags = $riskTags
         role = Get-Role -Name $name -Description $description
         source = $Source; relativePath = $relativePath; skillPath = $skillPath; trigger = $description
     }

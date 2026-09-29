@@ -55,8 +55,6 @@ done
 
 echo "==> Installing the on-demand Skill Library"
 cp -R "$REPO_ROOT/skill-library"/. "$CODEX_TARGET/skill-library"/
-cp "$REPO_ROOT/scripts/route-task.mjs" "$CODEX_TARGET/skill-library/scripts/route-task.mjs"
-cp "$REPO_ROOT/scripts/find-skills.mjs" "$CODEX_TARGET/skill-library/scripts/find-skills.mjs"
 node "$REPO_ROOT/scripts/materialize-catalog.mjs" \
   "$REPO_ROOT/skill-library/catalog.portable.json" \
   "$CODEX_TARGET/skill-library/catalog.json"

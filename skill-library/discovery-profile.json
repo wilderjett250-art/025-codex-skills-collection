@@ -1,0 +1,197 @@
+{
+  "version": 1,
+  "excludeDefault": [
+    "design",
+    "open-design",
+    "taste-skill",
+    "coding-standards",
+    "skill-stocktake",
+    "figma-create-design-system-rules",
+    "figma-generate-design",
+    "figma-implement-design",
+    "figma-use"
+  ],
+  "redirects": {
+    "taste-skill": "frontend-design"
+  },
+  "entries": {
+    "product-discovery": {
+      "terms": [
+        "产品定位 用户研究 需求分析 核心用户 谁会用 需求优先级 访谈 用户价值 目标用户 MVP 最小可行产品 需求复盘 功能取舍 产品经理 产品规划 产品设计 PRD product discovery interview priorities",
+        "给谁用 给谁 谁用 第一版 首版 做什么 先做什么 用户需求 功能优先级"
+      ]
+    },
+    "architecture-decisions": {
+      "terms": [
+        "系统架构 架构设计 技术选型 模块边界 单体 微服务 ADR 架构决策 数据归属 技术方案 后端架构 architectural decision architecture tradeoffs monolith microservices"
+      ]
+    },
+    "interaction-design": {
+      "terms": [
+        "交互设计 用户流程 用户体验 UX 导航 返回 撤销 信息架构 操作太绕 操作繁琐 找不到入口 表单难用 注册步骤 操作步骤 迷路 新手引导 错误恢复 表单体验 interaction user journey onboarding navigation"
+      ]
+    },
+    "frontend-design": {
+      "terms": [
+        "UI设计 界面设计 页面设计 视觉方向 审美 排版 美观 看起来土 高级感 落地页 配色 视觉层级 frontend visual design typography"
+      ]
+    },
+    "impeccable": {
+      "terms": [
+        "界面精修 视觉审查 微调 打磨 美化 视觉一致性 UI polish critique",
+        "现有界面 排版对比度 界面优化 键盘导航 焦点 无障碍 accessibility audit"
+      ]
+    },
+    "react-engineering": {
+      "terms": [
+        "React Next.js React组件 组件设计 组件组合 状态管理 客户端边界 请求瀑布 重复渲染 页面卡顿 前端性能 composition performance react nextjs"
+      ]
+    },
+    "backend-patterns": {
+      "terms": [
+        "Node.js Express Next.js 后端开发 业务逻辑 服务端 接口校验 请求验证 鉴权 权限 幂等 缓存 队列 事务 游戏服务器 本地服务器 离线服务 服务端架构 backend validation authorization caching idempotency"
+      ]
+    },
+    "cn-natural-business-writing": {
+      "terms": [
+        "中文客户 商务方案 项目方案 客户汇报 提案 商业报告 对外文案 中文商务写作"
+      ]
+    },
+    "office-business-design": {
+      "terms": [
+        "商务PPT 汇报PPT 演示文稿 客户汇报 Word排版 Excel报告 PowerPoint"
+      ]
+    },
+    "ai-manju": {
+      "terms": [
+        "AI漫剧 AI 漫剧 漫剧创作 漫剧制作 漫画剧 分镜角色一致性 AI短剧"
+      ]
+    },
+    "video-editor": {
+      "terms": [
+        "口播短视频剪辑 B-roll 合成 加字幕 烧字幕 高亮字幕 片头 动效 9:16 16:9"
+      ]
+    },
+    "davinci-resolve-color": {
+      "terms": [
+        "达芬奇 DaVinci Resolve 视频调色 LUT 调色节点 色彩分级 时间线 导出检查 Resolve scripting"
+      ]
+    },
+    "speech": {
+      "terms": [
+        "配音 旁白 语音合成 文字转语音 TTS narration voiceover"
+      ]
+    },
+    "social": {
+      "terms": [
+        "抖音 Douyin 短视频发布 内容发布 社媒运营 视频标题"
+      ]
+    },
+    "photoshop-editing": {
+      "terms": [
+        "Photoshop PS修图 RAW修图 Camera Raw 人像精修 PSD图层 批量导出"
+      ]
+    },
+    "photo-toolkit": {
+      "terms": [
+        "RAW转换 RAW预览 照片批量处理 EXIF 缩略图 HEIC"
+      ]
+    },
+    "unity-csharp-scripting": {
+      "terms": [
+        "Unity 手游开发 Unity游戏 C#玩法脚本 MonoBehaviour 协程 Inspector"
+      ]
+    },
+    "rpg": {
+      "terms": [
+        "RPG 角色扮演 武侠游戏 等级装备背包任务战斗 存档读档"
+      ]
+    },
+    "api-design": {
+      "terms": [
+        "API接口设计 REST 分页 错误码 接口契约 接口版本 HTTP api contracts pagination"
+      ]
+    },
+    "tdd-workflow": {
+      "terms": [
+        "单元测试 回归测试 测试驱动 业务规则测试 边界条件 TDD regression unit test coverage"
+      ]
+    },
+    "e2e-testing": {
+      "terms": [
+        "端到端测试 自动化测试 Playwright 浏览器测试 点击流程 登录流程 购物流程 页面验收 测试不稳定 E2E flaky browser test"
+      ]
+    },
+    "systematic-debugging": {
+      "terms": [
+        "根因定位 故障诊断 反复修不好 排查 根因 分析报错 修复失败 调试 跨组件故障 错误堆栈 debug debugging root cause"
+      ]
+    },
+    "ui-ux-pro-max": {
+      "terms": [
+        "字体搭配 配色方案 对比度 无障碍 图表选型 触摸尺寸 参考数据库 accessibility palette typography chart"
+      ]
+    },
+    "workspace-surface-audit": {
+      "terms": [
+        "Skill匹配 Skill审计 Skill配置 技能合集 工具能力盘点 路由优化 上下文 精简 触发条件"
+      ]
+    },
+    "vue-engineering": {
+      "terms": [
+        "Vue Vue3 Vue.js 组件 响应式 ref reactive computed watch Pinia storeToRefs 状态不更新 路由守卫 VueRouter Vitest 组件测试"
+      ]
+    },
+    "nextjs-engineering": {
+      "terms": [
+        "Next.js Nextjs 服务端组件 AppRouter RSC hydration 水合 revalidate 缓存失效 ServerActions 服务端渲染"
+      ]
+    },
+    "shadcn-ui": {
+      "terms": [
+        "shadcn shadcn/ui components.json Radix BaseUI 组件库 主题 弹窗"
+      ]
+    },
+    "postgres-patterns": {
+      "terms": [
+        "PostgreSQL Postgres pg 慢查询 索引 连接池 数据库锁 RLS 行级权限 EXPLAIN"
+      ]
+    },
+    "qa-methodology": {
+      "terms": [
+        "测试策略 测试计划 风险覆盖 测试范围 探索测试 回归选择 质量门禁 QA strategy"
+      ]
+    },
+    "external-browser": {
+      "terms": [
+        "已有浏览器 已登录 Edge Chrome 复用会话 当前标签页 浏览器操作 external browser authenticated session"
+      ]
+    },
+    "ui-image-parity": {
+      "terms": [
+        "截图还原 图片还原 对照截图 像素还原 UI复刻 设计稿还原 screenshot fidelity parity"
+      ]
+    },
+    "career-profile-builder": {
+      "terms": [
+        "从零写简历 没有简历 职业档案 职业经历梳理 经历盘点 求职背景 职业包装 career profile resume from scratch"
+      ]
+    },
+    "resume-tailor": {
+      "terms": [
+        "写简历 简历制作 简历优化 改简历 岗位定制 职位定制 职位描述 JD 求职投递 CV resume tailor tailored resume"
+      ]
+    },
+    "ats-resume-formatting": {
+      "terms": [
+        "ATS 简历机筛 简历格式 简历解析 招聘系统 Workday Greenhouse Lever iCIMS 过机筛 parse-safe"
+      ]
+    },
+    "code-explanation": {
+      "terms": [
+        "源码讲解 代码走读 读懂项目源码 陌生项目代码 初学者学代码 文件类方法负责什么 谁调用这个方法 调用链 输入 输出 状态变化 为什么这样写 Java基础 C#源码 VS Code学习 source code walkthrough explain code flow beginner code learning",
+        "从项目任务讲到具体代码 解释这个文件在项目中的作用 逐步理解代码 代码注释讲原因和业务规则"
+      ]
+    }
+  }
+}

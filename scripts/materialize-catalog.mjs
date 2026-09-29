@@ -2,6 +2,7 @@
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const args = process.argv.slice(2);
 const prepare = args[0] === '--prepare';
@@ -12,7 +13,7 @@ if (prepare) {
   if (!input || !output) {
     throw new Error('Usage: materialize-catalog.mjs --prepare <catalog.json> <catalog.portable.json>');
   }
-  const catalog = JSON.parse(fs.readFileSync(input, 'utf8'));
+  const catalog = JSON.parse(fs.readFileSync(input, 'utf8').replace(/^\uFEFF/, ''));
   for (const skill of catalog.skills) {
     if (skill.source === 'active') {
       skill.skillPath = `skills/${skill.directory}/SKILL.md`;
@@ -26,11 +27,11 @@ if (prepare) {
   process.exit(0);
 }
 
-const repoRoot = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
+const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const codexHome = path.resolve(process.env.CODEX_HOME || path.join(os.homedir(), '.codex'));
 const input = args[0] || path.join(repoRoot, 'skill-library', 'catalog.portable.json');
 const output = args[1] || path.join(codexHome, 'skill-library', 'catalog.json');
-const catalog = JSON.parse(fs.readFileSync(input, 'utf8'));
+const catalog = JSON.parse(fs.readFileSync(input, 'utf8').replace(/^\uFEFF/, ''));
 
 for (const skill of catalog.skills) {
   const parts = String(skill.skillPath).split('/');

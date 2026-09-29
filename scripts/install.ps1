@@ -3,6 +3,7 @@ param(
     [ValidateSet('recommended', 'development', 'research', 'design', 'video', 'engineering', 'full')]
     [string]$Profile = 'full',
     [string]$FilesystemRoot,
+    [string]$TargetCodexHome,
     [switch]$Force,
     [switch]$SkipMcp,
     [switch]$SkipPlugins
@@ -16,7 +17,9 @@ $catalogPath = Join-Path $repoRoot 'mcp\catalog.json'
 $profilesPath = Join-Path $repoRoot 'mcp\profiles.json'
 $pluginsPath = Join-Path $repoRoot 'presets\plugins.json'
 
-if ($env:CODEX_HOME) {
+if ($TargetCodexHome) {
+    $codexHome = [System.IO.Path]::GetFullPath($TargetCodexHome)
+} elseif ($env:CODEX_HOME) {
     $codexHome = [System.IO.Path]::GetFullPath($env:CODEX_HOME)
 } else {
     $codexHome = Join-Path $env:USERPROFILE '.codex'
@@ -176,11 +179,10 @@ $catalogBuilder = Join-Path $libraryTarget 'scripts\build-catalog.ps1'
 if (-not (Test-Path -LiteralPath $catalogBuilder)) {
     throw "Missing Skill Catalog builder: $catalogBuilder"
 }
-$pwshCommand = Get-Command pwsh.exe -ErrorAction SilentlyContinue
-if (-not $pwshCommand) {
-    throw 'PowerShell 7 (pwsh.exe) is required by the on-demand Skill router.'
-}
-& $pwshCommand.Source -NoProfile -ExecutionPolicy Bypass -File $catalogBuilder -SkillRoot $skillsTarget -LibraryRoot $libraryTarget -OutputPath (Join-Path $libraryTarget 'catalog.json') -ProfilePath (Join-Path $libraryTarget 'routing-profile.json') | Out-Null
+$powerShellCommand = Get-Command pwsh.exe -ErrorAction SilentlyContinue
+if (-not $powerShellCommand) { $powerShellCommand = Get-Command powershell.exe -ErrorAction SilentlyContinue }
+if (-not $powerShellCommand) { throw 'PowerShell is required to build the Skill Catalog.' }
+& $powerShellCommand.Source -NoProfile -ExecutionPolicy Bypass -File $catalogBuilder -SkillRoot $skillsTarget -LibraryRoot $libraryTarget -OutputPath (Join-Path $libraryTarget 'catalog.json') -ProfilePath (Join-Path $libraryTarget 'routing-profile.json') | Out-Null
 if ($LASTEXITCODE -ne 0) {
     throw 'Skill Catalog rebuild failed.'
 }

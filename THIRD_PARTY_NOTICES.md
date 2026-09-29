@@ -6,4 +6,4 @@ The on-demand library aggregates Skills and supporting assets from multiple upst
 
 Plugin-provided and Codex system Skills are not vendored from runtime caches. `presets/plugins.json` records official plugin identifiers so a compatible Codex installation can obtain them from their original marketplace or runtime.
 
-If this private collection is later made public, audit every imported Skill directory for its upstream source and redistribution terms before changing repository visibility.
+This repository is public. Review source and redistribution terms before adding or updating each imported Skill; pinned source records are in `skill-library/sources-lock.json` where available. Do not assume the root MIT license overrides a vendored directory's license.

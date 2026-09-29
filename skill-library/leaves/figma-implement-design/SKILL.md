@@ -1,6 +1,6 @@
 ---
 name: figma-implement-design
-description: Translates Figma designs into production-ready application code with 1:1 visual fidelity. Use when implementing UI code from Figma files, when user mentions "implement design", "generate code", "implement component", provides Figma URLs, or asks to build components matching Figma specs. For Figma canvas writes via `use_figma`, use `figma-use`.
+description: 'Implement production UI from Figma with visual fidelity when given a Figma link, component, or design-to-code request. For writes to the Figma canvas itself, use figma-use.'
 ---
 
 # Implement Design

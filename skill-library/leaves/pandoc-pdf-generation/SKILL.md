@@ -257,7 +257,6 @@ For detailed information, see:
 | Bibliography not rendering    | Missing references.bib       | Create .bib file or remove --bibliography flag    |
 | PDF file size too large       | Embedded fonts               | Use --pdf-engine-opt=-dEmbedAllFonts=false        |
 
-
 ## Post-Execution Reflection
 
 After this skill completes, check before closing:

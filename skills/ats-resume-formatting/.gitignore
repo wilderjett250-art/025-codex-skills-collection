@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# Build artifacts (the release zip is attached to GitHub Releases, not committed)
+*.zip

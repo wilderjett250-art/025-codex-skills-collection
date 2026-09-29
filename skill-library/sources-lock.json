@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-09-08",
+  "policy": "Pinned source references, not extra resident Skills. Local entrypoints adapt methods to task scope. Update only with upstream diff, license review and routing regression.",
+  "modules": [
+    {
+      "repository": "phuryn/pm-skills",
+      "commit": "18468a95b427e70e258b51389796367c6f684e7d",
+      "path": "pm-product-discovery/skills/interview-script",
+      "url": "https://github.com/phuryn/pm-skills/tree/18468a95b427e70e258b51389796367c6f684e7d/pm-product-discovery/skills/interview-script",
+      "installedPath": "leaves/product-discovery/references/interview-script",
+      "license": "MIT; root license preserved at references/LICENSE-PM-SKILLS",
+      "entryAdapted": false,
+      "runtimeValidation": "reference content reviewed; downstream product results not validated"
+    },
+    {
+      "repository": "phuryn/pm-skills",
+      "commit": "18468a95b427e70e258b51389796367c6f684e7d",
+      "path": "pm-product-discovery/skills/identify-assumptions-new",
+      "url": "https://github.com/phuryn/pm-skills/tree/18468a95b427e70e258b51389796367c6f684e7d/pm-product-discovery/skills/identify-assumptions-new",
+      "installedPath": "leaves/product-discovery/references/identify-assumptions-new",
+      "license": "MIT; root license preserved at references/LICENSE-PM-SKILLS",
+      "entryAdapted": false,
+      "runtimeValidation": "reference content reviewed; downstream product results not validated"
+    },
+    {
+      "repository": "phuryn/pm-skills",
+      "commit": "18468a95b427e70e258b51389796367c6f684e7d",
+      "path": "pm-product-discovery/skills/prioritize-features",
+      "url": "https://github.com/phuryn/pm-skills/tree/18468a95b427e70e258b51389796367c6f684e7d/pm-product-discovery/skills/prioritize-features",
+      "installedPath": "leaves/product-discovery/references/prioritize-features",
+      "license": "MIT; root license preserved at references/LICENSE-PM-SKILLS",
+      "entryAdapted": false,
+      "runtimeValidation": "reference content reviewed; downstream product results not validated"
+    },
+    {
+      "repository": "phuryn/pm-skills",
+      "commit": "18468a95b427e70e258b51389796367c6f684e7d",
+      "path": "pm-execution/skills/create-prd",
+      "url": "https://github.com/phuryn/pm-skills/tree/18468a95b427e70e258b51389796367c6f684e7d/pm-execution/skills/create-prd",
+      "installedPath": "leaves/product-discovery/references/create-prd",
+      "license": "MIT; root license preserved at references/LICENSE-PM-SKILLS",
+      "entryAdapted": false,
+      "runtimeValidation": "reference content reviewed; downstream product results not validated"
+    },
+    {
+      "repository": "vercel-labs/agent-skills",
+      "commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+      "path": "skills/react-best-practices",
+      "url": "https://github.com/vercel-labs/agent-skills/tree/063bee94c3f4df8453406c830b0a7df0f2860278/skills/react-best-practices",
+      "installedPath": "leaves/react-engineering/references/vercel/react-best-practices",
+      "license": "MIT declared in original Skill frontmatter; no separate LICENSE file in pinned upstream tree",
+      "entryAdapted": false,
+      "runtimeValidation": "reference content reviewed; downstream product results not validated"
+    },
+    {
+      "repository": "vercel-labs/agent-skills",
+      "commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+      "path": "skills/composition-patterns",
+      "url": "https://github.com/vercel-labs/agent-skills/tree/063bee94c3f4df8453406c830b0a7df0f2860278/skills/composition-patterns",
+      "installedPath": "leaves/react-engineering/references/vercel/composition-patterns",
+      "license": "MIT declared in original Skill frontmatter; no separate LICENSE file in pinned upstream tree",
+      "entryAdapted": false,
+      "runtimeValidation": "reference content reviewed; downstream product results not validated"
+    },
+    {
+      "repository": "anthropics/skills",
+      "commit": "41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f",
+      "path": "skills/webapp-testing",
+      "url": "https://github.com/anthropics/skills/tree/41bbe19d1a1a7eaab5e7bb9050a417e5c6cffc8f/skills/webapp-testing",
+      "installedPath": "leaves/e2e-testing/references/anthropic/webapp-testing",
+      "license": "LICENSE.txt preserved in module",
+      "entryAdapted": false,
+      "runtimeValidation": "with_server.py --help only; Windows process cleanup and browser journeys not validated"
+    },
+    {
+      "repository": "obra/superpowers",
+      "commit": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
+      "path": "skills/systematic-debugging",
+      "url": "https://github.com/obra/superpowers/tree/b36e0829c6d0140e93cfef2ca599b1b07d4a7797/skills/systematic-debugging",
+      "installedPath": "leaves/systematic-debugging",
+      "license": "MIT; root LICENSE preserved",
+      "entryAdapted": true,
+      "runtimeValidation": "reference content reviewed; downstream product results not validated"
+    },
+    {
+      "repository": "vuejs-ai/skills",
+      "commit": "c9d355ff23f654309dd02006be671859df0a134c",
+      "path": "skills/vue-best-practices",
+      "installedPath": "leaves/vue-engineering/references/upstream/vue-best-practices",
+      "license": "MIT; ../LICENSE",
+      "url": "https://github.com/vuejs-ai/skills/tree/c9d355ff23f654309dd02006be671859df0a134c/skills/vue-best-practices",
+      "originalSkillSha256": "05b373713e6bbd216fb3ee9709289b68bcdeb9eac8ffea477e35bdbd8e0f9acd",
+      "entryAdapted": false,
+      "runtimeValidation": "Local adapted owner; upstream module is reference-only. No product quality gain claimed."
+    },
+    {
+      "repository": "vuejs-ai/skills",
+      "commit": "c9d355ff23f654309dd02006be671859df0a134c",
+      "path": "skills/vue-pinia-best-practices",
+      "installedPath": "leaves/vue-engineering/references/upstream/vue-pinia-best-practices",
+      "license": "MIT; ../LICENSE",
+      "url": "https://github.com/vuejs-ai/skills/tree/c9d355ff23f654309dd02006be671859df0a134c/skills/vue-pinia-best-practices",
+      "originalSkillSha256": "70c5fae1e97d1df1d7a1207ad1df606d0c7375855f0c1cb0c9c94351931ab862",
+      "entryAdapted": false,
+      "runtimeValidation": "Local adapted owner; upstream module is reference-only. No product quality gain claimed."
+    },
+    {
+      "repository": "vuejs-ai/skills",
+      "commit": "c9d355ff23f654309dd02006be671859df0a134c",
+      "path": "skills/vue-router-best-practices",
+      "installedPath": "leaves/vue-engineering/references/upstream/vue-router-best-practices",
+      "license": "MIT; ../LICENSE",
+      "url": "https://github.com/vuejs-ai/skills/tree/c9d355ff23f654309dd02006be671859df0a134c/skills/vue-router-best-practices",
+      "originalSkillSha256": "33889faf631e80bf112a096dfe3e76029447f05f99d6d5c0aea2daddff186d7c",
+      "entryAdapted": false,
+      "runtimeValidation": "Local adapted owner; upstream module is reference-only. No product quality gain claimed."
+    },
+    {
+      "repository": "vuejs-ai/skills",
+      "commit": "c9d355ff23f654309dd02006be671859df0a134c",
+      "path": "skills/vue-testing-best-practices",
+      "installedPath": "leaves/vue-engineering/references/upstream/vue-testing-best-practices",
+      "license": "MIT; ../LICENSE",
+      "url": "https://github.com/vuejs-ai/skills/tree/c9d355ff23f654309dd02006be671859df0a134c/skills/vue-testing-best-practices",
+      "originalSkillSha256": "376fd21d6adfd37f7d102fa17ca099abddef16943389f37588405b013cef23b8",
+      "entryAdapted": false,
+      "runtimeValidation": "Local adapted owner; upstream module is reference-only. No product quality gain claimed."
+    },
+    {
+      "repository": "supabase/agent-skills",
+      "commit": "8331f910845103c08d51f6ca1d86ebb7d1f745e3",
+      "path": "skills/supabase-postgres-best-practices",
+      "installedPath": "leaves/postgres-patterns/references/curation-20260908/supabase-postgres-best-practices",
+      "license": "MIT; ../LICENSE",
+      "url": "https://github.com/supabase/agent-skills/tree/8331f910845103c08d51f6ca1d86ebb7d1f745e3/skills/supabase-postgres-best-practices",
+      "originalSkillSha256": "ad65e776f45e761bafc609d3f506c77c1032225aa65e0c4c02f241b8071e5855",
+      "entryAdapted": false,
+      "runtimeValidation": "Local adapted owner; upstream module is reference-only. No product quality gain claimed."
+    },
+    {
+      "repository": "shadcn-ui/ui",
+      "commit": "5c7072da672b0048bc6771e3204063a2537df91a",
+      "path": "skills/shadcn",
+      "installedPath": "leaves/shadcn-ui/references/upstream/shadcn",
+      "license": "MIT; ../LICENSE.md",
+      "url": "https://github.com/shadcn-ui/ui/tree/5c7072da672b0048bc6771e3204063a2537df91a/skills/shadcn",
+      "originalSkillSha256": "deba6c5152d9835892fa7dffeb1fedbb689ddac7e59e14e57ec5eaf9463309e4",
+      "entryAdapted": false,
+      "runtimeValidation": "Local adapted owner; upstream module is reference-only. No product quality gain claimed."
+    },
+    {
+      "repository": "vercel-labs/agent-skills",
+      "commit": "063bee94c3f4df8453406c830b0a7df0f2860278",
+      "path": "skills/web-design-guidelines",
+      "installedPath": "leaves/impeccable/references/curation-20260908/web-design-guidelines",
+      "license": "No license declared by this module; upstream snapshot retained locally, redistribution requires review",
+      "url": "https://github.com/vercel-labs/agent-skills/tree/063bee94c3f4df8453406c830b0a7df0f2860278/skills/web-design-guidelines",
+      "originalSkillSha256": "f4647ca866a3accf763777f83e7682954f0187cd6bea7eea0399796652414e8f",
+      "entryAdapted": false,
+      "runtimeValidation": "Local adapted owner; upstream module is reference-only. No product quality gain claimed."
+    }
+  ],
+  "referenceSources": [
+    {
+      "repository": "vercel-labs/web-interface-guidelines",
+      "commit": "e3d624baaf29dc1fc645aff3e38f03e564d2d6b1",
+      "path": "command.md",
+      "sha256": "5a775e6411f790f518dbc9c1fa7c50a89e6873502d9a3530a6eb223a590bcfe8",
+      "installedPath": "leaves/impeccable/references/curation-20260908/web-guidelines.md",
+      "note": "Topics mechanically split for local on-demand reading. No separate license verified; no redistribution performed."
+    },
+    {
+      "repository": "vercel-labs/next-skills",
+      "commit": "b76d687cf3e026eac3b1032f610f06b47a56377c",
+      "path": "README.md",
+      "note": "Migration notice reviewed; local nextjs-engineering points to version-matched project docs, no retired skill installed."
+    }
+  ]
+}

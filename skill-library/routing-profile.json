@@ -1,426 +1,2257 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "projectTypes": [
     {
       "name": "coursework",
-      "aliases": ["作业", "课程", "课程项目", "实验报告", "论文作业", "assignment", "coursework", "rubric"]
+      "aliases": [
+        "作业",
+        "课程",
+        "课程项目",
+        "实验报告",
+        "论文作业",
+        "assignment",
+        "coursework",
+        "rubric"
+      ]
     },
     {
       "name": "commercial-small",
-      "aliases": ["商用", "客户", "小项目", "网站", "小程序", "管理后台", "交付", "commercial", "customer-facing"]
+      "aliases": [
+        "商用",
+        "客户",
+        "小项目",
+        "网站",
+        "小程序",
+        "管理后台",
+        "交付",
+        "commercial",
+        "customer-facing"
+      ]
     },
     {
       "name": "special-large",
-      "aliases": ["大项目", "多服务", "跨端", "硬件", "设备", "生产系统", "遗留系统", "机器学习", "special-large", "multi-service", "production-critical"]
+      "aliases": [
+        "大项目",
+        "多服务",
+        "跨端",
+        "硬件",
+        "设备",
+        "生产系统",
+        "遗留系统",
+        "机器学习",
+        "special-large",
+        "multi-service",
+        "production-critical"
+      ]
     }
   ],
   "phases": [
     {
       "name": "inspect",
-      "aliases": ["看看", "检查", "审计", "诊断", "分析", "复盘", "盘点", "review", "audit", "diagnose", "inspect"]
+      "aliases": [
+        "看看",
+        "检查",
+        "审计",
+        "诊断",
+        "分析",
+        "复盘",
+        "盘点",
+        "review",
+        "audit",
+        "diagnose",
+        "inspect"
+      ]
     },
     {
       "name": "design",
-      "aliases": ["设计", "规划", "方案", "架构", "拆分", "plan", "design", "architecture"]
+      "aliases": [
+        "设计",
+        "规划",
+        "方案",
+        "架构",
+        "拆分",
+        "plan",
+        "design",
+        "architecture"
+      ]
     },
     {
       "name": "implement",
-      "aliases": ["实现", "开发", "修改", "修复", "重做", "写一个", "合并", "build", "implement", "fix", "merge", "refactor"]
+      "aliases": [
+        "实现",
+        "开发",
+        "修改",
+        "修复",
+        "重做",
+        "写一个",
+        "合并",
+        "build",
+        "implement",
+        "fix",
+        "merge",
+        "refactor"
+      ]
     },
     {
       "name": "verify",
-      "aliases": ["测试", "验证", "验收", "是否好用", "证明", "对比", "test", "verify", "acceptance", "validate"]
+      "aliases": [
+        "测试",
+        "验证",
+        "验收",
+        "是否好用",
+        "证明",
+        "对比",
+        "test",
+        "verify",
+        "acceptance",
+        "validate"
+      ]
     },
     {
       "name": "release",
-      "aliases": ["上传", "部署", "发布", "上线", "端口", "安全组", "生产环境", "deploy", "release", "publish", "production"]
+      "aliases": [
+        "上传",
+        "部署",
+        "发布",
+        "上线",
+        "端口",
+        "安全组",
+        "生产环境",
+        "deploy",
+        "release",
+        "publish",
+        "production"
+      ]
     },
     {
       "name": "operate",
-      "aliases": ["打开", "点击", "登录", "控制", "操作", "浏览器", "控制台", "open", "click", "operate", "browser", "console"]
+      "aliases": [
+        "打开",
+        "点击",
+        "登录",
+        "控制",
+        "操作",
+        "浏览器",
+        "控制台",
+        "open",
+        "click",
+        "operate",
+        "browser",
+        "console"
+      ]
     },
     {
       "name": "handoff",
-      "aliases": ["交接", "交给下一个", "续做", "当前现状", "handoff", "resume", "continuity"]
+      "aliases": [
+        "交接",
+        "交给下一个",
+        "续做",
+        "当前现状",
+        "handoff",
+        "resume",
+        "continuity"
+      ]
     }
   ],
   "domains": [
-    { "name": "computing-digital", "aliases": ["计算机", "软件", "程序", "代码", "网站", "前端", "后端", "界面", "服务端", "接口", "数据库", "服务器", "部署", "云", "浏览器", "小程序", "人工智能", "网络安全", "computer", "software", "code", "frontend", "backend", "ui", "vue", "react", "fastapi", "api", "database", "server", "deploy", "cloud", "browser", "ai"] },
-    { "name": "engineering-hardware", "aliases": ["工程", "硬件", "设备", "嵌入式", "固件", "cad", "engineering", "hardware", "device", "embedded", "firmware"] },
-    { "name": "documents-media", "aliases": ["文档", "办公", "图片", "视频", "音频", "演示文稿", "document", "office", "image", "video", "audio", "slides"] },
-    { "name": "research-education", "aliases": ["科研", "教育", "论文", "文献", "实验", "research", "education", "paper", "literature"] },
-    { "name": "business-operations", "aliases": ["商业", "业务", "运营", "市场", "销售", "财务", "物流", "business", "operations", "marketing", "sales", "finance", "logistics"] }
+    {
+      "name": "computing-digital",
+      "aliases": [
+        "计算机",
+        "软件",
+        "程序",
+        "代码",
+        "网站",
+        "前端",
+        "后端",
+        "界面",
+        "服务端",
+        "接口",
+        "数据库",
+        "服务器",
+        "部署",
+        "云",
+        "浏览器",
+        "小程序",
+        "人工智能",
+        "网络安全",
+        "computer",
+        "software",
+        "code",
+        "frontend",
+        "backend",
+        "ui",
+        "vue",
+        "react",
+        "fastapi",
+        "api",
+        "database",
+        "server",
+        "deploy",
+        "cloud",
+        "browser",
+        "ai"
+      ]
+    },
+    {
+      "name": "engineering-hardware",
+      "aliases": [
+        "工程",
+        "硬件",
+        "设备",
+        "嵌入式",
+        "固件",
+        "cad",
+        "engineering",
+        "hardware",
+        "device",
+        "embedded",
+        "firmware"
+      ]
+    },
+    {
+      "name": "documents-media",
+      "aliases": [
+        "文档",
+        "办公",
+        "图片",
+        "视频",
+        "音频",
+        "演示文稿",
+        "document",
+        "office",
+        "image",
+        "video",
+        "audio",
+        "slides"
+      ]
+    },
+    {
+      "name": "research-education",
+      "aliases": [
+        "科研",
+        "教育",
+        "论文",
+        "文献",
+        "实验",
+        "research",
+        "education",
+        "paper",
+        "literature"
+      ]
+    },
+    {
+      "name": "business-operations",
+      "aliases": [
+        "商业",
+        "业务",
+        "运营",
+        "市场",
+        "销售",
+        "财务",
+        "物流",
+        "business",
+        "operations",
+        "marketing",
+        "sales",
+        "finance",
+        "logistics"
+      ]
+    }
   ],
   "controlDomains": [
-    { "name": "execution-governance", "aliases": ["路由", "项目拆分", "交接", "上下文管理", "验收门禁", "skill routing", "handoff", "acceptance gate"] }
+    {
+      "name": "execution-governance",
+      "aliases": [
+        "路由",
+        "项目拆分",
+        "交接",
+        "上下文管理",
+        "验收门禁",
+        "skill routing",
+        "handoff",
+        "acceptance gate"
+      ]
+    }
   ],
   "disciplines": [
-    { "name": "project-flow", "aliases": ["项目", "仓库", "git", "github", "交接", "拆任务", "工作流", "skill", "上下文", "project", "repository", "handoff"] },
-    { "name": "code-engineering", "aliases": ["代码", "编程", "算法", "重构", "python", "java", "node", "cli", "code", "refactor", "algorithm"] },
-    { "name": "frontend-ui", "aliases": ["前端", "界面", "页面", "截图", "还原", "vue", "react", "css", "figma", "ui", "ux", "frontend"] },
-    { "name": "backend-api", "aliases": ["后端", "接口", "服务端", "fastapi", "django", "spring", "api", "backend"] },
-    { "name": "data-database", "aliases": ["数据库", "数据", "迁移", "sqlite", "mysql", "postgres", "sql", "excel", "database", "migration"] },
-    { "name": "devops-runtime", "aliases": ["服务器", "部署", "上线", "nginx", "docker", "ssh", "systemd", "安全组", "端口", "server", "deploy", "runtime"] },
-    { "name": "browser-desktop", "aliases": ["浏览器", "edge", "chrome", "已登录", "网页操作", "桌面", "browser", "playwright"] },
-    { "name": "documents-media", "aliases": ["word", "docx", "pdf", "ppt", "文档", "论文格式", "逐页", "图片", "视频", "音频"] },
-    { "name": "research-knowledge", "aliases": ["科研", "论文", "文献", "引用", "综述", "实验", "research", "paper", "citation", "literature"] },
-    { "name": "ai-ml", "aliases": ["大模型", "智能体", "agent", "mcp", "prompt", "提示词", "模型", "训练", "llm", "ml"] },
-    { "name": "hardware-iot", "aliases": ["硬件", "设备", "esp32", "串口", "刷机", "固件", "摄像头", "cad", "iot", "firmware", "serial"] },
-    { "name": "mobile-interactive", "aliases": ["微信小程序", "小程序", "android", "ios", "flutter", "unity", "tabbar", "mobile"] },
-    { "name": "security-quality", "aliases": ["测试", "验收", "证据", "安全", "漏洞", "质量", "qa", "security", "acceptance"] },
-    { "name": "business-ops", "aliases": ["库存", "电商", "客户", "市场", "销售", "内容运营", "财务", "物流", "inventory", "commerce", "marketing"] }
+    {
+      "name": "project-flow",
+      "aliases": [
+        "项目",
+        "仓库",
+        "git",
+        "github",
+        "交接",
+        "拆任务",
+        "工作流",
+        "skill",
+        "上下文",
+        "project",
+        "repository",
+        "handoff"
+      ]
+    },
+    {
+      "name": "code-engineering",
+      "aliases": [
+        "代码",
+        "编程",
+        "算法",
+        "重构",
+        "python",
+        "java",
+        "node",
+        "cli",
+        "code",
+        "refactor",
+        "algorithm"
+      ]
+    },
+    {
+      "name": "frontend-ui",
+      "aliases": [
+        "前端",
+        "界面",
+        "页面",
+        "截图",
+        "还原",
+        "vue",
+        "react",
+        "css",
+        "figma",
+        "ui",
+        "ux",
+        "frontend"
+      ]
+    },
+    {
+      "name": "backend-api",
+      "aliases": [
+        "后端",
+        "接口",
+        "服务端",
+        "fastapi",
+        "django",
+        "spring",
+        "api",
+        "backend"
+      ]
+    },
+    {
+      "name": "data-database",
+      "aliases": [
+        "数据库",
+        "数据",
+        "迁移",
+        "sqlite",
+        "mysql",
+        "postgres",
+        "sql",
+        "excel",
+        "database",
+        "migration"
+      ]
+    },
+    {
+      "name": "devops-runtime",
+      "aliases": [
+        "服务器",
+        "部署",
+        "上线",
+        "nginx",
+        "docker",
+        "ssh",
+        "systemd",
+        "安全组",
+        "端口",
+        "server",
+        "deploy",
+        "runtime"
+      ]
+    },
+    {
+      "name": "browser-desktop",
+      "aliases": [
+        "浏览器",
+        "edge",
+        "chrome",
+        "已登录",
+        "网页操作",
+        "桌面",
+        "browser",
+        "playwright"
+      ]
+    },
+    {
+      "name": "documents-media",
+      "aliases": [
+        "word",
+        "docx",
+        "pdf",
+        "ppt",
+        "文档",
+        "论文格式",
+        "逐页",
+        "图片",
+        "视频",
+        "音频"
+      ]
+    },
+    {
+      "name": "research-knowledge",
+      "aliases": [
+        "科研",
+        "论文",
+        "文献",
+        "引用",
+        "综述",
+        "实验",
+        "research",
+        "paper",
+        "citation",
+        "literature"
+      ]
+    },
+    {
+      "name": "ai-ml",
+      "aliases": [
+        "大模型",
+        "智能体",
+        "agent",
+        "mcp",
+        "prompt",
+        "提示词",
+        "模型",
+        "训练",
+        "llm",
+        "ml"
+      ]
+    },
+    {
+      "name": "hardware-iot",
+      "aliases": [
+        "硬件",
+        "设备",
+        "esp32",
+        "串口",
+        "刷机",
+        "固件",
+        "摄像头",
+        "cad",
+        "iot",
+        "firmware",
+        "serial"
+      ]
+    },
+    {
+      "name": "mobile-interactive",
+      "aliases": [
+        "微信小程序",
+        "小程序",
+        "android",
+        "ios",
+        "flutter",
+        "unity",
+        "tabbar",
+        "mobile"
+      ]
+    },
+    {
+      "name": "security-quality",
+      "aliases": [
+        "测试",
+        "验收",
+        "证据",
+        "安全",
+        "漏洞",
+        "质量",
+        "qa",
+        "security",
+        "acceptance"
+      ]
+    },
+    {
+      "name": "business-ops",
+      "aliases": [
+        "库存",
+        "电商",
+        "客户",
+        "市场",
+        "销售",
+        "内容运营",
+        "财务",
+        "物流",
+        "inventory",
+        "commerce",
+        "marketing"
+      ]
+    }
   ],
   "families": [
-    { "name": "implementation-parity", "discipline": "frontend-ui", "aliases": ["截图还原", "像素级", "视觉一致", "视觉对比", "ui还原", "screenshot parity", "pixel perfect"] },
-    { "name": "authenticated-session", "discipline": "browser-desktop", "aliases": ["已有edge", "已登录edge", "当前浏览器", "登录状态", "复用登录", "existing edge", "authenticated browser"] },
-    { "name": "wechat-miniprogram", "discipline": "mobile-interactive", "aliases": ["微信小程序", "小程序", "app.json", "tabbar", "wx.navigateTo", "wx.switchTab", "开发者工具", "体验版"] },
-    { "name": "embedded-device", "discipline": "hardware-iot", "aliases": ["esp32", "esp32-s3", "串口", "com口", "刷机", "固件", "esptool", "flash", "serial"] },
-    { "name": "deployment-runtime", "discipline": "devops-runtime", "aliases": ["部署", "上线", "生产环境", "nginx", "docker", "systemd", "服务器", "安全组", "443"] },
-    { "name": "documents-pdf", "discipline": "documents-media", "aliases": ["word", "docx", "pdf", "逐页", "排版", "文档"] },
-    { "name": "framework-services", "discipline": "backend-api", "aliases": ["fastapi", "django", "springboot", "nestjs", "laravel"] },
-    { "name": "database-schema", "discipline": "data-database", "aliases": ["数据库迁移", "表结构", "sqlite", "mysql", "postgres", "schema", "migration"] },
-    { "name": "scholarly-research", "discipline": "research-knowledge", "aliases": ["学术", "文献综述", "论文", "引用核验", "paper", "citation"] },
-    { "name": "agent-systems", "discipline": "ai-ml", "aliases": ["agent", "智能体", "上下文管理", "工具路由", "skill路由", "agent harness"] },
-    { "name": "quality-testing", "discipline": "security-quality", "aliases": ["验收", "测试通过", "已修复", "证据等级", "runtime validated"] },
-    { "name": "repo-execution", "discipline": "project-flow", "aliases": ["git", "github", "分支", "提交", "合并", "pull request"] },
-    { "name": "continuity-memory", "discipline": "project-flow", "aliases": ["交接", "续做", "当前现状", "下一个人", "handoff"] }
+    {
+      "name": "implementation-parity",
+      "discipline": "frontend-ui",
+      "aliases": [
+        "截图还原",
+        "像素级",
+        "视觉一致",
+        "视觉对比",
+        "ui还原",
+        "screenshot parity",
+        "pixel perfect"
+      ]
+    },
+    {
+      "name": "authenticated-session",
+      "discipline": "browser-desktop",
+      "aliases": [
+        "已有edge",
+        "已登录edge",
+        "当前浏览器",
+        "登录状态",
+        "复用登录",
+        "existing edge",
+        "authenticated browser"
+      ]
+    },
+    {
+      "name": "wechat-miniprogram",
+      "discipline": "mobile-interactive",
+      "aliases": [
+        "微信小程序",
+        "小程序",
+        "app.json",
+        "tabbar",
+        "wx.navigateTo",
+        "wx.switchTab",
+        "开发者工具",
+        "体验版"
+      ]
+    },
+    {
+      "name": "embedded-device",
+      "discipline": "hardware-iot",
+      "aliases": [
+        "esp32",
+        "esp32-s3",
+        "串口",
+        "com口",
+        "刷机",
+        "固件",
+        "esptool",
+        "flash",
+        "serial"
+      ]
+    },
+    {
+      "name": "deployment-runtime",
+      "discipline": "devops-runtime",
+      "aliases": [
+        "部署",
+        "上线",
+        "生产环境",
+        "nginx",
+        "docker",
+        "systemd",
+        "服务器",
+        "安全组",
+        "443"
+      ]
+    },
+    {
+      "name": "documents-pdf",
+      "discipline": "documents-media",
+      "aliases": [
+        "word",
+        "docx",
+        "pdf",
+        "逐页",
+        "排版",
+        "文档"
+      ]
+    },
+    {
+      "name": "framework-services",
+      "discipline": "backend-api",
+      "aliases": [
+        "fastapi",
+        "django",
+        "springboot",
+        "nestjs",
+        "laravel"
+      ]
+    },
+    {
+      "name": "database-schema",
+      "discipline": "data-database",
+      "aliases": [
+        "数据库迁移",
+        "表结构",
+        "sqlite",
+        "mysql",
+        "postgres",
+        "schema",
+        "migration"
+      ]
+    },
+    {
+      "name": "scholarly-research",
+      "discipline": "research-knowledge",
+      "aliases": [
+        "学术",
+        "文献综述",
+        "论文",
+        "引用核验",
+        "paper",
+        "citation"
+      ]
+    },
+    {
+      "name": "agent-systems",
+      "discipline": "ai-ml",
+      "aliases": [
+        "agent",
+        "智能体",
+        "上下文管理",
+        "工具路由",
+        "skill路由",
+        "agent harness"
+      ]
+    },
+    {
+      "name": "quality-testing",
+      "discipline": "security-quality",
+      "aliases": [
+        "验收",
+        "测试通过",
+        "已修复",
+        "证据等级",
+        "runtime validated"
+      ]
+    },
+    {
+      "name": "repo-execution",
+      "discipline": "project-flow",
+      "aliases": [
+        "git",
+        "github",
+        "分支",
+        "提交",
+        "合并",
+        "pull request"
+      ]
+    },
+    {
+      "name": "continuity-memory",
+      "discipline": "project-flow",
+      "aliases": [
+        "交接",
+        "续做",
+        "当前现状",
+        "下一个人",
+        "handoff"
+      ]
+    },
+    {
+      "name": "code-understanding",
+      "discipline": "code-engineering",
+      "aliases": [
+        "读源码",
+        "源码讲解",
+        "代码走读",
+        "理解陌生代码",
+        "source code walkthrough",
+        "code learning"
+      ]
+    }
   ],
   "routes": [
     {
-      "name": "tool-session-routing",
-      "aliases": ["登录过期", "打开真实登录界面", "复用登录", "复用会话", "不要再问密码", "已有ssh", "已有 ssh 别名", "ssh别名", "ssh 别名", "existing ssh alias", "工具登录", "gui cli", "后台等待"],
-      "kind": "control",
-      "plane": "control",
-      "domain": "execution-governance",
-      "discipline": "project-flow",
-      "family": "skill-system",
-      "ownerSkills": ["tool-session-optimizer"],
-      "supportingSkills": []
-    },
-    {
       "name": "existing-edge-session",
-      "aliases": ["已有edge", "已登录edge", "已经登录的 edge", "登录的 edge", "edge有在线网页", "当前浏览器", "复用登录", "登录的github", "登录的腾讯云"],
+      "aliases": [
+        "已有edge",
+        "已登录edge",
+        "已经登录的 edge",
+        "登录的 edge",
+        "edge有在线网页",
+        "当前浏览器",
+        "复用登录",
+        "登录的github",
+        "登录的腾讯云"
+      ],
       "kind": "access",
       "plane": "domain",
       "domain": "computing-digital",
       "discipline": "browser-desktop",
       "family": "authenticated-session",
-      "ownerSkills": ["external-browser"],
+      "ownerSkills": [
+        "external-browser"
+      ],
       "supportingSkills": []
     },
     {
       "name": "wechat-miniprogram",
-      "aliases": ["微信小程序", "小程序", "tabbar", "wx.navigateto", "wx.switchtab", "开发者工具", "体验版"],
+      "aliases": [
+        "微信小程序",
+        "小程序",
+        "tabbar",
+        "wx.navigateto",
+        "wx.switchtab",
+        "开发者工具",
+        "体验版"
+      ],
       "kind": "capability",
       "plane": "domain",
       "domain": "computing-digital",
       "discipline": "mobile-interactive",
       "family": "wechat-miniprogram",
-      "ownerSkills": ["wechat-miniprogram-engineering"],
-      "supportingSkills": [
-        { "name": "evidence-based-acceptance", "whenPhases": ["implement", "verify", "release"] }
-      ]
+      "ownerSkills": [
+        "wechat-miniprogram-engineering"
+      ],
+      "supportingSkills": []
     },
     {
       "name": "esp32-device",
-      "aliases": ["esp32", "esp32-s3", "esptool", "com口", "串口", "刷机", "固件", "flash"],
+      "aliases": [
+        "esp32",
+        "esp32-s3",
+        "esptool",
+        "com口",
+        "串口",
+        "刷机",
+        "固件"
+      ],
       "kind": "capability",
       "plane": "domain",
       "domain": "engineering-hardware",
       "discipline": "hardware-iot",
       "family": "embedded-device",
-      "ownerSkills": ["esp32-device-ops"],
-      "supportingSkills": [
-        { "name": "evidence-based-acceptance", "whenPhases": ["implement", "verify", "release", "operate"] }
-      ]
+      "ownerSkills": [
+        "esp32-device-ops"
+      ],
+      "supportingSkills": []
     },
     {
       "name": "ui-screenshot-parity",
-      "aliases": ["截图还原", "按照截图", "跟截图一样", "视觉一致", "像素级", "ui还原", "screenshot parity"],
+      "aliases": [
+        "截图还原",
+        "按照截图",
+        "跟截图一样",
+        "视觉一致",
+        "像素级",
+        "ui还原",
+        "screenshot parity"
+      ],
       "kind": "capability",
       "plane": "domain",
       "domain": "computing-digital",
       "discipline": "frontend-ui",
       "family": "implementation-parity",
-      "ownerSkills": ["ui-image-parity"],
+      "ownerSkills": [
+        "ui-image-parity"
+      ],
       "supportingSkills": [
-        { "name": "ui-to-vue", "whenAliases": ["vue", "vue3"] },
-        { "name": "evidence-based-acceptance", "whenPhases": ["verify"] }
+        {
+          "name": "ui-to-vue",
+          "whenAliases": [
+            "vue",
+            "vue3"
+          ]
+        }
       ]
     },
     {
       "name": "server-release",
-      "aliases": ["服务器部署", "部署到服务器", "部署", "腾讯云服务器", "生产环境", "nginx", "systemd", "docker", "上线", "443", "开放端口", "端口开放", "安全组"],
+      "aliases": [
+        "服务器部署",
+        "部署到服务器",
+        "部署",
+        "腾讯云服务器",
+        "生产环境",
+        "nginx",
+        "systemd",
+        "docker",
+        "上线",
+        "开放端口",
+        "端口开放",
+        "安全组"
+      ],
       "kind": "capability",
       "sequence": 80,
       "plane": "domain",
       "domain": "computing-digital",
       "discipline": "devops-runtime",
       "family": "deployment-runtime",
-      "ownerSkills": ["deployment-patterns"],
+      "ownerSkills": [
+        "deployment-patterns"
+      ],
       "supportingSkills": [
-        { "name": "production-audit", "whenPhases": ["inspect", "verify", "release"] },
-        { "name": "evidence-based-acceptance", "whenPhases": ["verify", "release"] }
+        {
+          "name": "production-audit",
+          "whenPhases": [
+            "inspect",
+            "verify",
+            "release"
+          ]
+        }
       ]
     },
     {
       "name": "fastapi-service-work",
-      "aliases": ["fastapi"],
+      "aliases": [
+        "fastapi"
+      ],
       "kind": "capability",
       "sequence": 20,
       "plane": "domain",
       "domain": "computing-digital",
       "discipline": "backend-api",
       "family": "framework-services",
-      "ownerSkills": ["fastapi-patterns"],
+      "ownerSkills": [
+        "fastapi-patterns"
+      ],
       "supportingSkills": []
     },
     {
       "name": "large-project-control",
-      "aliases": ["大项目", "拆任务", "拆成小项目", "给agent", "多服务", "跨团队"],
+      "aliases": [
+        "大项目",
+        "拆任务",
+        "拆成小项目",
+        "给agent",
+        "多服务",
+        "跨团队"
+      ],
       "kind": "control",
       "plane": "control",
       "domain": "execution-governance",
       "discipline": "project-flow",
       "family": "project-control",
-      "ownerSkills": ["large-project-ops"],
-      "supportingSkills": [
-        { "name": "work-handoff", "whenPhases": ["handoff"] }
-      ]
-    },
-    {
-      "name": "project-handoff",
-      "aliases": ["交接", "交给下一个", "让下一个人知道", "当前现状", "后续任务", "handoff"],
-      "kind": "control",
-      "plane": "control",
-      "domain": "execution-governance",
-      "discipline": "project-flow",
-      "family": "continuity-memory",
-      "suppressedByRoutes": ["large-project-control"],
-      "ownerSkills": ["work-handoff"],
+      "ownerSkills": [
+        "large-project-ops"
+      ],
       "supportingSkills": []
     },
     {
       "name": "github-operations",
-      "aliases": ["github", "github仓库", "仓库分支", "pull request", "合并到 master", "合并到 main"],
+      "aliases": [
+        "github",
+        "github仓库",
+        "仓库分支",
+        "pull request",
+        "合并到 master",
+        "合并到 main"
+      ],
       "kind": "capability",
       "plane": "domain",
       "domain": "computing-digital",
       "discipline": "project-flow",
       "family": "repo-execution",
-      "ownerSkills": ["github-ops"],
+      "ownerSkills": [
+        "github-ops"
+      ],
       "supportingSkills": [
-        { "name": "terminal-ops", "whenAliases": ["本地 git", "本地仓库"] },
-        { "name": "evidence-based-acceptance", "whenPhases": ["implement", "verify", "release"] }
+        {
+          "name": "terminal-ops",
+          "whenAliases": [
+            "本地 git",
+            "本地仓库"
+          ]
+        }
       ]
     },
     {
       "name": "word-document-qa",
-      "aliases": ["word", "docx", "论文格式", "逐页检查", "逐页验收", "文档排版"],
+      "aliases": [
+        "word",
+        "docx",
+        "论文格式",
+        "逐页检查",
+        "逐页验收",
+        "文档排版"
+      ],
       "kind": "capability",
       "plane": "domain",
       "domain": "documents-media",
       "discipline": "documents-media",
       "family": "documents-pdf",
-      "ownerSkills": ["office-quality-gate"],
-      "supportingSkills": [
-        { "name": "evidence-based-acceptance", "whenPhases": ["verify"] }
-      ]
+      "ownerSkills": [
+        "office-quality-gate"
+      ],
+      "supportingSkills": []
     },
     {
       "name": "academic-research",
-      "aliases": ["科研", "学术论文", "文献综述", "引用核验", "实验设计", "academic research"],
+      "aliases": [
+        "科研",
+        "学术论文",
+        "文献综述",
+        "引用核验",
+        "实验设计",
+        "academic research"
+      ],
       "kind": "capability",
       "plane": "domain",
       "domain": "research-education",
       "discipline": "research-knowledge",
       "family": "scholarly-research",
-      "ownerSkills": ["academic-research-suite"],
+      "ownerSkills": [
+        "academic-research-suite"
+      ],
       "supportingSkills": [
-        { "name": "research-paper-figures", "whenAliases": ["图", "figure", "流程图", "结果图"] }
+        {
+          "name": "research-paper-figures",
+          "whenAliases": [
+            "图",
+            "figure",
+            "流程图",
+            "结果图"
+          ]
+        }
       ]
     },
     {
       "name": "video-editing",
-      "aliases": ["剪视频", "视频剪辑", "短视频", "口播剪辑", "片头", "高亮字幕", "烧字幕", "9:16"],
+      "aliases": [
+        "剪视频",
+        "视频剪辑",
+        "短视频",
+        "口播剪辑",
+        "片头",
+        "字幕",
+        "加字幕",
+        "高亮字幕",
+        "烧字幕",
+        "9:16"
+      ],
       "kind": "capability",
       "plane": "domain",
       "domain": "documents-media",
       "discipline": "documents-media",
       "family": "video-motion",
-      "ownerSkills": ["video-editor"],
-      "supportingSkills": []
+      "ownerSkills": [
+        "video-editor"
+      ],
+      "supportingSkills": [],
+      "suppressedByRoutes": [
+        "davinci-color-grading"
+      ]
     },
     {
       "name": "social-content",
-      "aliases": ["社交媒体", "社媒", "linkedin", "小红书", "内容日历", "互动", "发帖", "帖子"],
+      "aliases": [
+        "社交媒体",
+        "社媒",
+        "linkedin",
+        "小红书",
+        "内容日历",
+        "社媒互动",
+        "发帖",
+        "帖子"
+      ],
       "kind": "capability",
       "plane": "domain",
       "domain": "business-operations",
       "discipline": "business-ops",
       "family": "content-marketing",
-      "ownerSkills": ["social"],
+      "ownerSkills": [
+        "social"
+      ],
       "supportingSkills": []
     },
     {
       "name": "unity-navigation",
-      "aliases": ["unity navmesh", "navmesh", "unity寻路", "敌人追踪", "动态障碍"],
+      "aliases": [
+        "unity navmesh",
+        "navmesh",
+        "unity寻路",
+        "敌人追踪",
+        "动态障碍"
+      ],
       "kind": "capability",
       "plane": "domain",
       "domain": "computing-digital",
       "discipline": "mobile-interactive",
       "family": "game-interaction",
-      "ownerSkills": ["unity-navmesh"],
+      "ownerSkills": [
+        "unity-navmesh"
+      ],
       "supportingSkills": []
+    },
+    {
+      "name": "skill-system-maintenance",
+      "aliases": [
+        "skill路由",
+        "skill 路由",
+        "常驻skill",
+        "常驻 skill",
+        "技能路由"
+      ],
+      "aliasGroups": [
+        [
+          "skill",
+          "skills",
+          "技能"
+        ],
+        [
+          "审计",
+          "盘点",
+          "配置",
+          "精简",
+          "路由",
+          "低质量",
+          "完善",
+          "优化",
+          "推荐",
+          "检查",
+          "查找",
+          "寻找",
+          "review",
+          "audit",
+          "routing"
+        ]
+      ],
+      "kind": "capability",
+      "sequence": 10,
+      "ownerSkills": [
+        "workspace-surface-audit"
+      ],
+      "supportingSkills": [],
+      "plane": "domain",
+      "domain": "computing-digital",
+      "discipline": "project-flow",
+      "family": "skill-system"
+    },
+    {
+      "name": "frontend-new-design",
+      "aliases": [
+        "新界面设计",
+        "新页面设计",
+        "重新设计界面",
+        "redesign ui"
+      ],
+      "aliasGroups": [
+        [
+          "设计",
+          "创建",
+          "制作",
+          "做一个",
+          "重做",
+          "build",
+          "create",
+          "design",
+          "redesign"
+        ],
+        [
+          "ui",
+          "界面",
+          "页面",
+          "网站",
+          "landing page",
+          "dashboard"
+        ]
+      ],
+      "excludeAliases": [
+        "skill",
+        "skills",
+        "技能"
+      ],
+      "excludePromptAliases": [
+        "figma",
+        "canva",
+        "swiftui",
+        "android",
+        "flutter",
+        "react native",
+        "小程序"
+      ],
+      "suppressedByRoutes": [
+        "ui-screenshot-parity"
+      ],
+      "kind": "capability",
+      "sequence": 30,
+      "ownerSkills": [
+        "frontend-design"
+      ],
+      "supportingSkills": [],
+      "plane": "domain",
+      "domain": "computing-digital",
+      "discipline": "frontend-ui",
+      "family": "design-system"
+    },
+    {
+      "name": "frontend-refinement",
+      "aliases": [
+        "界面精修",
+        "交互设计",
+        "互动反馈",
+        "交互反馈",
+        "ui polish"
+      ],
+      "aliasGroups": [
+        [
+          "优化",
+          "精修",
+          "打磨",
+          "美化",
+          "改进",
+          "评审",
+          "审查",
+          "polish",
+          "critique",
+          "refine"
+        ],
+        [
+          "ui",
+          "界面",
+          "页面",
+          "交互",
+          "表单",
+          "导航",
+          "反馈",
+          "app"
+        ]
+      ],
+      "excludeAliases": [
+        "skill",
+        "skills",
+        "技能"
+      ],
+      "excludePromptAliases": [
+        "figma",
+        "canva"
+      ],
+      "suppressedByRoutes": [
+        "ui-screenshot-parity",
+        "frontend-new-design"
+      ],
+      "kind": "capability",
+      "sequence": 40,
+      "ownerSkills": [
+        "impeccable"
+      ],
+      "supportingSkills": [],
+      "plane": "domain",
+      "domain": "computing-digital",
+      "discipline": "frontend-ui",
+      "family": "implementation-parity"
+    },
+    {
+      "name": "chinese-business-delivery",
+      "aliasGroups": [
+        [
+          "中文客户",
+          "客户",
+          "商务",
+          "企业"
+        ],
+        [
+          "项目方案",
+          "汇报",
+          "ppt",
+          "演示文稿"
+        ]
+      ],
+      "kind": "capability",
+      "sequence": 20,
+      "ownerSkills": [
+        "cn-natural-business-writing"
+      ],
+      "supportingSkills": [
+        {
+          "name": "office-business-design"
+        }
+      ],
+      "plane": "domain",
+      "domain": "business-operations",
+      "discipline": "business-ops",
+      "family": "business-productivity"
+    },
+    {
+      "name": "ai-comic-drama",
+      "aliases": [
+        "ai漫剧",
+        "ai 漫剧",
+        "漫剧",
+        "漫剧创作",
+        "ai漫画剧",
+        "漫画剧"
+      ],
+      "kind": "capability",
+      "sequence": 20,
+      "ownerSkills": [
+        "ai-manju"
+      ],
+      "supportingSkills": [],
+      "plane": "domain",
+      "domain": "computing-digital",
+      "discipline": "ai-ml",
+      "family": "ai-media"
+    },
+    {
+      "name": "voiceover-production",
+      "aliases": [
+        "配音",
+        "旁白",
+        "语音合成",
+        "文字转语音",
+        "tts",
+        "text to speech"
+      ],
+      "kind": "capability",
+      "sequence": 30,
+      "ownerSkills": [
+        "speech"
+      ],
+      "supportingSkills": [],
+      "plane": "domain",
+      "domain": "documents-media",
+      "discipline": "documents-media",
+      "family": "audio-speech"
+    },
+    {
+      "name": "douyin-short-video-release",
+      "aliases": [
+        "抖音",
+        "发布抖音",
+        "douyin"
+      ],
+      "kind": "capability",
+      "sequence": 40,
+      "ownerSkills": [
+        "social"
+      ],
+      "supportingSkills": [],
+      "plane": "domain",
+      "domain": "business-operations",
+      "discipline": "business-ops",
+      "family": "content-marketing"
+    },
+    {
+      "name": "photoshop-raw-retouch",
+      "aliases": [
+        "photoshop修图",
+        "ps修图",
+        "raw修图",
+        "camera raw"
+      ],
+      "aliasGroups": [
+        [
+          "photoshop",
+          "ps",
+          "camera raw"
+        ],
+        [
+          "raw",
+          "修图",
+          "retouch",
+          "人像"
+        ]
+      ],
+      "kind": "capability",
+      "sequence": 20,
+      "ownerSkills": [
+        "photoshop-editing"
+      ],
+      "supportingSkills": [
+        {
+          "name": "photo-toolkit",
+          "whenAliases": [
+            "raw",
+            "批量",
+            "导出"
+          ]
+        }
+      ],
+      "plane": "domain",
+      "domain": "documents-media",
+      "discipline": "documents-media",
+      "family": "image-production"
+    },
+    {
+      "name": "davinci-color-grading",
+      "aliases": [
+        "达芬奇调色",
+        "davinci resolve",
+        "davinci调色"
+      ],
+      "aliasGroups": [
+        [
+          "达芬奇",
+          "davinci",
+          "resolve"
+        ],
+        [
+          "调色",
+          "color grade",
+          "color grading"
+        ]
+      ],
+      "kind": "capability",
+      "sequence": 20,
+      "ownerSkills": [
+        "video-editor"
+      ],
+      "supportingSkills": [],
+      "plane": "domain",
+      "domain": "documents-media",
+      "discipline": "documents-media",
+      "family": "video-motion"
+    },
+    {
+      "name": "unity-game-development",
+      "aliasGroups": [
+        [
+          "unity"
+        ],
+        [
+          "手游",
+          "游戏",
+          "rpg",
+          "角色扮演",
+          "武侠"
+        ]
+      ],
+      "kind": "capability",
+      "sequence": 20,
+      "ownerSkills": [
+        "unity-csharp-scripting"
+      ],
+      "supportingSkills": [
+        {
+          "name": "rpg",
+          "whenAliases": [
+            "rpg",
+            "角色扮演",
+            "武侠"
+          ]
+        }
+      ],
+      "plane": "domain",
+      "domain": "computing-digital",
+      "discipline": "mobile-interactive",
+      "family": "game-interaction"
+    },
+    {
+      "name": "local-game-service",
+      "aliasGroups": [
+        [
+          "unity",
+          "手游",
+          "游戏"
+        ],
+        [
+          "离线",
+          "本地服务器",
+          "私服",
+          "服务器"
+        ]
+      ],
+      "kind": "capability",
+      "sequence": 30,
+      "ownerSkills": [
+        "backend-patterns"
+      ],
+      "supportingSkills": [],
+      "plane": "domain",
+      "domain": "computing-digital",
+      "discipline": "backend-api",
+      "family": "api-contracts"
+    },
+    {
+      "name": "product-implementation-contract",
+      "aliases": [
+        "需求转工程",
+        "实现约束",
+        "能力契约"
+      ],
+      "aliasGroups": [
+        [
+          "prd",
+          "产品需求"
+        ],
+        [
+          "实现",
+          "工程",
+          "技术方案",
+          "接口",
+          "拆解"
+        ]
+      ],
+      "kind": "capability",
+      "sequence": 20,
+      "ownerSkills": [
+        "product-capability"
+      ],
+      "supportingSkills": [],
+      "plane": "domain",
+      "domain": "business-operations",
+      "discipline": "business-ops",
+      "family": "business-productivity"
+    },
+    {
+      "name": "career-profile-build",
+      "aliases": [
+        "从零写简历",
+        "没有简历",
+        "职业档案",
+        "职业经历梳理",
+        "经历盘点",
+        "职业包装"
+      ],
+      "kind": "capability",
+      "sequence": 20,
+      "ownerSkills": [
+        "career-profile-builder"
+      ],
+      "supportingSkills": [],
+      "plane": "domain",
+      "domain": "business-operations",
+      "discipline": "business-ops",
+      "family": "business-productivity"
+    },
+    {
+      "name": "resume-job-tailoring",
+      "aliases": [
+        "写简历",
+        "改简历",
+        "简历优化",
+        "岗位定制",
+        "职位定制",
+        "职位描述",
+        "JD",
+        "求职投递",
+        "投递简历",
+        "resume tailor"
+      ],
+      "suppressedByRoutes": [
+        "career-profile-build"
+      ],
+      "kind": "capability",
+      "sequence": 30,
+      "ownerSkills": [
+        "resume-tailor"
+      ],
+      "supportingSkills": [
+        {
+          "name": "ats-resume-formatting",
+          "whenAliases": [
+            "ATS",
+            "机筛",
+            "Workday",
+            "Greenhouse",
+            "Lever",
+            "iCIMS"
+          ]
+        }
+      ],
+      "plane": "domain",
+      "domain": "business-operations",
+      "discipline": "business-ops",
+      "family": "business-productivity"
+    },
+    {
+      "name": "resume-ats-parse-safety",
+      "aliases": [
+        "ATS",
+        "简历机筛",
+        "简历解析",
+        "招聘系统",
+        "Workday",
+        "Greenhouse",
+        "Lever",
+        "iCIMS",
+        "过机筛"
+      ],
+      "kind": "capability",
+      "sequence": 40,
+      "ownerSkills": [
+        "ats-resume-formatting"
+      ],
+      "supportingSkills": [],
+      "plane": "domain",
+      "domain": "business-operations",
+      "discipline": "business-ops",
+      "family": "business-productivity"
+    },
+    {
+      "name": "authentic-storytelling-introduction",
+      "aliasGroups": [
+        [
+          "介绍",
+          "品牌故事",
+          "人物故事",
+          "创业故事",
+          "项目故事"
+        ],
+        [
+          "真情实感",
+          "真情流露",
+          "有温度",
+          "真实经历",
+          "真诚",
+          "走心",
+          "文艺",
+          "务实",
+          "故事化"
+        ]
+      ],
+      "kind": "capability",
+      "sequence": 20,
+      "ownerSkills": [
+        "article-writing"
+      ],
+      "supportingSkills": [
+        {
+          "name": "brand-voice",
+          "whenAliases": [
+            "我的语气",
+            "我的风格",
+            "参考文章",
+            "参考帖子",
+            "我的写作样本",
+            "保持我的口吻",
+            "品牌声音"
+          ]
+        }
+      ],
+      "plane": "domain",
+      "domain": "business-operations",
+      "discipline": "business-ops",
+      "family": "content-marketing"
+    },
+    {
+      "name": "source-code-learning",
+      "aliases": [
+        "带我读项目源码",
+        "讲解陌生源码",
+        "学习项目代码",
+        "学习项目源码",
+        "从业务和调用流程讲解代码",
+        "初学者理解陌生代码"
+      ],
+      "kind": "capability",
+      "sequence": 35,
+      "ownerSkills": [
+        "code-explanation"
+      ],
+      "supportingSkills": [],
+      "plane": "domain",
+      "domain": "computing-digital",
+      "discipline": "code-engineering",
+      "family": "code-understanding"
     }
   ],
   "skillOverrides": [
-    {
-      "name": "tool-session-optimizer",
-      "plane": "control",
-      "discipline": "project-flow",
-      "family": "skill-system",
-      "aliases": ["最短工具路径", "登录过期", "复用登录", "工具会话", "gui cli", "打开真实界面"],
-      "projectTypes": ["coursework", "commercial-small", "special-large"],
-      "phases": ["operate", "release"],
-      "platforms": ["windows-local", "browser", "cli", "desktop-app"],
-      "riskTags": ["authenticated-session", "human-gate", "context-budget"]
-    },
     {
       "name": "skill-library-router",
       "plane": "control",
       "discipline": "project-flow",
       "family": "skill-system",
-      "aliases": ["skill路由", "技能检索", "原子skill", "上下文精简"],
-      "projectTypes": ["coursework", "commercial-small", "special-large"],
-      "phases": ["inspect", "design"],
-      "platforms": ["codex"],
-      "riskTags": ["context-budget"]
+      "aliases": [
+        "skill路由",
+        "技能检索",
+        "原子skill",
+        "上下文精简"
+      ],
+      "projectTypes": [
+        "coursework",
+        "commercial-small",
+        "special-large"
+      ],
+      "phases": [
+        "inspect",
+        "design"
+      ],
+      "platforms": [
+        "codex"
+      ],
+      "riskTags": [
+        "context-budget"
+      ]
     },
     {
       "name": "syhprojectskill",
       "plane": "control",
       "discipline": "project-flow",
       "family": "skill-system",
-      "aliases": ["项目分类", "作业项目", "商用小项目", "特殊大项目", "项目指纹"],
-      "projectTypes": ["coursework", "commercial-small", "special-large"],
-      "phases": ["inspect", "design"],
-      "platforms": ["project"],
-      "riskTags": ["scope-boundary"]
+      "aliases": [
+        "项目分类",
+        "作业项目",
+        "商用小项目",
+        "特殊大项目",
+        "项目指纹"
+      ],
+      "projectTypes": [
+        "coursework",
+        "commercial-small",
+        "special-large"
+      ],
+      "phases": [
+        "inspect",
+        "design"
+      ],
+      "platforms": [
+        "project"
+      ],
+      "riskTags": [
+        "scope-boundary"
+      ]
     },
     {
       "name": "large-project-ops",
       "plane": "control",
       "discipline": "project-flow",
       "family": "project-control",
-      "aliases": ["大项目拆分", "agent任务包", "多服务项目"],
-      "projectTypes": ["special-large"],
-      "phases": ["inspect", "design", "implement"],
-      "platforms": ["multi-service"],
-      "riskTags": ["cross-system"]
-    },
-    {
-      "name": "work-handoff",
-      "plane": "control",
-      "discipline": "project-flow",
-      "family": "continuity-memory",
-      "aliases": ["工作交接", "当前现状", "后续任务", "下一个人"],
-      "projectTypes": ["commercial-small", "special-large"],
-      "phases": ["handoff"],
-      "platforms": ["project"],
-      "riskTags": ["continuity"]
+      "aliases": [
+        "大项目拆分",
+        "agent任务包",
+        "多服务项目"
+      ],
+      "projectTypes": [
+        "special-large"
+      ],
+      "phases": [
+        "inspect",
+        "design",
+        "implement"
+      ],
+      "platforms": [
+        "multi-service"
+      ],
+      "riskTags": [
+        "cross-system"
+      ]
     },
     {
       "name": "local-experience",
       "plane": "control",
       "discipline": "project-flow",
       "family": "continuity-memory",
-      "aliases": ["本机经验", "历史踩坑", "机器特定"],
-      "projectTypes": ["coursework", "commercial-small", "special-large"],
-      "phases": ["inspect"],
-      "platforms": ["windows-local"],
-      "riskTags": ["historical-only"]
+      "aliases": [
+        "本机经验",
+        "历史踩坑",
+        "机器特定"
+      ],
+      "projectTypes": [
+        "coursework",
+        "commercial-small",
+        "special-large"
+      ],
+      "phases": [
+        "inspect"
+      ],
+      "platforms": [
+        "windows-local"
+      ],
+      "riskTags": [
+        "historical-only"
+      ]
     },
     {
       "name": "external-browser",
       "discipline": "browser-desktop",
       "family": "authenticated-session",
-      "aliases": ["已有edge", "已登录edge", "当前浏览器", "复用登录", "云控制台"],
-      "projectTypes": ["commercial-small", "special-large"],
-      "phases": ["operate", "release"],
-      "platforms": ["edge", "chrome", "cloud-console"],
-      "riskTags": ["authenticated-session", "external-write"]
+      "aliases": [
+        "已有edge",
+        "已登录edge",
+        "当前浏览器",
+        "复用登录",
+        "云控制台"
+      ],
+      "projectTypes": [
+        "commercial-small",
+        "special-large"
+      ],
+      "phases": [
+        "operate",
+        "release"
+      ],
+      "platforms": [
+        "edge",
+        "chrome",
+        "cloud-console"
+      ],
+      "riskTags": [
+        "authenticated-session",
+        "external-write"
+      ]
     },
     {
       "name": "ui-image-parity",
       "discipline": "frontend-ui",
       "family": "implementation-parity",
-      "aliases": ["截图还原", "视觉一致", "像素级", "同尺寸对比"],
-      "projectTypes": ["coursework", "commercial-small", "special-large"],
-      "phases": ["implement", "verify"],
-      "platforms": ["web-ui"],
-      "riskTags": ["visual-evidence"]
-    },
-    {
-      "name": "evidence-based-acceptance",
-      "plane": "control",
-      "discipline": "security-quality",
-      "family": "quality-testing",
-      "aliases": ["已修复", "已完成", "是否好用", "验收", "证据等级", "运行时验证"],
-      "projectTypes": ["coursework", "commercial-small", "special-large"],
-      "phases": ["verify", "release"],
-      "platforms": [],
-      "riskTags": ["claim-gate", "runtime-evidence"]
+      "aliases": [
+        "截图还原",
+        "视觉一致",
+        "像素级",
+        "同尺寸对比"
+      ],
+      "projectTypes": [
+        "coursework",
+        "commercial-small",
+        "special-large"
+      ],
+      "phases": [
+        "implement",
+        "verify"
+      ],
+      "platforms": [
+        "web-ui"
+      ],
+      "riskTags": [
+        "visual-evidence"
+      ]
     },
     {
       "name": "wechat-miniprogram-engineering",
       "discipline": "mobile-interactive",
       "family": "wechat-miniprogram",
-      "aliases": ["微信小程序", "tabbar", "开发者工具", "体验版", "app.json"],
-      "projectTypes": ["commercial-small", "special-large", "coursework"],
-      "phases": ["inspect", "implement", "verify", "release"],
-      "platforms": ["wechat-miniprogram"],
-      "riskTags": ["user-visible-runtime", "release-boundary"]
+      "aliases": [
+        "微信小程序",
+        "tabbar",
+        "开发者工具",
+        "体验版",
+        "app.json"
+      ],
+      "projectTypes": [
+        "commercial-small",
+        "special-large",
+        "coursework"
+      ],
+      "phases": [
+        "inspect",
+        "implement",
+        "verify",
+        "release"
+      ],
+      "platforms": [
+        "wechat-miniprogram"
+      ],
+      "riskTags": [
+        "user-visible-runtime",
+        "release-boundary"
+      ]
     },
     {
       "name": "esp32-device-ops",
       "discipline": "hardware-iot",
       "family": "embedded-device",
-      "aliases": ["esp32", "esp32-s3", "串口", "刷机", "esptool", "固件备份"],
-      "projectTypes": ["special-large", "coursework"],
-      "phases": ["inspect", "implement", "verify", "operate"],
-      "platforms": ["esp32", "serial", "firmware"],
-      "riskTags": ["physical-device", "irreversible-flash"]
+      "aliases": [
+        "esp32",
+        "esp32-s3",
+        "串口",
+        "刷机",
+        "esptool",
+        "固件备份"
+      ],
+      "projectTypes": [
+        "special-large",
+        "coursework"
+      ],
+      "phases": [
+        "inspect",
+        "implement",
+        "verify",
+        "operate"
+      ],
+      "platforms": [
+        "esp32",
+        "serial",
+        "firmware"
+      ],
+      "riskTags": [
+        "physical-device",
+        "irreversible-flash"
+      ]
     },
     {
       "name": "database-migrations",
       "discipline": "data-database",
       "family": "database-schema",
-      "aliases": ["数据库迁移", "表结构迁移", "数据库回滚", "零停机迁移"],
-      "projectTypes": ["commercial-small", "special-large"],
-      "phases": ["design", "implement", "verify", "release"],
-      "platforms": ["database"],
-      "riskTags": ["data-mutation", "rollback"]
+      "aliases": [
+        "数据库迁移",
+        "表结构迁移",
+        "数据库回滚",
+        "零停机迁移"
+      ],
+      "projectTypes": [
+        "commercial-small",
+        "special-large"
+      ],
+      "phases": [
+        "design",
+        "implement",
+        "verify",
+        "release"
+      ],
+      "platforms": [
+        "database"
+      ],
+      "riskTags": [
+        "data-mutation",
+        "rollback"
+      ]
     },
     {
       "name": "cisco-ios-patterns",
       "discipline": "devops-runtime",
       "family": "network-infrastructure",
-      "aliases": ["cisco ios", "ios-xe", "交换机", "路由器配置"],
-      "projectTypes": ["commercial-small", "special-large", "coursework"],
-      "phases": ["inspect", "design", "verify", "operate"],
-      "platforms": ["cisco-ios", "network-device"],
-      "riskTags": ["network-change"]
+      "aliases": [
+        "cisco ios",
+        "ios-xe",
+        "交换机",
+        "路由器配置"
+      ],
+      "projectTypes": [
+        "commercial-small",
+        "special-large",
+        "coursework"
+      ],
+      "phases": [
+        "inspect",
+        "design",
+        "verify",
+        "operate"
+      ],
+      "platforms": [
+        "cisco-ios",
+        "network-device"
+      ],
+      "riskTags": [
+        "network-change"
+      ]
     },
     {
       "name": "academic-research-suite",
       "discipline": "research-knowledge",
       "family": "scholarly-research",
-      "aliases": ["科研", "学术论文", "文献综述", "引用核验", "实验设计"],
-      "projectTypes": ["coursework", "special-large"],
-      "phases": ["inspect", "design", "implement", "verify"],
-      "platforms": ["academic"],
-      "riskTags": ["source-integrity", "citation-integrity"]
+      "aliases": [
+        "科研",
+        "学术论文",
+        "文献综述",
+        "引用核验",
+        "实验设计"
+      ],
+      "projectTypes": [
+        "coursework",
+        "special-large"
+      ],
+      "phases": [
+        "inspect",
+        "design",
+        "implement",
+        "verify"
+      ],
+      "platforms": [
+        "academic"
+      ],
+      "riskTags": [
+        "source-integrity",
+        "citation-integrity"
+      ]
+    },
+    {
+      "name": "product-discovery",
+      "discipline": "business-ops",
+      "family": "product-discovery",
+      "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "architecture-decisions",
+      "discipline": "code-engineering",
+      "family": "architecture-decisions",
+      "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "interaction-design",
+      "discipline": "frontend-ui",
+      "family": "interaction-design",
+      "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "systematic-debugging",
+      "discipline": "security-quality",
+      "family": "debugging",
+      "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "vue-engineering",
+      "discipline": "frontend-ui",
+      "family": "web-ui",
+      "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "nextjs-engineering",
+      "discipline": "frontend-ui",
+      "family": "web-ui",
+      "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "shadcn-ui",
+      "discipline": "frontend-ui",
+      "family": "design-system",
+      "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "cn-natural-business-writing",
+      "discipline": "business-ops",
+      "family": "business-productivity",
+      "aliases": [
+        "中文客户",
+        "商务方案",
+        "项目方案",
+        "客户汇报",
+        "提案"
+      ],
+      "projectTypes": [
+        "commercial-small",
+        "special-large"
+      ],
+      "phases": [
+        "design",
+        "implement"
+      ],
+      "platforms": [
+        "word",
+        "ppt"
+      ],
+      "riskTags": []
+    },
+    {
+      "name": "office-business-design",
+      "discipline": "documents-media",
+      "family": "documents-pdf",
+      "aliases": [
+        "商务ppt",
+        "汇报ppt",
+        "演示文稿",
+        "客户汇报",
+        "word排版"
+      ],
+      "projectTypes": [
+        "commercial-small",
+        "special-large"
+      ],
+      "phases": [
+        "design",
+        "implement",
+        "verify"
+      ],
+      "platforms": [
+        "word",
+        "excel",
+        "ppt"
+      ],
+      "riskTags": []
+    },
+    {
+      "name": "ai-manju",
+      "discipline": "ai-ml",
+      "family": "ai-media",
+      "aliases": [
+        "ai漫剧",
+        "ai 漫剧",
+        "漫剧",
+        "漫剧创作",
+        "漫画剧"
+      ],
+      "projectTypes": [],
+      "phases": [
+        "design",
+        "implement"
+      ],
+      "platforms": [
+        "ai-video"
+      ],
+      "riskTags": []
+    },
+    {
+      "name": "photoshop-editing",
+      "discipline": "documents-media",
+      "family": "image-production",
+      "aliases": [
+        "photoshop",
+        "ps修图",
+        "raw修图",
+        "camera raw"
+      ],
+      "projectTypes": [],
+      "phases": [
+        "implement",
+        "verify"
+      ],
+      "platforms": [
+        "photoshop"
+      ],
+      "riskTags": []
+    },
+    {
+      "name": "video-editor",
+      "discipline": "documents-media",
+      "family": "video-motion",
+      "aliases": [
+        "口播剪辑",
+        "B-roll合成",
+        "高亮字幕",
+        "短视频合成"
+      ],
+      "projectTypes": [],
+      "phases": [
+        "implement",
+        "verify"
+      ],
+      "platforms": [
+        "video"
+      ],
+      "riskTags": []
+    },
+    {
+      "name": "davinci-resolve-color",
+      "discipline": "documents-media",
+      "family": "video-motion",
+      "aliases": [
+        "达芬奇",
+        "DaVinci Resolve",
+        "视频调色",
+        "LUT调色"
+      ],
+      "projectTypes": [],
+      "phases": [
+        "implement",
+        "verify"
+      ],
+      "platforms": [
+        "davinci"
+      ],
+      "riskTags": []
+    },
+    {
+      "name": "speech",
+      "discipline": "documents-media",
+      "family": "audio-speech",
+      "aliases": [
+        "配音",
+        "旁白",
+        "语音合成",
+        "文字转语音"
+      ],
+      "projectTypes": [],
+      "phases": [
+        "implement"
+      ],
+      "platforms": [
+        "audio"
+      ],
+      "riskTags": []
+    },
+    {
+      "name": "social",
+      "discipline": "documents-media",
+      "family": "creative-media",
+      "aliases": [
+        "抖音",
+        "短视频发布",
+        "内容发布"
+      ],
+      "projectTypes": [],
+      "phases": [
+        "design",
+        "release"
+      ],
+      "platforms": [
+        "douyin"
+      ],
+      "riskTags": [
+        "external-write"
+      ]
+    },
+    {
+      "name": "unity-csharp-scripting",
+      "discipline": "mobile-interactive",
+      "family": "game-interaction",
+      "aliases": [
+        "unity",
+        "unity手游",
+        "unity游戏",
+        "手游开发"
+      ],
+      "projectTypes": [],
+      "phases": [
+        "design",
+        "implement",
+        "verify"
+      ],
+      "platforms": [
+        "unity"
+      ],
+      "riskTags": []
+    },
+    {
+      "name": "rpg",
+      "discipline": "mobile-interactive",
+      "family": "game-interaction",
+      "aliases": [
+        "rpg",
+        "角色扮演",
+        "武侠游戏",
+        "任务系统"
+      ],
+      "projectTypes": [],
+      "phases": [
+        "design",
+        "implement"
+      ],
+      "platforms": [
+        "game"
+      ],
+      "riskTags": []
+    },
+    {
+      "name": "backend-patterns",
+      "discipline": "backend-api",
+      "family": "api-contracts",
+      "aliases": [
+        "游戏服务器",
+        "本地服务器",
+        "离线服务",
+        "服务端架构"
+      ],
+      "projectTypes": [],
+      "phases": [
+        "design",
+        "implement",
+        "verify"
+      ],
+      "platforms": [
+        "server"
+      ],
+      "riskTags": []
+    },
+    {
+      "name": "career-profile-builder",
+      "discipline": "business-ops",
+      "family": "business-productivity",
+      "aliases": [
+        "职业档案",
+        "职业经历梳理",
+        "从零写简历",
+        "没有简历",
+        "职业包装"
+      ],
+      "projectTypes": [],
+      "phases": [
+        "design",
+        "implement"
+      ],
+      "platforms": [
+        "career"
+      ],
+      "riskTags": []
+    },
+    {
+      "name": "resume-tailor",
+      "discipline": "business-ops",
+      "family": "business-productivity",
+      "aliases": [
+        "写简历",
+        "改简历",
+        "简历优化",
+        "岗位定制",
+        "JD",
+        "职位描述",
+        "求职投递"
+      ],
+      "projectTypes": [],
+      "phases": [
+        "implement"
+      ],
+      "platforms": [
+        "word",
+        "docx",
+        "pdf"
+      ],
+      "riskTags": []
+    },
+    {
+      "name": "ats-resume-formatting",
+      "discipline": "business-ops",
+      "family": "business-productivity",
+      "aliases": [
+        "ATS",
+        "简历机筛",
+        "简历解析",
+        "Workday",
+        "Greenhouse",
+        "Lever",
+        "iCIMS",
+        "简历格式"
+      ],
+      "projectTypes": [],
+      "phases": [
+        "verify"
+      ],
+      "platforms": [
+        "docx",
+        "pdf",
+        "ats"
+      ],
+      "riskTags": []
+    },
+    {
+      "name": "code-explanation",
+      "plane": "domain",
+      "discipline": "code-engineering",
+      "family": "code-understanding",
+      "aliases": [
+        "代码讲解",
+        "源码解读",
+        "读懂项目代码",
+        "代码走读",
+        "初学者学源码",
+        "为什么这样写代码",
+        "VS Code 学习源码"
+      ],
+      "projectTypes": [],
+      "phases": [
+        "inspect",
+        "implement",
+        "verify"
+      ],
+      "platforms": [
+        "vscode",
+        "code-editor"
+      ],
+      "riskTags": []
     }
   ]
 }

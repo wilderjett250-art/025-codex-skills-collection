@@ -1,6 +1,6 @@
 ---
 name: office-business-design
-description: "Design or revise polished business Word, Excel, and PowerPoint files so the writing, structure, and visual choices resemble careful human office work. Use with Documents, Spreadsheets, or Presentations for Chinese, executive, client-facing, or visually polished deliverables; preserve supplied templates."
+description: "Design or revise polished business Word, Excel, and PowerPoint deliverables. Use with Documents, Spreadsheets, or Presentations for Chinese, executive, or client-facing work; preserve supplied templates."
 ---
 
 # Office 商务成品设计

@@ -1,34 +1,22 @@
 ---
 name: skill-library-router
-description: 'Route non-trivial local or compound work to one owner Skill per atomic capability, using the local library only when runtime Skills do not already cover it.'
+description: Find task-relevant on-demand local Skills when no already-available Skill fits; search metadata, compare matches, and load only the selected specialist.
 ---
+# Find the right Skill
+Use the actual request, conversation, confirmed platform and all already-available Skill descriptions first. Routine work needs no extra Skill.
+1. Match the capability to the user's real intent; examples, negation, quoted requirements and future phases do not authorize work.
+2. If a specialist would materially help, regardless of task size, search once with task + object + platform using `skill-library/scripts/find-skills.mjs`. Reuse unchanged results rather than searching on every message.
+3. Return at most three names/descriptions/paths and compare scope. For the selected current-stage catalog Skill, run `node <library>/scripts/read-skill.mjs <exact-catalog-name>` to load its entire SKILL.md and record a metadata-only local load event. If the helper is unavailable, read that SKILL.md directly and say the local load counter will miss it. Supporting references load only for a concrete need. A load event means instructions were delivered, not that the workflow was applied or counted by Codex's built-in activity page.
+4. If search misses, rephrase once using a specific synonym or remove an unnecessary platform filter. If still unsuitable, proceed with available capabilities and state only a material gap; never treat no-match as proof that the capability does not exist.
+5. Prefer a matching Skill already available in this session. Keep access methods and acceptance gates separate from domain ownership. A compound request can have several real work units, but do not preload their future phases.
+   For a new app whose users/problem/MVP are still undecided, discover product-discovery first. Use interaction-design for flows and recovery; visual styling follows the established journey. Use architecture-decisions for consequential technical tradeoffs. Existing briefs or small fixes do not require repeating these stages.
+6. Reuse a Skill body already present and unchanged in context; re-read only after relevant changes or loss of needed content. A disk cache does not prove the model still has its instructions.
 
-# Skill Library Router
+Metadata search (resolve the actual Codex home; `CODEX_HOME` overrides the default):
+    node <codex-home>/skill-library/scripts/find-skills.mjs --query "React render performance" --limit 3
 
-Keep discovery cheap while making the user's taxonomy operational. Routine work needs no extra routing.
+Useful queries: 产品定位 MVP; 用户流程 表单体验; 架构 技术选型; React 组件性能; Node 接口校验; Playwright 端到端测试.
+Add -Domain/-Discipline/-Family only when that filter is known; use listing switches for taxonomy browsing. Names in discovery-profile.json are curated retrieval hints, not a second instruction catalogue.
+Metadata search uses search-skills.mjs. Optional explicit lexical lookup uses route-task.mjs and route-core.mjs. Rebuild catalog.json after Skill metadata/move changes. Validate lexical regression with route-task.test.mjs and independent retrieval cases with search-skills.test.mjs.
 
-1. Match the user's actual request, confirmed platform, and current phase. Examples, negations, quoted requirements, and future phases do not authorize a separate work unit.
-2. Reuse a `skillRoute` result already supplied by the `UserPromptSubmit` Hook for the current prompt; do not run the router again. If no result was supplied or it is clearly inconsistent with the prompt, query the user's full prompt. The result separates capability work units, access methods, and control Skills without loading Skill bodies:
-
-   macOS/Linux:
-
-   `node "${CODEX_HOME:-$HOME/.codex}/skill-library/scripts/route-task.mjs" --prompt "<current user request>" --limit 5`
-
-   Windows PowerShell:
-
-   `$codexRoot = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $env:USERPROFILE '.codex' }; node "$codexRoot\skill-library\scripts\route-task.mjs" --prompt "<current user request>" --limit 5`
-
-3. Treat every `workUnit` independently. Each must have exactly one owner and one canonical path: `plane/domain/discipline/family/skill`. A compound request may yield several work units; do not demote a second capability to generic support.
-4. Prefer a matching runtime-provided system or plugin Skill when it directly owns a work unit. Use the local library only for missing specialization; do not duplicate plugin Skills merely for indexing.
-5. If routing returns no suitable owner, rephrase the search once with a concrete synonym or remove an unnecessary platform filter. Return at most three candidates with their name, scope, and path. If it still misses, proceed with available capabilities and state only the material gap.
-6. Use [domain-routing.md](references/domain-routing.md) only when the result needs a manual domain/discipline/family drill-down. Examples:
-
-   `node "${CODEX_HOME:-$HOME/.codex}/skill-library/scripts/find-skills.mjs" --domain computing-digital --list-disciplines`
-
-   `node "${CODEX_HOME:-$HOME/.codex}/skill-library/scripts/find-skills.mjs" --domain computing-digital --discipline frontend-ui --family implementation-parity --query "Vue screenshot"`
-
-7. Read each required owner Skill's complete `SKILL.md`, then only the resources it routes to. Add listed support only for a real dependency or gate. Reuse an unchanged Skill body already in context; re-read only after a relevant change or loss of needed content.
-8. `accessSkills` describe how to reach the target, such as the user's existing Edge session. `controlSkills` govern routing, handoff, decomposition, or acceptance. Neither replaces a capability owner.
-9. Project `AGENTS.md`, current user authority, and safety rules still govern execution. Rebuild or rematerialize the catalog after changing the library.
-
-The index is at `~/.codex/skill-library/catalog.json`, business aliases at `routing-profile.json`, and complete cold Skills under `~/.codex/skill-library/leaves/`.
+MCP is a separate access layer. Before relying on a configured MCP, verify its tool is callable in this task. `enabled = true` in config alone is not runtime proof; a session started before a config change may need a new task or app restart. Do not enable all dormant MCPs or assume the activity dashboard includes local Skill loads. The local report is `node <library>/scripts/activity-report.mjs --days 7`.

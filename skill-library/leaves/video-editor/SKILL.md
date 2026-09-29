@@ -1,11 +1,11 @@
 ---
 name: video-editor
-description: '用于 9:16 和 16:9 短视频剪辑、片头、动效、B-roll 合成和 Whisper 高亮字幕。触发后先确认只做字幕、标题、动画/整片，还是全流程；需要实拍素材时再调用 footage-finder。'
+description: '用于现有口播素材的短视频合成：9:16/16:9/3:4 片头、B-roll、动效与高亮字幕，基于本 Skill 的 FFmpeg/HTML 模板流程。'
 ---
 
 # Video Editor · 视频工人
 
-把 9:16 / 16:9 talking-head 口播 + 叠层素材（标题 / B-roll cutaway / chyron / 字幕）合成出短视频。合成核心**自给自足**；实拍 stock / 新闻卡素材由本 skill 当总指挥派活给 footage-finder / news-highlight 抓取。
+把 9:16 / 16:9 talking-head 口播 + 叠层素材（标题 / B-roll cutaway / chyron / 字幕）合成出短视频。合成核心**自给自足**；实拍 stock / 新闻卡素材由本 skill 当总指挥派活给 footage-finder / news-highlight 抓取。本流程不适用于本机 DaVinci Resolve 调色；该任务交给 `davinci-resolve-color`。
 
 ## 何时触发
 
