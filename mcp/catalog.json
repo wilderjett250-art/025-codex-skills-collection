@@ -236,6 +236,23 @@
     "category": "design",
     "installMode": "manual",
     "requirements": ["Figma desktop", "Figma console MCP bridge"],
-    "note": "Requires a local port/bridge and the friend's own Figma session."
+    "note": "Requires a local port/bridge and the user's own Figma session."
+  },
+  {
+    "name": "memory",
+    "category": "core",
+    "installMode": "auto",
+    "type": "stdio",
+    "command": "npx",
+    "args": ["-y", "@modelcontextprotocol/server-memory"],
+    "requirements": ["Node.js"],
+    "note": "Generic memory MCP only; no local memory or knowledge data is bundled."
+  },
+  {
+    "name": "cua_repl",
+    "category": "development",
+    "installMode": "manual",
+    "requirements": ["Codex desktop app", "matching app-provided computer-use runtime"],
+    "note": "Use the installed app's current bridge. Version-specific executable paths and sessions are not portable."
   }
 ]

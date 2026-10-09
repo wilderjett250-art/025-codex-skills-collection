@@ -1,0 +1,38 @@
+# Credential-free defaults; review before merging into config.toml.
+model = "gpt-6.1-sol"
+model_reasoning_effort = "high"
+model_verbosity = "low"
+personality = "pragmatic"
+plan_mode_reasoning_effort = "medium"
+check_for_update_on_startup = false
+web_search = "live"
+approval_policy = "never"
+approvals_reviewer = "user"
+sandbox_mode = "danger-full-access"
+service_tier = "default"
+
+[features]
+hooks = true
+multi_agent = true
+prevent_idle_sleep = false
+memories = true
+chronicle = false
+responses_websockets = true
+responses_websockets_v2 = true
+js_repl = false
+
+[analytics]
+enabled = true
+
+[windows]
+sandbox = "elevated"
+
+[memories]
+disable_on_external_context = true
+
+[desktop]
+followUpQueueMode = "steer"
+open-link-in-target-preference = "external-browser"
+show-context-window-usage = true
+enabled-reasoning-efforts = ["low", "medium", "high", "xhigh", "ultra", "max"]
+git-branch-prefix = "hao/"

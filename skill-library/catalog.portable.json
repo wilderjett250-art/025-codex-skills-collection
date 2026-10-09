@@ -1356,7 +1356,6 @@
       "tags": [
         "ai-ml",
         "ui",
-        "automation",
         "ai"
       ],
       "aliases": [],
@@ -1368,7 +1367,7 @@
       "source": "library",
       "relativePath": "chatgpt-apps",
       "skillPath": "skill-library/leaves/chatgpt-apps/SKILL.md",
-      "trigger": "Build, scaffold, refactor, and troubleshoot ChatGPT Apps SDK applications that combine an MCP server and widget UI. Use when Codex needs to design tools, register UI resources, wire the MCP Apps bridge or ChatGPT compatibility APIs, apply Apps SDK metadata or CSP or domain settings, or produce a docs-aligned project scaffold. Prefer a docs-first workflow by invoking the openai-docs skill or OpenAI developer docs MCP tools before generating code."
+      "trigger": "Use to build or troubleshoot ChatGPT Apps SDK projects that combine an MCP server and widget UI, including tools, UI resources, bridge APIs, metadata, CSP, and domain configuration."
     },
     {
       "name": "drama",
@@ -1570,7 +1569,7 @@
       "source": "library",
       "relativePath": "cli-creator",
       "skillPath": "skill-library/leaves/cli-creator/SKILL.md",
-      "trigger": "Build a composable CLI for Codex from API docs, an OpenAPI spec, existing curl examples, an SDK, a web app, an admin tool, or a local script. Use when the user wants Codex to create a command-line tool that can run from any repo, expose composable read/write commands, return stable JSON, manage auth, and pair with a companion skill."
+      "trigger": "Use to build a composable, repo-independent CLI from API docs, OpenAPI, curl examples, an SDK, web or admin behavior, or an existing local script."
     },
     {
       "name": "cost-aware-llm-pipeline",
@@ -1763,7 +1762,7 @@
       "source": "library",
       "relativePath": "aspnet-core",
       "skillPath": "skill-library/leaves/aspnet-core/SKILL.md",
-      "trigger": "Build, review, refactor, or architect ASP.NET Core web applications using current official guidance for .NET web development. Use when working on Blazor Web Apps, Razor Pages, MVC, Minimal APIs, controller-based Web APIs, SignalR, gRPC, middleware, dependency injection, configuration, authentication, authorization, testing, performance, deployment, or ASP.NET Core upgrades."
+      "trigger": "Use for ASP.NET Core, Blazor, Razor Pages, MVC, Minimal APIs, Web APIs, SignalR, gRPC, middleware, DI, auth, testing, performance, deployment, or framework upgrades."
     },
     {
       "name": "django-engineering",
@@ -2079,8 +2078,7 @@
       "tags": [
         "browser-desktop",
         "web",
-        "ui",
-        "data"
+        "ui"
       ],
       "aliases": [],
       "projectTypes": [],
@@ -2091,7 +2089,7 @@
       "source": "library",
       "relativePath": "playwright",
       "skillPath": "skill-library/leaves/playwright/SKILL.md",
-      "trigger": "Use when the task requires automating a real browser from the terminal (navigation, form filling, snapshots, screenshots, data extraction, UI-flow debugging) via `playwright-cli` or the bundled wrapper script."
+      "trigger": "Use for real-browser automation, form filling, screenshots, extraction, UI-flow debugging, Playwright CLI, or explicitly requested persistent browser or Electron interaction through js_repl."
     },
     {
       "name": "windows-desktop-e2e",
@@ -2161,6 +2159,28 @@
       "relativePath": "unified-notifications-ops",
       "skillPath": "skill-library/leaves/unified-notifications-ops/SKILL.md",
       "trigger": "Operate and audit notification routing, deduplication, escalation, and inbox consolidation across GitHub, Linear, desktop alerts, hooks, and connected communication surfaces."
+    },
+    {
+      "name": "winui-app",
+      "directory": "winui-app",
+      "plane": "domain",
+      "domain": "computing-digital",
+      "discipline": "browser-desktop",
+      "family": "desktop-capture",
+      "canonicalPath": "domain/computing-digital/browser-desktop/desktop-capture/winui-app",
+      "tags": [
+        "browser-desktop"
+      ],
+      "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
+      "riskTags": [],
+      "role": "candidate",
+      "source": "library",
+      "relativePath": "winui-app",
+      "skillPath": "skill-library/leaves/winui-app/SKILL.md",
+      "trigger": "Use for WinUI 3 desktop applications with C#, XAML, and Windows App SDK, including setup, controls, navigation, windowing, theming, accessibility, performance, and deployment."
     },
     {
       "name": "architecture-decisions",
@@ -4360,29 +4380,6 @@
       "relativePath": "vue-engineering",
       "skillPath": "skill-library/leaves/vue-engineering/SKILL.md",
       "trigger": "Implement or debug Vue 3 components, reactivity, Pinia state, Vue Router and Vue component tests. Vue开发、状态不更新、路由守卫、组件测试。Not React or visual direction."
-    },
-    {
-      "name": "winui-app",
-      "directory": "winui-app",
-      "plane": "domain",
-      "domain": "computing-digital",
-      "discipline": "frontend-ui",
-      "family": "web-ui",
-      "canonicalPath": "domain/computing-digital/frontend-ui/web-ui/winui-app",
-      "tags": [
-        "frontend-ui",
-        "ui"
-      ],
-      "aliases": [],
-      "projectTypes": [],
-      "phases": [],
-      "platforms": [],
-      "riskTags": [],
-      "role": "candidate",
-      "source": "library",
-      "relativePath": "winui-app",
-      "skillPath": "skill-library/leaves/winui-app/SKILL.md",
-      "trigger": "Bootstrap, develop, and design modern WinUI 3 desktop applications with C# and the Windows App SDK using official Microsoft guidance, WinUI Gallery patterns, Windows App SDK samples, and CommunityToolkit components. Use when creating a brand new app, preparing a machine for WinUI, reviewing, refactoring, planning, troubleshooting, environment-checking, or setting up WinUI 3 XAML, controls, navigation, windowing, theming, accessibility, responsiveness, performance, deployment, or related Windows app design and development work."
     },
     {
       "name": "design-game-design-fundamentals",

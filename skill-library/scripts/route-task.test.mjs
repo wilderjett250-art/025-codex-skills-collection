@@ -104,8 +104,7 @@ for (const test of cases) {
 for (const id of ['original-skill-audit', 'current-followup', 'password-not-word', 'literal-shell-text', 'compound-api-deploy']) {
   check(`${id}:powershell-entrypoint`, () => {
     const test = cases.find((c) => c.id === id);
-    const actual = JSON.parse(run('pwsh', ['-NoProfile', '-File', path.join(root, 'scripts', 'route-task.ps1'),
-      '-Prompt', test.prompt, '-Limit', '20', '-AsJson', '-CatalogPath', catalogPath, '-ProfilePath', profilePath]));
+    const actual = JSON.parse(run('pwsh', ['-NoProfile', '-File', path.join(root, 'scripts', 'route-task.ps1'), '-Prompt', test.prompt, '-Limit', '20', '-AsJson', '-CatalogPath', catalogPath, '-ProfilePath', profilePath]));
     assert.deepEqual(actual, routeTask(test.prompt, catalog, profile, 20));
   });
 }

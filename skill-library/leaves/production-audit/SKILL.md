@@ -41,7 +41,7 @@ remote code, upload repository contents to third-party services, or call
 external scanners unless the user explicitly approves that specific tool and
 data flow.
 
-For an explicitly requested read-only Sentry issue, event, or health inspection, read `<CODEX_HOME>\skill-library\leaves\sentry\SKILL.md` and use it only when its CLI and account configuration are available.
+For an explicitly requested read-only Sentry issue, event, or health inspection, read `canonical/sentry/SKILL.md` and use it only when its CLI and account configuration are available.
 
 Use this order:
 

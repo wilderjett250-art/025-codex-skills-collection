@@ -6,9 +6,10 @@
 
 - 9 个常驻 Skill 提供精确入口；290 个按需 Skill 保存在冷库中。
 - 元数据检索最多返回 3 个候选，只在选定后读取完整 Skill；本地读取器可记录元数据级的加载次数。
-- 31 个可移植 MCP 条目按照开发、研究、设计、视频和工程场景分组。
+- 33 个非知识库 MCP 条目按照开发、研究、设计、视频和工程场景分组；另附本机启停状态的无凭证快照。
 - 25 个插件预设用于恢复对应的官方能力来源。
 - Windows 和 macOS 安装器会备份同名配置并完成安装。
+- `presets/global/` 提供最新全局规则、无凭证 Codex 设置和元数据统计 Hook 模板。
 
 ## Windows 安装
 
@@ -52,9 +53,33 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\install.ps1 -P
 
 ## 更新
 
-用户拉取仓库更新后重新运行安装器可同步仓库中的 Skill、MCP 候选和插件预设，但安装器会保留已有同名 MCP 与用户自定义设置；它不会把本机私有服务自动发布到仓库，也不会覆盖全局 `AGENTS.md` 或 `hooks.json`。
+用户拉取仓库更新后重新运行安装器可同步仓库中的 Skill、MCP 候选和插件预设，但安装器会保留已有同名 MCP 与用户自定义设置。全局规则和 Hook 通过下面的独立命令按需安装。
 
 安装器会在覆盖同名内容前创建备份。大容量 Skill 库请先确认目标盘有足够的备份空间。
+
+### 全局规则与设置
+
+本机 2026-10-10 的全局规则保存在 `presets/global/AGENTS.md`；机器用户名路径已改为 `<codex-home>`，安装时按目标电脑展开。规则内容保留当前版本，包括按需 Skill 路由、权限、备份、证据验证和知识采集开关。
+
+先安装 Skill Library，再选择安装全局规则与统计 Hook：
+
+```bash
+node scripts/install-global.mjs --rules --hook
+# 指定独立安装目录时：
+node scripts/install-global.mjs --target <codex-home> --rules --hook
+```
+
+该命令先校验备份再覆盖 `AGENTS.md`，并将统计 Hook 合并到已有 `hooks.json`，保留其他 Hook。`presets/global/config.defaults.toml` 是本机模型、推理、权限、功能开关、Windows 和桌面偏好的无凭证参考，需手动审核合并；其中模型、权限和沙箱设置不应自动套用到别人的电脑。`settings-scope.json` 说明已导出和需要目标电脑重新配置的项目；项目信任路径、通知程序、私有环境值和 Hook 信任哈希不跨机器复制。安装 Hook 后按 Codex 当前界面完成信任/重载；模板存在不代表实际调用已计数。配置入口参见 [Codex 官方配置文档](https://learn.chatgpt.com/docs/config-file/config-basic)。
+
+`mcp/local-state.json` 记录 33 个非知识库 MCP 的启停状态、环境变量名称和无凭证连接信息，包含启用的百度网盘两个条目。它是配置快照，不会强制改变接收电脑的服务开关，也不证明账号授权或连接可用。
+
+维护者在已审查且有 Git 恢复点的工作副本中，可重新导出当前个人 Skill 和设置：
+
+```bash
+python scripts/export-local.py --home <codex-home> --canonical-root <canonical-skills-root> --date YYYY-MM-DD
+```
+
+导出后仍需审核差异、检查凭证和私有信息、重建目录并验证。导出器不是自动发布工具。`presets/sync-manifest.json` 记录本次同步范围和便携适配；本机软件路径、活动目录和经验手册入口保留参数化版本。
 
 ## 按需检索与本地计数
 
@@ -73,12 +98,15 @@ node <codex-home>/skill-library/scripts/read-skill.mjs davinci-resolve-color
 - `skill-library/` 保存 290 个按需 Skill、目录和路由脚本。
 - `mcp/` 保存 MCP Catalog 和 Profile。
 - `presets/` 保存插件来源预设。
+- `presets/global/` 保存全局规则、无凭证设置及统计 Hook 模板。
 - `scripts/` 保存安装、诊断和路由脚本。
 - `.codex-plugin/` 保存 Codex Plugin 清单。
 
 ## 安全与许可
 
 安装器通过环境变量和本机配置接收服务凭据。
+
+仓库不包含个人知识库、经验手册正文、聊天归档、账号凭证、登录会话、应用程序、虚拟环境或插件缓存。`memory` 是通用 MCP 安装条目，知识管理类 Skill 也只是操作说明；`personal_knowledge` 私有服务未导出。MCP 手动条目需要目标电脑自行安装软件/桥接并配置授权。
 
 第三方能力继续使用各自的许可证和署名，来源记录位于 `THIRD_PARTY_NOTICES.md` 和 `skill-library/sources-lock.json`。
 

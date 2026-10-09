@@ -7,7 +7,7 @@ description: Retrieve a small, source-located lesson from an operator-maintained
 
 Use only when Windows, browser bridges, deployment, documents, devices, or a recurring local failure could change the decision.
 
-1. Run [scripts/search-experience.ps1](scripts/search-experience.ps1) with an exact `-Query` first and an approved `-ManualPath` (or `CODEX_EXPERIENCE_MANUAL`); use `-Topic` only when the symptom is unknown.
+1. Run [scripts/search-experience.ps1](scripts/search-experience.ps1) with an exact `-Query` first; use `-Topic` only when the symptom is unknown.
 2. Start with four matches and zero surrounding lines; widen context once only when a result is ambiguous.
 3. Apply only entries that change the current decision, then live-verify ports, processes, services, browser registration, project files, or device identity.
 

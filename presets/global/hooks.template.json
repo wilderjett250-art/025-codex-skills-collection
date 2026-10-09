@@ -1,0 +1,18 @@
+{
+  "description": "Metadata-only local MCP activity counter; no prompts, arguments or responses are saved.",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "^mcp__",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"<codex-home>/skill-library/scripts/activity-hook.mjs\"",
+            "async": true,
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

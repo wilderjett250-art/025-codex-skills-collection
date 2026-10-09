@@ -1,0 +1,40 @@
+{
+  "snapshotDate": "2026-10-10",
+  "exportedTopLevelSettings": [
+    "approval_policy",
+    "approvals_reviewer",
+    "check_for_update_on_startup",
+    "model",
+    "model_reasoning_effort",
+    "model_verbosity",
+    "personality",
+    "plan_mode_reasoning_effort",
+    "sandbox_mode",
+    "service_tier",
+    "web_search"
+  ],
+  "exportedSections": [
+    "features",
+    "analytics",
+    "windows",
+    "memories",
+    "desktop"
+  ],
+  "exportedSeparately": [
+    "plugins",
+    "MCP states",
+    "AGENTS.md",
+    "PostToolUse metadata hook"
+  ],
+  "excludedMachineSettings": [
+    "project trust paths",
+    "notification executable paths",
+    "marketplace filesystem locations",
+    "shell environment values",
+    "hook trust hashes"
+  ],
+  "shellEnvironmentKeys": [
+    "NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S"
+  ],
+  "knowledgeDataIncluded": false
+}

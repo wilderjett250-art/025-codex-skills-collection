@@ -1,13 +1,14 @@
 ---
 name: "playwright"
-description: "Use when the task requires automating a real browser from the terminal (navigation, form filling, snapshots, screenshots, data extraction, UI-flow debugging) via `playwright-cli` or the bundled wrapper script."
+description: "Use for real-browser automation, form filling, screenshots, extraction, UI-flow debugging, Playwright CLI, or explicitly requested persistent browser or Electron interaction through js_repl."
 ---
-
 
 # Playwright CLI Skill
 
 Drive a real browser from the terminal using `playwright-cli`. Prefer the bundled wrapper script so the CLI works even when it is not globally installed.
 Treat this skill as CLI-first automation. Do not pivot to `@playwright/test` unless the user explicitly asks for test files.
+
+If the user explicitly requests persistent browser or Electron interaction through `js_repl`, read `canonical/playwright-interactive/SKILL.md` and follow that canonical interactive workflow instead of the CLI branch.
 
 ## Prerequisite check (required)
 

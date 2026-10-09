@@ -13,9 +13,9 @@ For reviews focused on permissive fallback values, default credentials, fail-ope
 
 For these explicit specialist objectives, read the corresponding canonical guide completely and resolve its resources from the canonical directory:
 
-- Python, JavaScript/TypeScript, or Go secure-by-default review: `<CODEX_HOME>\skill-library\leaves\security-best-practices\SKILL.md`
-- Git-history security ownership and bus-factor topology: `<CODEX_HOME>\skill-library\leaves\security-ownership-map\SKILL.md`
-- Repository-grounded threat modeling and abuse paths: `<CODEX_HOME>\skill-library\leaves\security-threat-model\SKILL.md`
+- Python, JavaScript/TypeScript, or Go secure-by-default review: `canonical/security-best-practices/SKILL.md`
+- Git-history security ownership and bus-factor topology: `canonical/security-ownership-map/SKILL.md`
+- Repository-grounded threat modeling and abuse paths: `canonical/security-threat-model/SKILL.md`
 
 ## When to Activate
 

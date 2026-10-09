@@ -89,6 +89,8 @@
     "codegraph",
     "node_repl",
     "jlceda",
-    "figma_console_local"
+    "figma_console_local",
+    "memory",
+    "cua_repl"
   ]
 }

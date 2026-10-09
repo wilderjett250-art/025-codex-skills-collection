@@ -1,0 +1,312 @@
+{
+  "snapshotDate": "2026-10-10",
+  "excluded": [
+    "personal_knowledge"
+  ],
+  "servers": [
+    {
+      "name": "openaiDeveloperDocs",
+      "enabled": false,
+      "transport": "http",
+      "environmentKeys": [],
+      "urlWithoutCredentials": "https://developers.openai.com/mcp",
+      "credentialQueryKeys": []
+    },
+    {
+      "name": "photoshop_basic",
+      "enabled": false,
+      "transport": "stdio",
+      "environmentKeys": [],
+      "commandKind": "photoshop-mcp-server.exe",
+      "requiresLocalCommandConfiguration": true
+    },
+    {
+      "name": "photoshop_mcp",
+      "enabled": false,
+      "transport": "stdio",
+      "environmentKeys": [
+        "ANALYTICS_DISABLED",
+        "PHOTOSHOP_PATH"
+      ],
+      "commandKind": "node.exe",
+      "requiresLocalCommandConfiguration": true
+    },
+    {
+      "name": "davinci_resolve_basic",
+      "enabled": false,
+      "transport": "stdio",
+      "environmentKeys": [],
+      "commandKind": "python.exe",
+      "requiresLocalCommandConfiguration": true
+    },
+    {
+      "name": "davinci_resolve",
+      "enabled": false,
+      "transport": "stdio",
+      "environmentKeys": [
+        "PYTHONDONTWRITEBYTECODE",
+        "PYTHONHOME",
+        "PYTHONPATH",
+        "RESOLVE_SCRIPT_API",
+        "RESOLVE_SCRIPT_LIB"
+      ],
+      "commandKind": "python.exe",
+      "requiresLocalCommandConfiguration": true
+    },
+    {
+      "name": "davinci_resolve_advanced",
+      "enabled": false,
+      "transport": "stdio",
+      "environmentKeys": [],
+      "commandKind": "node.exe",
+      "requiresLocalCommandConfiguration": true
+    },
+    {
+      "name": "filesystem",
+      "enabled": false,
+      "transport": "stdio",
+      "environmentKeys": [],
+      "commandKind": "npx",
+      "requiresLocalCommandConfiguration": true
+    },
+    {
+      "name": "pdf",
+      "enabled": false,
+      "transport": "stdio",
+      "environmentKeys": [],
+      "commandKind": "npx",
+      "requiresLocalCommandConfiguration": true
+    },
+    {
+      "name": "memory",
+      "enabled": false,
+      "transport": "stdio",
+      "environmentKeys": [
+        "MEMORY_FILE_PATH"
+      ],
+      "commandKind": "npx",
+      "requiresLocalCommandConfiguration": true
+    },
+    {
+      "name": "crossref",
+      "enabled": false,
+      "transport": "stdio",
+      "environmentKeys": [],
+      "commandKind": "npx",
+      "requiresLocalCommandConfiguration": true
+    },
+    {
+      "name": "arxiv",
+      "enabled": false,
+      "transport": "stdio",
+      "environmentKeys": [],
+      "commandKind": "npx",
+      "requiresLocalCommandConfiguration": true
+    },
+    {
+      "name": "zotero",
+      "enabled": false,
+      "transport": "stdio",
+      "environmentKeys": [],
+      "commandKind": "npx",
+      "requiresLocalCommandConfiguration": true
+    },
+    {
+      "name": "papers",
+      "enabled": false,
+      "transport": "stdio",
+      "environmentKeys": [],
+      "commandKind": "npx",
+      "requiresLocalCommandConfiguration": true
+    },
+    {
+      "name": "desktop_control",
+      "enabled": false,
+      "transport": "stdio",
+      "environmentKeys": [],
+      "commandKind": "python.exe",
+      "requiresLocalCommandConfiguration": true
+    },
+    {
+      "name": "autocad_mcp",
+      "enabled": false,
+      "transport": "stdio",
+      "environmentKeys": [
+        "AUTOCAD_MCP_BACKEND",
+        "PYTHONDONTWRITEBYTECODE"
+      ],
+      "commandKind": "python.exe",
+      "requiresLocalCommandConfiguration": true
+    },
+    {
+      "name": "autocad_coreconsole",
+      "enabled": false,
+      "transport": "stdio",
+      "environmentKeys": [],
+      "commandKind": "python.exe",
+      "requiresLocalCommandConfiguration": true
+    },
+    {
+      "name": "playwright_mcp",
+      "enabled": false,
+      "transport": "stdio",
+      "environmentKeys": [],
+      "commandKind": "cmd",
+      "requiresLocalCommandConfiguration": true
+    },
+    {
+      "name": "external_browser",
+      "enabled": true,
+      "transport": "stdio",
+      "environmentKeys": [],
+      "commandKind": "node.exe",
+      "requiresLocalCommandConfiguration": true
+    },
+    {
+      "name": "context7",
+      "enabled": false,
+      "transport": "stdio",
+      "environmentKeys": [],
+      "commandKind": "cmd",
+      "requiresLocalCommandConfiguration": true
+    },
+    {
+      "name": "sequential_thinking",
+      "enabled": false,
+      "transport": "stdio",
+      "environmentKeys": [],
+      "commandKind": "cmd",
+      "requiresLocalCommandConfiguration": true
+    },
+    {
+      "name": "serena",
+      "enabled": false,
+      "transport": "stdio",
+      "environmentKeys": [],
+      "commandKind": "cmd",
+      "requiresLocalCommandConfiguration": true
+    },
+    {
+      "name": "github",
+      "enabled": false,
+      "transport": "http",
+      "environmentKeys": [],
+      "urlWithoutCredentials": "https://api.githubcopilot.com/mcp/",
+      "credentialQueryKeys": []
+    },
+    {
+      "name": "firecrawl",
+      "enabled": false,
+      "transport": "stdio",
+      "environmentKeys": [],
+      "commandKind": "npx",
+      "requiresLocalCommandConfiguration": true
+    },
+    {
+      "name": "baidu_netdisk",
+      "enabled": true,
+      "transport": "http",
+      "environmentKeys": [],
+      "urlWithoutCredentials": "https://mcp-pan.baidu.com/sse",
+      "credentialQueryKeys": [
+        "access_token"
+      ]
+    },
+    {
+      "name": "baidu_netdisk_local_uploader",
+      "enabled": true,
+      "transport": "stdio",
+      "environmentKeys": [
+        "BAIDU_NETDISK_ACCESS_TOKEN",
+        "PYTHONDONTWRITEBYTECODE"
+      ],
+      "commandKind": "python.exe",
+      "requiresLocalCommandConfiguration": true
+    },
+    {
+      "name": "drawio",
+      "enabled": false,
+      "transport": "stdio",
+      "environmentKeys": [],
+      "commandKind": "npx",
+      "requiresLocalCommandConfiguration": true
+    },
+    {
+      "name": "biorender",
+      "enabled": false,
+      "transport": "http",
+      "environmentKeys": [],
+      "urlWithoutCredentials": "https://mcp.services.biorender.com/mcp",
+      "credentialQueryKeys": []
+    },
+    {
+      "name": "canva_dev",
+      "enabled": false,
+      "transport": "stdio",
+      "environmentKeys": [],
+      "commandKind": "npx",
+      "requiresLocalCommandConfiguration": true
+    },
+    {
+      "name": "codegraph",
+      "enabled": false,
+      "transport": "stdio",
+      "environmentKeys": [],
+      "commandKind": "codegraph.cmd",
+      "requiresLocalCommandConfiguration": true
+    },
+    {
+      "name": "node_repl",
+      "enabled": true,
+      "transport": "stdio",
+      "environmentKeys": [
+        "BROWSER_USE_AVAILABLE_BACKENDS",
+        "BROWSER_USE_CODEX_APP_BUILD_FLAVOR",
+        "BROWSER_USE_CODEX_APP_VERSION",
+        "BROWSER_USE_TINYSKY_ENABLED",
+        "CODEX_CLI_PATH",
+        "CODEX_HOME",
+        "NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER",
+        "NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME",
+        "NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS",
+        "NODE_REPL_NODE_MODULE_DIRS",
+        "NODE_REPL_NODE_PATH",
+        "NODE_REPL_TRUSTED_CODE_PATHS",
+        "NODE_REPL_TRUSTED_SERVICES",
+        "NODE_REPL_UNTRUSTED_ENV_ALLOWLIST",
+        "SKY_CUA_NATIVE_PIPE",
+        "SKY_CUA_NATIVE_PIPE_DIRECTORY"
+      ],
+      "commandKind": "node_repl.exe",
+      "requiresLocalCommandConfiguration": true
+    },
+    {
+      "name": "jlceda",
+      "enabled": false,
+      "transport": "stdio",
+      "environmentKeys": [
+        "GATEWAY_WS_URL"
+      ],
+      "commandKind": "node",
+      "requiresLocalCommandConfiguration": true
+    },
+    {
+      "name": "figma_console_local",
+      "enabled": false,
+      "transport": "stdio",
+      "environmentKeys": [
+        "ENABLE_MCP_APPS"
+      ],
+      "commandKind": "node.exe",
+      "requiresLocalCommandConfiguration": true
+    },
+    {
+      "name": "cua_repl",
+      "enabled": false,
+      "transport": "stdio",
+      "environmentKeys": [],
+      "commandKind": "ChatGPT.exe",
+      "requiresLocalCommandConfiguration": true
+    }
+  ]
+}

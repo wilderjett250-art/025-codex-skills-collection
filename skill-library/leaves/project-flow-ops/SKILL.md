@@ -11,7 +11,7 @@ This skill turns disconnected GitHub issues, PRs, and Linear tasks into one exec
 
 Use it when the problem is coordination, not coding.
 
-When the task requires live Linear issue or project operations, first read the canonical guide at `<CODEX_HOME>\skill-library\leaves\linear\SKILL.md` and use it only if the required Linear connection is available.
+When the task requires live Linear issue or project operations, first read the canonical guide at `canonical/linear/SKILL.md` and use it only if the required Linear connection is available.
 
 ## When to Use
 

@@ -22,10 +22,10 @@ Production deployment workflows and CI/CD best practices.
 
 For an explicitly selected platform, read only its full canonical guide and resolve its scripts relative to that guide:
 
-- Cloudflare Workers or Pages: `<CODEX_HOME>\skill-library\leaves\cloudflare-deploy\SKILL.md`
-- Netlify: `<CODEX_HOME>\skill-library\leaves\netlify-deploy\SKILL.md`
-- Render: `<CODEX_HOME>\skill-library\leaves\render-deploy\SKILL.md`
-- Vercel: `<CODEX_HOME>\skill-library\leaves\vercel-deploy\SKILL.md`
+- Cloudflare Workers or Pages: `canonical/cloudflare-deploy/SKILL.md`
+- Netlify: `canonical/netlify-deploy/SKILL.md`
+- Render: `canonical/render-deploy/SKILL.md`
+- Vercel: `canonical/vercel-deploy/SKILL.md`
 
 Keep generic deployment planning in this Skill. A platform guide applies only after the user selects that platform or the repository proves it is the active target.
 
