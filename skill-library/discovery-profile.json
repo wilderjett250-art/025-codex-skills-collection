@@ -152,7 +152,18 @@
     },
     "workspace-surface-audit": {
       "terms": [
-        "Skill匹配 Skill审计 Skill配置 技能合集 工具能力盘点 路由优化 上下文 精简 触发条件"
+        "Skill匹配 Skill审计 Skill配置 技能合集 工具能力盘点 路由优化 上下文 精简 触发条件 token消耗 加载成本 入口过长"
+      ]
+    },
+    "answer-me-with-html": {
+      "terms": [
+        "离线HTML说明 图文解释页 HTML解释器 一页HTML 可视化说明页 Markdown渲染网页 diagram explainer offline visual HTML answer-me-with-html",
+        "把复杂解释做成HTML页面 把多维对比做成离线网页 请求调用链图文说明"
+      ]
+    },
+    "windows-desktop-e2e": {
+      "terms": [
+        "Windows原生桌面 E2E WPF WinForms Win32 Qt pywinauto UIA 自动化测试 桌面测试 定位器 AutomationId"
       ]
     },
     "vue-engineering": {

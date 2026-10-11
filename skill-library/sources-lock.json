@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-09-08",
+  "updated": "2026-10-11",
   "policy": "Pinned source references, not extra resident Skills. Local entrypoints adapt methods to task scope. Update only with upstream diff, license review and routing regression.",
   "modules": [
     {
@@ -162,6 +162,21 @@
     }
   ],
   "referenceSources": [
+    {
+      "repository": "QingYunA/answer-me-with-html",
+      "commit": "533c39fd47d814a6bee3d9c1df388345f4e4c858",
+      "path": "skills/answer-me-with-html/scripts/am.mjs",
+      "sha256": "8a52581ca87beeffa19fd5bdb1d8da3cee75ae9ef41e7d7277471c305fd4fa92",
+      "installedPath": "leaves/answer-me-with-html/scripts/am.mjs",
+      "license": "MIT; root LICENSE retained in the adapted Skill",
+      "note": "Pinned unmodified renderer, narrow on-demand owner and offline/no-open/no-update wrapper. Runtime results are recorded separately, not inferred from installation."
+    },
+    {
+      "repository": "CursorTouch/Windows-MCP",
+      "commit": "b74c507d9e709223a0904cf08019edf55f2a75bb",
+      "path": "src/windows_mcp/tools/snapshot.py",
+      "note": "Source-reviewed UIA-first/bounded snapshot ideas adapted into tool-session-optimizer and windows-desktop-e2e. No server installation, activation or desktop takeover."
+    },
     {
       "repository": "vercel-labs/web-interface-guidelines",
       "commit": "e3d624baaf29dc1fc645aff3e38f03e564d2d6b1",

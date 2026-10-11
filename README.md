@@ -4,7 +4,7 @@
 
 ## 项目内容
 
-- 9 个常驻 Skill 提供精确入口；291 个按需 Skill 保存在冷库中。
+- 9 个常驻 Skill 提供精确入口；292 个按需 Skill 保存在冷库中。
 - 元数据检索最多返回 3 个候选，只在选定后读取完整 Skill；本地读取器可记录元数据级的加载次数。
 - 33 个非知识库 MCP 条目按照开发、研究、设计、视频和工程场景分组；另附本机启停状态的无凭证快照。
 - 25 个插件预设用于恢复对应的官方能力来源。
@@ -95,9 +95,12 @@ node <codex-home>/skill-library/scripts/read-skill.mjs davinci-resolve-color
 ## 项目结构
 
 - `skills/` 保存 9 个常驻 Skill。
-- `skill-library/` 保存 291 个按需 Skill、目录和路由脚本。
+- `skill-library/` 保存 292 个按需 Skill、目录和路由脚本。
 - `mcp/` 保存 MCP Catalog 和 Profile。
 - `presets/` 保存插件来源预设。
+- `presets/global/` 保存全局规则、无凭证设置及统计 Hook 模板。
+- `scripts/` 保存安装、诊断和路由脚本。
+- `.codex-plugin/` 保存 Codex Plugin 清单。
 
 ## 常用产品与工程能力
 
@@ -113,10 +116,17 @@ node <codex-home>/skill-library/scripts/read-skill.mjs davinci-resolve-color
 | 代码质量、需求一致性、可维护性 | `code-quality-review` |
 | 产品标准、测试策略、验收证据 | `qa-methodology`，实际 web 流程用 `e2e-testing` |
 
-新增的是通用代码质量审查；其他入口强化已有内容。全局规则只增加阶段选择提醒。MCP 负责访问设计、代码平台和真实运行环境，不替代领域 Skill，也不默认全部启用。开源借鉴、验证范围和未验证项见[升级说明](presets/capability-upgrade-20261011.md)。
-- `presets/global/` 保存全局规则、无凭证设置及统计 Hook 模板。
-- `scripts/` 保存安装、诊断和路由脚本。
-- `.codex-plugin/` 保存 Codex Plugin 清单。
+通用代码质量审查强化现有产品/工程能力；全局规则保留阶段选择提醒和按需加载。MCP 负责访问设计、代码平台和真实运行环境，不替代领域 Skill，也不默认全部启用。七类能力借鉴与验证范围见[升级说明](presets/capability-upgrade-20261011.md)。
+
+## 上下文成本与图文说明
+
+```bash
+node <codex-home>/skill-library/scripts/audit-context-cost.mjs --home <codex-home> --limit 10
+```
+
+该命令只输出入口体积、引用和目录链接元数据，不导出 Skill 正文、聊天或配置秘密；体积不是质量评分或真实 token 账单。需要更细的完整审计时才使用 `--rows`。大型 Windows 测试入口已拆为短入口和条件参考，原指南可按记录重组。
+
+`answer-me-with-html` 按需把短 Markdown 转为离线图文说明页，使用固定版本的本地渲染器；不默认打开浏览器、检查更新或把每次回答都变成网页。Windows-MCP 的 UIA 优先/局部快照方法已借鉴到操作与测试 Skill，本仓库没有因此安装或启用 Windows-MCP 服务。测量方法、限制和规则保留清单见[本轮审计](presets/context-efficiency-20261011.md)。
 
 ## 安全与许可
 

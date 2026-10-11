@@ -1,0 +1,4 @@
+scripts/am.mjs -text
+scripts/dagre.esm.js.LEGAL.txt -text
+licenses/* -text
+LICENSE -text

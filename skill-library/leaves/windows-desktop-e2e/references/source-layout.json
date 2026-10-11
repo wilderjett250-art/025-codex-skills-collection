@@ -1,0 +1,132 @@
+{
+  "sourceSha256": "fa7840e3f48fc50d097624446bc3f955faa07ba9a915367505244fde483382e6",
+  "preservedBytes": 30567,
+  "pieces": [
+    {
+      "index": 0,
+      "file": "source-scope.md",
+      "offset": 0,
+      "length": 446,
+      "title": ""
+    },
+    {
+      "index": 1,
+      "file": "source-scope.md",
+      "offset": 446,
+      "length": 656,
+      "title": "When to Activate"
+    },
+    {
+      "index": 2,
+      "file": "uia-foundations.md",
+      "offset": 0,
+      "length": 1209,
+      "title": "Core Concepts"
+    },
+    {
+      "index": 3,
+      "file": "uia-foundations.md",
+      "offset": 1209,
+      "length": 522,
+      "title": "Setup & Prerequisites"
+    },
+    {
+      "index": 4,
+      "file": "uia-foundations.md",
+      "offset": 1731,
+      "length": 879,
+      "title": "Testability Setup (by Framework)"
+    },
+    {
+      "index": 5,
+      "file": "test-harness.md",
+      "offset": 0,
+      "length": 6381,
+      "title": "Page Object Model"
+    },
+    {
+      "index": 6,
+      "file": "uia-foundations.md",
+      "offset": 2610,
+      "length": 452,
+      "title": "Locator Strategy"
+    },
+    {
+      "index": 7,
+      "file": "test-harness.md",
+      "offset": 6381,
+      "length": 488,
+      "title": "Wait Patterns"
+    },
+    {
+      "index": 8,
+      "file": "screenshots-tracing.md",
+      "offset": 0,
+      "length": 661,
+      "title": "Artifact Management"
+    },
+    {
+      "index": 9,
+      "file": "screenshots-tracing.md",
+      "offset": 661,
+      "length": 2493,
+      "title": "Per-Step Trace (opt-in)"
+    },
+    {
+      "index": 10,
+      "file": "test-harness.md",
+      "offset": 6869,
+      "length": 1043,
+      "title": "Flaky Test Handling"
+    },
+    {
+      "index": 11,
+      "file": "isolation-ci.md",
+      "offset": 0,
+      "length": 7299,
+      "title": "Test Isolation & Sandbox"
+    },
+    {
+      "index": 12,
+      "file": "isolation-ci.md",
+      "offset": 7299,
+      "length": 957,
+      "title": "CI/CD Integration"
+    },
+    {
+      "index": 13,
+      "file": "qt.md",
+      "offset": 0,
+      "length": 2215,
+      "title": "Qt Specific"
+    },
+    {
+      "index": 14,
+      "file": "screenshots-tracing.md",
+      "offset": 3154,
+      "length": 3469,
+      "title": "Fallback: Screenshot Mode"
+    },
+    {
+      "index": 15,
+      "file": "test-harness.md",
+      "offset": 7912,
+      "length": 847,
+      "title": "Anti-Patterns"
+    },
+    {
+      "index": 16,
+      "file": "test-harness.md",
+      "offset": 8759,
+      "length": 354,
+      "title": "Running Tests"
+    },
+    {
+      "index": 17,
+      "file": "source-scope.md",
+      "offset": 1102,
+      "length": 196,
+      "title": "Related Skills"
+    }
+  ]
+}

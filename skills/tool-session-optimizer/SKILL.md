@@ -36,4 +36,6 @@ Select the access path; leave domain execution to the task's primary Skill.
 - Reuse valid references and observations until navigation, session, or target state changes.
 - On failure, diagnose the current route before installing another tool or opening an alternate app.
 
+For an authorized native Windows UI route, read [bounded UIA observation](references/windows-uia.md): inspect relevant controls first, use a cropped screenshot when visual state matters, and re-observe after state changes. This does not authorize desktop takeover or replace a requested browser bridge.
+
 Read [references/route-patterns.md](references/route-patterns.md) only when more than one access route is plausible or authentication behavior is ambiguous.

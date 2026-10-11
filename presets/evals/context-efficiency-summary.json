@@ -1,0 +1,54 @@
+{
+  "encoding": "o200k_base",
+  "basis": "Tokenizer-specific proxy, not measured Codex API input or billing.",
+  "before": {
+    "skills": 300,
+    "active": 9,
+    "onDemand": 291,
+    "globalChars": 17120,
+    "globalTokens": 3169,
+    "activeDescriptionTokens": 378,
+    "medianEntryTokens": 1172.5,
+    "windowsEntryTokens": 7596
+  },
+  "after": {
+    "skills": 301,
+    "active": 9,
+    "onDemand": 292,
+    "globalChars": 14675,
+    "globalTokens": 2727,
+    "activeDescriptionTokens": 378,
+    "medianEntryTokens": 1169,
+    "windowsEntryTokens": 586,
+    "htmlEntryTokens": 594
+  },
+  "validation": {
+    "originalSearchChecks": 86,
+    "lexicalChecks": 98,
+    "activityTests": 4,
+    "capabilityQueries": 21,
+    "capabilityBoundaries": 6,
+    "nodeCliChecks": 3,
+    "contextChecks": 17,
+    "rendererChecks": 16,
+    "isolatedInstall": {
+      "active": 9,
+      "onDemand": 292,
+      "globalReinstallChanged": 0
+    },
+    "browserWidths": [
+      1440,
+      768,
+      390
+    ],
+    "browserRemoteRequests": 0,
+    "browserErrors": 0,
+    "originalNamesAndCanonicalPathsRetained": 300
+  },
+  "limits": [
+    "Fixed-tokenizer file counts are not Codex billing measurements.",
+    "Automatic invocation and all-Skill task quality are not proven.",
+    "Windows-MCP server was not installed, activated or live-tested.",
+    "Publication must be verified independently against the Git remote revision; these are local validation results."
+  ]
+}

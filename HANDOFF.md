@@ -1,19 +1,22 @@
 # Toolkit handoff
 
 - Scope: portable personal Skills, on-demand routing, sanitized MCP/plugin/global presets; no knowledge-base data.
-- Evidence cutoff: 2026-10-11. Baseline revision: `9ebc06a3722610eafe5aa04f743b4ab083e6a333`.
+- Evidence cutoff: 2026-10-11. Current change-set baseline revision: `8c0bc551b2ea2fbc32b9b0b103e6e88a5078cc99`.
 
 ## Resume card
 
-- Read first: `README.md`, `presets/capability-upgrade-20261011.md`, `presets/sync-manifest.json`.
-- First check: run `skill-library/scripts/capability-routing.test.mjs` against an installed/materialized catalogue.
+- Read first: `README.md`, `presets/context-efficiency-20261011.md`, `presets/sync-manifest.json`; the earlier seven-capability report remains historical evidence.
+- First check: run `skill-library/scripts/context-efficiency.test.mjs` against an installed/materialized catalogue.
 - Next safe action: observe selection and outcomes on a real authorized task; correct only demonstrated gaps.
 
 ## Current state
 
 - Implemented: seven common capability boundaries, one new code-quality review Skill, application-performance diagnosis using the existing benchmark owner, short global phase-selection reminder.
 - Verified locally: 21/21 targeted retrieval fixtures and six boundary checks; original search and lexical routing checks remain passing. Skill structure and isolated installation results are recorded in the dated upgrade report when available.
-- Verified on the final scope: 86 original search checks, 98 lexical checks, four activity tests, three Node CLI checks and two catalogue invariants passed. Isolated installation contains 9 active + 291 on-demand Skills; rule/Hook reinstallation made no further writes.
+- Implemented this phase: conservatively shortened global rules; bounded Windows UIA route; a small Windows E2E entry with reconstructable conditional guides; a pinned, licensed offline HTML renderer and no-open/no-update wrapper; structural cost auditing. No Windows-MCP server was installed or activated.
+- Verified on the final scope: 86 original search checks, 98 lexical checks, four activity tests, three Node CLI checks and two catalogue invariants passed. New context checks (17) and renderer/guard checks (16) pass; isolated installation contains 9 active + 292 on-demand Skills, and rule/Hook reinstallation made no further writes.
+- Local HTML was rendered and visually inspected at three widths in an isolated headless browser without account sessions; this is not native desktop or all-future-page acceptance. Comparable tokenizer-specific global size fell 3,169 to 2,727; real API cost was not measured.
+- Publication scope (user-authorized, 2026-10-11): synchronize this complete portable change set to `wilderjett250-art/025-codex-skills-collection`, `origin/main`. Credentials, sessions, knowledge data and machine-local recovery files remain excluded.
 - Publication is distinct from local validation; verify the current remote revision before treating an update as published.
 
 ## Recovery / open items

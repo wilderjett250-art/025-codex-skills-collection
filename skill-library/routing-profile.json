@@ -2286,6 +2286,17 @@
       "riskTags": []
     },
     {
+      "name": "answer-me-with-html",
+      "plane": "domain",
+      "discipline": "documents-media",
+      "family": "visual-explanation",
+      "aliases": ["离线HTML说明", "图文解释页", "Markdown渲染网页"],
+      "projectTypes": [],
+      "phases": ["inspect", "implement", "verify"],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
       "name": "impeccable",
       "plane": "domain",
       "discipline": "frontend-ui",
