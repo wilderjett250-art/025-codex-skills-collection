@@ -1,6 +1,6 @@
 ---
 name: benchmark-optimization-loop
-description: Use when the user asks to make something faster, try many variants, run recursive optimization, benchmark latency/throughput/cost, or choose the best implementation by repeated measured tests.
+description: Diagnose application performance and compare measured optimization variants. 前后端效率、首屏慢、接口慢、吞吐量、CPU、响应时间p95、性能瓶颈。Use the framework owner for a known local cause. Not game frame/GPU profiling.
 metadata:
   origin: ECC
   tools: Read, Write, Edit, Bash, Grep, Glob
@@ -10,6 +10,8 @@ metadata:
 
 Use this skill to convert "make it 20x faster" or "try 50 recursive
 optimizations" into a bounded measured loop that can actually improve a system.
+
+For an unknown application bottleneck or cross-frontend/backend efficiency review, read [application diagnosis](references/application-performance.md). Diagnose first; do not run a multi-variant search when the request is only an assessment. For a known React, database or framework issue, its narrower owner is sufficient.
 
 ## Required Baseline
 

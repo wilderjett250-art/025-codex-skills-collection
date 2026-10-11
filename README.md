@@ -4,7 +4,7 @@
 
 ## 项目内容
 
-- 9 个常驻 Skill 提供精确入口；290 个按需 Skill 保存在冷库中。
+- 9 个常驻 Skill 提供精确入口；291 个按需 Skill 保存在冷库中。
 - 元数据检索最多返回 3 个候选，只在选定后读取完整 Skill；本地读取器可记录元数据级的加载次数。
 - 33 个非知识库 MCP 条目按照开发、研究、设计、视频和工程场景分组；另附本机启停状态的无凭证快照。
 - 25 个插件预设用于恢复对应的官方能力来源。
@@ -59,7 +59,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\install.ps1 -P
 
 ### 全局规则与设置
 
-本机 2026-10-10 的全局规则保存在 `presets/global/AGENTS.md`；机器用户名路径已改为 `<codex-home>`，安装时按目标电脑展开。规则内容保留当前版本，包括按需 Skill 路由、权限、备份、证据验证和知识采集开关。
+本机 2026-10-11 的全局规则保存在 `presets/global/AGENTS.md`；机器用户名路径已改为 `<codex-home>`，安装时按目标电脑展开。规则内容保留当前版本，包括按需 Skill 路由、权限、备份、证据验证和知识采集开关。
 
 先安装 Skill Library，再选择安装全局规则与统计 Hook：
 
@@ -95,9 +95,25 @@ node <codex-home>/skill-library/scripts/read-skill.mjs davinci-resolve-color
 ## 项目结构
 
 - `skills/` 保存 9 个常驻 Skill。
-- `skill-library/` 保存 290 个按需 Skill、目录和路由脚本。
+- `skill-library/` 保存 291 个按需 Skill、目录和路由脚本。
 - `mcp/` 保存 MCP Catalog 和 Profile。
 - `presets/` 保存插件来源预设。
+
+## 常用产品与工程能力
+
+保留二级路由：先匹配已有入口；缺少专门能力时检索元数据，比较最多三个候选，再加载当前阶段的一个 owner。直接描述任务即可，不要求记住 Skill 名称，也不预加载整套产品开发流程。
+
+| 任务 | 按需入口 |
+|---|---|
+| 大项目、遗留系统、里程碑和协作 | `large-project-ops` |
+| 产品经理视角、用户价值、需求取舍 | `product-discovery` |
+| 新 UI / 现有界面审美和打磨 | `frontend-design` / `impeccable` |
+| 技术方案、模块边界、架构合理性 | `architecture-decisions` |
+| 跨前后端性能瓶颈和实测优化 | `benchmark-optimization-loop`，已知原因用对应框架 Skill |
+| 代码质量、需求一致性、可维护性 | `code-quality-review` |
+| 产品标准、测试策略、验收证据 | `qa-methodology`，实际 web 流程用 `e2e-testing` |
+
+新增的是通用代码质量审查；其他入口强化已有内容。全局规则只增加阶段选择提醒。MCP 负责访问设计、代码平台和真实运行环境，不替代领域 Skill，也不默认全部启用。开源借鉴、验证范围和未验证项见[升级说明](presets/capability-upgrade-20261011.md)。
 - `presets/global/` 保存全局规则、无凭证设置及统计 Hook 模板。
 - `scripts/` 保存安装、诊断和路由脚本。
 - `.codex-plugin/` 保存 Codex Plugin 清单。

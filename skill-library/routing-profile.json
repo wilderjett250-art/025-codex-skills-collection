@@ -664,6 +664,16 @@
         "source code walkthrough",
         "code learning"
       ]
+    },
+    {
+      "name": "code-maintainability",
+      "discipline": "code-engineering",
+      "aliases": ["代码审查", "可维护性", "代码混乱", "code review"]
+    },
+    {
+      "name": "performance-measurement",
+      "discipline": "code-engineering",
+      "aliases": ["应用性能", "前后端效率", "性能瓶颈", "benchmark"]
     }
   ],
   "routes": [
@@ -2251,6 +2261,39 @@
         "vscode",
         "code-editor"
       ],
+      "riskTags": []
+    },
+    {
+      "name": "code-quality-review",
+      "plane": "domain",
+      "discipline": "code-engineering",
+      "family": "code-maintainability",
+      "aliases": ["代码审查", "代码评审", "可维护性", "代码混乱"],
+      "projectTypes": [],
+      "phases": ["inspect", "verify"],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "benchmark-optimization-loop",
+      "plane": "domain",
+      "discipline": "code-engineering",
+      "family": "performance-measurement",
+      "aliases": ["应用性能", "前后端效率", "性能诊断", "性能瓶颈"],
+      "projectTypes": [],
+      "phases": ["inspect", "implement", "verify"],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "impeccable",
+      "plane": "domain",
+      "discipline": "frontend-ui",
+      "family": "visual-design",
+      "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
       "riskTags": []
     }
   ]

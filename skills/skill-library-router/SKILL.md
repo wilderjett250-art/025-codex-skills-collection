@@ -11,11 +11,12 @@ Use the actual request, conversation, confirmed platform and all already-availab
 5. Prefer a matching Skill already available in this session. Keep access methods and acceptance gates separate from domain ownership. A compound request can have several real work units, but do not preload their future phases.
    For a new app whose users/problem/MVP are still undecided, discover product-discovery first. Use interaction-design for flows and recovery; visual styling follows the established journey. Use architecture-decisions for consequential technical tradeoffs. Existing briefs or small fixes do not require repeating these stages.
 6. Reuse a Skill body already present and unchanged in context; re-read only after relevant changes or loss of needed content. A disk cache does not prove the model still has its instructions.
+   For ambiguous common product/engineering requests, consult [capability boundaries](references/capability-selection.md). This is a small owner/access map, not seven Skills to preload. Reconsider the current owner when actual work changes phase.
 
 Metadata search (resolve the actual Codex home; `CODEX_HOME` overrides the default):
     node <codex-home>/skill-library/scripts/find-skills.mjs --query "React render performance" --limit 3
 
-Useful queries: 产品定位 MVP; 用户流程 表单体验; 架构 技术选型; React 组件性能; Node 接口校验; Playwright 端到端测试.
+Useful queries: 大项目 里程碑; 产品经理 用户价值; 现有页面 视觉审查; 架构 技术选型; 前后端 性能瓶颈; 代码审查 可维护性; 产品测试 上线标准.
 Add -Domain/-Discipline/-Family only when that filter is known; use listing switches for taxonomy browsing. Names in discovery-profile.json are curated retrieval hints, not a second instruction catalogue.
 Metadata search uses search-skills.mjs. Optional explicit lexical lookup uses route-task.mjs and route-core.mjs. Rebuild catalog.json after Skill metadata/move changes. Validate lexical regression with route-task.test.mjs and independent retrieval cases with search-skills.test.mjs.
 

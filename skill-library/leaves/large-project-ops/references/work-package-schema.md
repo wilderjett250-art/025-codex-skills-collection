@@ -11,6 +11,7 @@ Create one file at `work-packages/WP-<id>-<slug>.md` per coherent agent task. Ke
 - Last verified:
 - Depends on:
 - Blocks:
+- Integration owner / shared contract version:
 
 ## Goal
 
@@ -51,6 +52,7 @@ Create one file at `work-packages/WP-<id>-<slug>.md` per coherent agent task. Ke
 
 - Focused command, test, page, device, or artifact:
 - Expected result:
+- Cross-component acceptance / rollback boundary, when relevant:
 
 ## Completion update
 
@@ -61,12 +63,12 @@ Create one file at `work-packages/WP-<id>-<slug>.md` per coherent agent task. Ke
 
 ## Splitting test
 
-Split a proposed package when any answer is unclear or has more than one independent answer:
+Split by independent outcome, conflicting writes or a real delivery boundary, not file count. One vertical slice may legitimately touch several modules. Resolve:
 
-- Does it change more than one module or external system?
-- Does it require mutually unrelated Skills or tool routes?
-- Does it have more than one acceptance environment?
-- Would two agents need to edit the same files or perform ordered mutations?
+- Can outcomes be verified and rolled back independently?
+- Are separate Skills or tool routes needed now, or only in a future phase?
+- Who verifies the integration if checks span environments?
+- Would two agents share writes or perform ordered mutations? Assign one writer or explicit sequencing rather than pretending the tasks are parallel.
 - Can completion be stated in one sentence with one evidence set?
 
 If the package only becomes small by omitting an integration or verification step, keep the missing step as a dependent package rather than calling the first package complete.

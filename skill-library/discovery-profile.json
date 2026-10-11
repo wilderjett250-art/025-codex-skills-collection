@@ -15,15 +15,22 @@
     "taste-skill": "frontend-design"
   },
   "entries": {
+    "large-project-ops": {
+      "terms": [
+        "超级大项目 大型项目 多人协作 跨端协作 多服务 大型遗留系统 里程碑 分阶段 依赖顺序 集成验收 agent任务包 项目拆分 large project milestones integration work packages"
+      ]
+    },
     "product-discovery": {
       "terms": [
         "产品定位 用户研究 需求分析 核心用户 谁会用 需求优先级 访谈 用户价值 目标用户 MVP 最小可行产品 需求复盘 功能取舍 产品经理 产品规划 产品设计 PRD product discovery interview priorities",
-        "给谁用 给谁 谁用 第一版 首版 做什么 先做什么 用户需求 功能优先级"
+        "给谁用 给谁 谁用 第一版 首版 做什么 先做什么 用户需求 功能优先级",
+        "产品经理视角 产品合理性 值得做 用户价值 真实需求 差异化 投入产出 商业可行性 核心流程 产品评估"
       ]
     },
     "architecture-decisions": {
       "terms": [
-        "系统架构 架构设计 技术选型 模块边界 单体 微服务 ADR 架构决策 数据归属 技术方案 后端架构 architectural decision architecture tradeoffs monolith microservices"
+        "系统架构 架构设计 技术选型 模块边界 单体 微服务 ADR 架构决策 数据归属 技术方案 后端架构 architectural decision architecture tradeoffs monolith microservices",
+        "架构评审 技术完善 过度设计 模块耦合 依赖耦合 长期维护 可用性 迁移成本 回滚条件"
       ]
     },
     "interaction-design": {
@@ -39,12 +46,23 @@
     "impeccable": {
       "terms": [
         "界面精修 视觉审查 微调 打磨 美化 视觉一致性 UI polish critique",
-        "现有界面 排版对比度 界面优化 键盘导航 焦点 无障碍 accessibility audit"
+        "现有界面 排版对比度 界面优化 键盘导航 焦点 无障碍 accessibility audit",
+        "现有后台 现有页面 高级感 信息层级 字号 留白 整体审美 视觉审查"
       ]
     },
     "react-engineering": {
       "terms": [
         "React Next.js React组件 组件设计 组件组合 状态管理 客户端边界 请求瀑布 重复渲染 页面卡顿 前端性能 composition performance react nextjs"
+      ]
+    },
+    "benchmark-optimization-loop": {
+      "terms": [
+        "应用性能 前后端效率 前后端代码高效 性能诊断 性能评估 性能瓶颈 首屏慢 接口慢 响应时间 p95 CPU占用 吞吐量 用户等待时间 测量 基准测试 优化变体 application performance benchmark"
+      ]
+    },
+    "code-quality-review": {
+      "terms": [
+        "代码审查 代码评审 code review PR diff 可维护性 代码混乱 职责耦合 重复代码 重复实现 过度抽象 重构建议 需求一致性 需求对齐 变更审查"
       ]
     },
     "backend-patterns": {
@@ -159,7 +177,8 @@
     },
     "qa-methodology": {
       "terms": [
-        "测试策略 测试计划 风险覆盖 测试范围 探索测试 回归选择 质量门禁 QA strategy"
+        "测试策略 测试计划 风险覆盖 测试范围 探索测试 回归选择 质量门禁 QA strategy",
+        "产品测试 符合需求 上线标准 需求验收 验收证据 对应关系 行为验证 发布前质量 数据完整性 失败恢复"
       ]
     },
     "external-browser": {

@@ -1,13 +1,15 @@
 ---
 name: product-discovery
-description: Define an app's users, problem, MVP, priorities and success criteria; plan user interviews or write a product brief before UX and engineering. 产品定位、需求复盘、用户访谈、功能取舍。Not engineering architecture or visual styling.
+description: Define or review a product's user value, core journey, MVP, priorities and business assumptions. 产品经理视角、产品合理性、差异化、需求取舍、用户访谈。Not technical architecture or visual styling.
 ---
 # Product discovery
 Start from supplied requirements and existing product evidence. For an existing product, identify what already works before proposing changes.
 - Establish the user's situation, current workaround, core job, and observable benefit. Separate facts, assumptions and proposed decisions; do not invent research, market figures, personas presented as real people, or willingness to pay.
 - Ask only one decisive missing question at a time. Use conversation for already-confirmed answers. A small feature needs a small decision, not a full PRD.
+- Resolve answerable facts from artifacts first. Ask the highest-impact unresolved decision with a recommendation and tradeoff; stop interviewing when the current scope and acceptance are actionable. Use a bounded prototype for an empirical unknown rather than demanding certainty from conversation.
 - Define one end-to-end first-version journey. Rank scope using impact, effort, evidence and dependency; do not manufacture numeric scores or require a fixed number of features.
 - Agree observable success and failure conditions before implementation. Identify the highest-risk unknown and a cheap way to test it. Actual interviews or external messages require the user's authorization.
+- For an existing-product or PM-perspective review, read [product review](references/product-review.md). A polished interface or a long feature list does not prove user value.
 - Record a compact brief in an existing project document when useful: audience/context, problem, core journey, MVP boundaries, success evidence, assumptions. Explicitly requested full PRDs may use the template below.
 Read only the relevant pinned PM Skills reference:
 - Interview questions grounded in past behavior: [interview-script](references/interview-script/SKILL.md).

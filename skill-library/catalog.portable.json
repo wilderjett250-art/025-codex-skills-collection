@@ -58,9 +58,9 @@
       "canonicalPath": "control/execution-governance/project-flow/project-control/large-project-ops",
       "tags": [
         "project-flow",
+        "api",
         "automation",
-        "ai",
-        "hardware"
+        "ai"
       ],
       "aliases": [
         "大项目拆分",
@@ -85,7 +85,7 @@
       "source": "library",
       "relativePath": "large-project-ops",
       "skillPath": "skill-library/leaves/large-project-ops/SKILL.md",
-      "trigger": "Run a confirmed special-large project with a compact control plane and bounded, agent-ready work packages. Use for multi-service, hardware, ML, legacy, regulated, or cross-team work."
+      "trigger": "Coordinate large or legacy projects through dependency-aware milestones, bounded agent work packages and integration acceptance. 大项目、跨端协作、里程碑、任务拆分。Use for real cross-system complexity, not every feature."
     },
     {
       "name": "skill-library-router",
@@ -1162,7 +1162,7 @@
       "source": "library",
       "relativePath": "product-discovery",
       "skillPath": "skill-library/leaves/product-discovery/SKILL.md",
-      "trigger": "Define an app's users, problem, MVP, priorities and success criteria; plan user interviews or write a product brief before UX and engineering. 产品定位、需求复盘、用户访谈、功能取舍。Not engineering architecture or visual styling."
+      "trigger": "Define or review a product's user value, core journey, MVP, priorities and business assumptions. 产品经理视角、产品合理性、差异化、需求取舍、用户访谈。Not technical architecture or visual styling."
     },
     {
       "name": "agent-architecture-audit",
@@ -2192,6 +2192,7 @@
       "canonicalPath": "domain/computing-digital/code-engineering/architecture-decisions/architecture-decisions",
       "tags": [
         "code-engineering",
+        "ui",
         "data"
       ],
       "aliases": [],
@@ -2203,7 +2204,7 @@
       "source": "library",
       "relativePath": "architecture-decisions",
       "skillPath": "skill-library/leaves/architecture-decisions/SKILL.md",
-      "trigger": "Choose or review application architecture, module and data boundaries, technical options and ADRs against concrete constraints. 架构设计、技术选型、单体与微服务、模块拆分。Not project management or React component styling."
+      "trigger": "Choose or review application architecture, technical completeness, module/data boundaries and ADRs against real constraints. 架构评审、技术选型、模块耦合、过度设计、长期维护。Not project coordination or visual styling."
     },
     {
       "name": "agent-sort",
@@ -2390,6 +2391,37 @@
       "relativePath": "yeet",
       "skillPath": "skill-library/leaves/yeet/SKILL.md",
       "trigger": "Use only when the user explicitly asks to stage, commit, push, and open a GitHub pull request in one flow using the GitHub CLI (`gh`)."
+    },
+    {
+      "name": "code-quality-review",
+      "directory": "code-quality-review",
+      "plane": "domain",
+      "domain": "computing-digital",
+      "discipline": "code-engineering",
+      "family": "code-maintainability",
+      "canonicalPath": "domain/computing-digital/code-engineering/code-maintainability/code-quality-review",
+      "tags": [
+        "code-engineering",
+        "security"
+      ],
+      "aliases": [
+        "代码审查",
+        "代码评审",
+        "可维护性",
+        "代码混乱"
+      ],
+      "projectTypes": [],
+      "phases": [
+        "inspect",
+        "verify"
+      ],
+      "platforms": [],
+      "riskTags": [],
+      "role": "candidate",
+      "source": "library",
+      "relativePath": "code-quality-review",
+      "skillPath": "skill-library/leaves/code-quality-review/SKILL.md",
+      "trigger": "Review a diff or scoped module for requirement alignment, correctness and maintainability with actionable evidence. 代码审查、代码混乱、职责耦合、重复代码、过度抽象、重构建议。Not beginner code explanation or a dedicated security audit."
     },
     {
       "name": "coding-standards",
@@ -2706,6 +2738,37 @@
       "relativePath": "security-best-practices",
       "skillPath": "skill-library/leaves/security-best-practices/SKILL.md",
       "trigger": "Perform language and framework specific security best-practice reviews and suggest improvements. Trigger only when the user explicitly requests security best practices guidance, a security review/report, or secure-by-default coding help. Trigger only for supported languages (python, javascript/typescript, go). Do not trigger for general code review, debugging, or non-security tasks."
+    },
+    {
+      "name": "benchmark-optimization-loop",
+      "directory": "benchmark-optimization-loop",
+      "plane": "domain",
+      "domain": "computing-digital",
+      "discipline": "code-engineering",
+      "family": "performance-measurement",
+      "canonicalPath": "domain/computing-digital/code-engineering/performance-measurement/benchmark-optimization-loop",
+      "tags": [
+        "code-engineering"
+      ],
+      "aliases": [
+        "应用性能",
+        "前后端效率",
+        "性能诊断",
+        "性能瓶颈"
+      ],
+      "projectTypes": [],
+      "phases": [
+        "inspect",
+        "implement",
+        "verify"
+      ],
+      "platforms": [],
+      "riskTags": [],
+      "role": "candidate",
+      "source": "library",
+      "relativePath": "benchmark-optimization-loop",
+      "skillPath": "skill-library/leaves/benchmark-optimization-loop/SKILL.md",
+      "trigger": "Diagnose application performance and compare measured optimization variants. 前后端效率、首屏慢、接口慢、吞吐量、CPU、响应时间p95、性能瓶颈。Use the framework owner for a known local cause. Not game frame/GPU profiling."
     },
     {
       "name": "artifact-tool-excel-legacy",
@@ -3633,28 +3696,6 @@
       "trigger": "Use for read-only BGP diagnosis, router or switch configuration validation, and interface error, drop, duplex, flap, or negotiation analysis. Select the matching diagnostic reference before suggesting changes."
     },
     {
-      "name": "benchmark-optimization-loop",
-      "directory": "benchmark-optimization-loop",
-      "plane": "domain",
-      "domain": "computing-digital",
-      "discipline": "devops-runtime",
-      "family": "performance-reliability",
-      "canonicalPath": "domain/computing-digital/devops-runtime/performance-reliability/benchmark-optimization-loop",
-      "tags": [
-        "devops-runtime"
-      ],
-      "aliases": [],
-      "projectTypes": [],
-      "phases": [],
-      "platforms": [],
-      "riskTags": [],
-      "role": "candidate",
-      "source": "library",
-      "relativePath": "benchmark-optimization-loop",
-      "skillPath": "skill-library/leaves/benchmark-optimization-loop/SKILL.md",
-      "trigger": "Use when the user asks to make something faster, try many variants, run recursive optimization, benchmark latency/throughput/cost, or choose the best implementation by repeated measured tests."
-    },
-    {
       "name": "yara-rule-authoring",
       "directory": "yara-rule-authoring",
       "plane": "domain",
@@ -3957,7 +3998,7 @@
       "source": "library",
       "relativePath": "anthropic-frontend-design",
       "skillPath": "skill-library/leaves/anthropic-frontend-design/SKILL.md",
-      "trigger": "Design a new web UI or full visual redesign from a confirmed brief. 新界面设计、视觉方向、完整改版。Use Impeccable for minor refinement; product-discovery for undecided product scope."
+      "trigger": "Design a new web UI or full visual redesign from a confirmed brief. 新界面设计、审美风格、视觉方向、完整改版。Use Impeccable for existing-UI refinement; product-discovery for undecided product scope."
     },
     {
       "name": "motion-ui",
@@ -4163,7 +4204,7 @@
       "source": "library",
       "relativePath": "impeccable",
       "skillPath": "skill-library/leaves/impeccable/SKILL.md",
-      "trigger": "Audit and refine an existing UI for layout, accessibility, UX copy, responsiveness and visual consistency. 现有界面打磨、排版对比度、无障碍审查。Preserve identity unless redesign is requested."
+      "trigger": "Audit and refine an existing UI for hierarchy, typography, layout, accessibility and consistency. 现有页面审美、高级感、视觉审查、字号留白、界面打磨。Preserve identity unless redesign is requested."
     },
     {
       "name": "logo-generator",
@@ -5603,7 +5644,7 @@
       "source": "library",
       "relativePath": "qa-methodology",
       "skillPath": "skill-library/leaves/qa-methodology/SKILL.md",
-      "trigger": "Plan risk-based testing, regression selection, exploratory checks and release quality criteria. 测试策略、测试计划、风险覆盖、探索测试。Not routine bug tracing or automatic browser control."
+      "trigger": "Assess product conformance and plan risk-based tests against requirements and release criteria. 产品测试、上线标准、需求验收、验收证据、质量门禁、测试策略。Not routine bug tracing or browser control."
     },
     {
       "name": "systematic-debugging",

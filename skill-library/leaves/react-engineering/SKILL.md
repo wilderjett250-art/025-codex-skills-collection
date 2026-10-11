@@ -6,6 +6,7 @@ description: Implement React/Next.js components, state and server/client boundar
 Read the repository's actual React/Next/router versions and component conventions first. Select only the relevant branch:
 - Ordinary components, hooks, errors, forms, fetching or state: [patterns](references/patterns.md).
 - Performance: inspect the relevant rule under references/vercel/react-best-practices/rules/ (async-, bundle-, server-, client-, rerender- or rendering-). Start with an observed waterfall, bundle or render problem; measure the affected behavior.
+  Prioritize the measured critical path: independent requests/waterfalls and shipped JavaScript before speculative memoization. Compare the same journey, input and build mode before/after; note effects on behavior and accessibility. For an unidentified cross-stack bottleneck, use benchmark-optimization-loop's diagnosis branch when needed, not all Vercel rules.
 - Boolean-prop proliferation or component composition: inspect matching architecture-, state- or patterns- files under references/vercel/composition-patterns/rules/.
 - Component/hook tests: [testing](references/testing.md).
 - Existing ECC examples only when needed: [additional patterns](references/additional-patterns.md).

@@ -1,11 +1,12 @@
 ---
 name: impeccable
-description: Audit and refine an existing UI for layout, accessibility, UX copy, responsiveness and visual consistency. 现有界面打磨、排版对比度、无障碍审查。Preserve identity unless redesign is requested.
+description: Audit and refine an existing UI for hierarchy, typography, layout, accessibility and consistency. 现有页面审美、高级感、视觉审查、字号留白、界面打磨。Preserve identity unless redesign is requested.
 metadata:
   version: 4.0.3-local-curation
 ---
 # Refine existing interfaces
 Inspect the target and existing tokens/components first. Preserve product facts, user flows and identity within the request. Missing design documents do not make the product a blank canvas.
+Translate "looks dated" or "more premium" into observable hierarchy, legibility, density and consistency problems. Separate task-blocking defects from subjective stylistic suggestions. Preserve useful information and familiar interactions; avoid decorative complexity that makes the core task harder.
 Load only the playbook for the actual problem:
 - [Critique](reference/critique.md): diagnose usability/visual hierarchy.
 - [Polish](reference/polish.md): final detail pass.

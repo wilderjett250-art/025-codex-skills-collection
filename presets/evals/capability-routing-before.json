@@ -1,0 +1,300 @@
+{
+  "fixtureType": "targeted retrieval regression; not automatic-selection or product-quality evaluation",
+  "catalogSkillCount": 299,
+  "retrievalCases": 21,
+  "hitAt3": 0.6190476190476191,
+  "failed": 8,
+  "results": [
+    {
+      "query": "超级大项目如何分阶段推进并安排多人协作",
+      "expected": "large-project-ops",
+      "hitAt3": true,
+      "boundedAndResolvable": true,
+      "actual": [
+        "syhprojectskill",
+        "large-project-ops",
+        "cn-natural-business-writing"
+      ]
+    },
+    {
+      "query": "几十个模块跨端协作，需要依赖顺序和可以交给agent的任务包",
+      "expected": "large-project-ops",
+      "hitAt3": true,
+      "boundedAndResolvable": true,
+      "actual": [
+        "large-project-ops",
+        "architecture-decisions",
+        "rpg"
+      ]
+    },
+    {
+      "query": "大型遗留系统改造，如何拆分里程碑并保证集成验收",
+      "expected": "large-project-ops",
+      "hitAt3": false,
+      "boundedAndResolvable": true,
+      "actual": [
+        "architecture-decisions",
+        "e2e-testing",
+        "超能力"
+      ]
+    },
+    {
+      "query": "从产品经理角度评估这个产品是否合理和值得做",
+      "expected": "product-discovery",
+      "hitAt3": true,
+      "boundedAndResolvable": true,
+      "actual": [
+        "product-discovery"
+      ]
+    },
+    {
+      "query": "已有产品功能很多但用户价值不明确，评估差异化和投入产出",
+      "expected": "product-discovery",
+      "hitAt3": true,
+      "boundedAndResolvable": true,
+      "actual": [
+        "product-discovery",
+        "external-browser",
+        "超能力"
+      ]
+    },
+    {
+      "query": "产品设计是否解决真实需求，商业可行性与核心流程是什么",
+      "expected": "product-discovery",
+      "hitAt3": true,
+      "boundedAndResolvable": true,
+      "actual": [
+        "product-discovery",
+        "interaction-design",
+        "cn-natural-business-writing"
+      ]
+    },
+    {
+      "query": "现有后台看起来土，希望整体更高级而不是增加装饰",
+      "expected": "impeccable",
+      "hitAt3": true,
+      "boundedAndResolvable": true,
+      "actual": [
+        "frontend-design",
+        "douyin-upload",
+        "impeccable"
+      ]
+    },
+    {
+      "query": "对现有页面做视觉审查，检查信息层级、字号和留白",
+      "expected": "impeccable",
+      "hitAt3": true,
+      "boundedAndResolvable": true,
+      "actual": [
+        "impeccable",
+        "frontend-design",
+        "dashiai-ppt"
+      ]
+    },
+    {
+      "query": "设计一个新网站的视觉方向和审美风格",
+      "expected": "frontend-design",
+      "hitAt3": true,
+      "boundedAndResolvable": true,
+      "actual": [
+        "frontend-design",
+        "ui-image-parity",
+        "api-design"
+      ]
+    },
+    {
+      "query": "检查产品架构是否完善，技术方案是否过度设计",
+      "expected": "architecture-decisions",
+      "hitAt3": true,
+      "boundedAndResolvable": true,
+      "actual": [
+        "architecture-decisions",
+        "超能力",
+        "product-discovery"
+      ]
+    },
+    {
+      "query": "评估模块边界和依赖耦合，是否方便长期维护",
+      "expected": "architecture-decisions",
+      "hitAt3": true,
+      "boundedAndResolvable": true,
+      "actual": [
+        "architecture-decisions",
+        "tdd-workflow",
+        "react-engineering"
+      ]
+    },
+    {
+      "query": "技术选型评审，要比较可用性、迁移成本和回滚条件",
+      "expected": "architecture-decisions",
+      "hitAt3": true,
+      "boundedAndResolvable": true,
+      "actual": [
+        "architecture-decisions",
+        "database-migrations",
+        "ui-ux-pro-max"
+      ]
+    },
+    {
+      "query": "检查前后端代码是否高效，定位接口慢和首屏慢的原因",
+      "expected": "benchmark-optimization-loop",
+      "hitAt3": false,
+      "boundedAndResolvable": true,
+      "actual": [
+        "backend-patterns",
+        "code-explanation",
+        "api-design"
+      ]
+    },
+    {
+      "query": "应用性能诊断：响应时间p95很差，CPU占用高，先找瓶颈",
+      "expected": "benchmark-optimization-loop",
+      "hitAt3": false,
+      "boundedAndResolvable": true,
+      "actual": [
+        "davinci-resolve-color",
+        "latency-critical-systems",
+        "vue-engineering"
+      ]
+    },
+    {
+      "query": "跨前端后端的性能评估，吞吐量与用户等待时间如何测量",
+      "expected": "benchmark-optimization-loop",
+      "hitAt3": false,
+      "boundedAndResolvable": true,
+      "actual": [
+        "react-engineering",
+        "davinci-resolve-color",
+        "backend-patterns"
+      ]
+    },
+    {
+      "query": "审查这批代码是否混乱，职责耦合和重复实现太多",
+      "expected": "code-quality-review",
+      "hitAt3": false,
+      "boundedAndResolvable": true,
+      "actual": [
+        "react-engineering",
+        "impeccable",
+        "code-explanation"
+      ]
+    },
+    {
+      "query": "代码审查这个PR，检查需求一致性和可维护性",
+      "expected": "code-quality-review",
+      "hitAt3": false,
+      "boundedAndResolvable": true,
+      "actual": [
+        "impeccable",
+        "ai-manju",
+        "workspace-surface-audit"
+      ]
+    },
+    {
+      "query": "模块里有重复代码与过度抽象，给有证据的重构建议",
+      "expected": "code-quality-review",
+      "hitAt3": false,
+      "boundedAndResolvable": true,
+      "actual": [
+        "react-engineering",
+        "architecture-decisions",
+        "code-explanation"
+      ]
+    },
+    {
+      "query": "产品测试能否证明符合需求和上线标准",
+      "expected": "qa-methodology",
+      "hitAt3": true,
+      "boundedAndResolvable": true,
+      "actual": [
+        "product-discovery",
+        "qa-methodology",
+        "tdd-workflow"
+      ]
+    },
+    {
+      "query": "检查需求到验收证据的对应关系，哪些行为还没验证",
+      "expected": "qa-methodology",
+      "hitAt3": false,
+      "boundedAndResolvable": true,
+      "actual": [
+        "e2e-testing",
+        "davinci-resolve-color",
+        "product-discovery"
+      ]
+    },
+    {
+      "query": "发布前质量门禁，测试策略要覆盖权限、失败恢复和数据完整性",
+      "expected": "qa-methodology",
+      "hitAt3": true,
+      "boundedAndResolvable": true,
+      "actual": [
+        "qa-methodology",
+        "postgres-patterns",
+        "social"
+      ]
+    }
+  ],
+  "boundaries": [
+    {
+      "query": "游戏低FPS和GPU draw-call瓶颈",
+      "expected": "performance-optimization",
+      "passed": true,
+      "actual": [
+        "performance-optimization",
+        "unity-csharp-scripting",
+        "rpg"
+      ]
+    },
+    {
+      "query": "Vue 3 组合式API的响应式组件最佳实践",
+      "expected": "vue-engineering",
+      "passed": true,
+      "actual": [
+        "vue-engineering",
+        "react-engineering",
+        "ui-to-vue"
+      ]
+    },
+    {
+      "query": "React 组件重复渲染和Next.js请求瀑布",
+      "expected": "react-engineering",
+      "passed": true,
+      "actual": [
+        "react-engineering",
+        "nextjs-engineering",
+        "backend-patterns"
+      ]
+    },
+    {
+      "query": "请逐行讲解这份源码帮助我学习",
+      "expected": "code-explanation",
+      "passed": true,
+      "actual": [
+        "code-explanation",
+        "超能力",
+        "douyin-upload"
+      ]
+    },
+    {
+      "query": "根据岗位JD优化简历",
+      "expected": "resume-tailor",
+      "passed": true,
+      "actual": [
+        "resume-tailor",
+        "ats-resume-formatting",
+        "career-profile-builder"
+      ]
+    },
+    {
+      "query": "Photoshop RAW 人像精修",
+      "expected": "photoshop-editing",
+      "passed": true,
+      "actual": [
+        "photoshop-editing",
+        "photo-toolkit",
+        "photo-previewer"
+      ]
+    }
+  ]
+}
