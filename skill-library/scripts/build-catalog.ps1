@@ -238,6 +238,21 @@ function Get-Role {
     return 'candidate'
 }
 
+function Get-AllowImplicitInvocation {
+    param([System.IO.DirectoryInfo]$Directory)
+    $metadata = Join-Path $Directory.FullName 'agents/openai.yaml'
+    if (-not (Test-Path -LiteralPath $metadata)) { return $true }
+    $inPolicy = $false
+    foreach ($line in @(Get-Content -LiteralPath $metadata -Encoding UTF8)) {
+        if ($line -match '^policy:\s*(?:#.*)?$') { $inPolicy = $true; continue }
+        if ($inPolicy -and $line -match '^\S') { break }
+        if ($inPolicy -and $line -match '^\s+allow_implicit_invocation:\s*(true|false)\s*(?:#.*)?$') {
+            return ($Matches[1] -eq 'true')
+        }
+    }
+    return $true
+}
+
 function Get-SkillRecord {
     param([System.IO.DirectoryInfo]$Directory, [string]$Source, [string]$LeavesRoot)
     $skillPath = Join-Path $Directory.FullName 'SKILL.md'
@@ -285,6 +300,7 @@ function Get-SkillRecord {
         phases = $phases
         platforms = $platforms
         riskTags = $riskTags
+        allowImplicitInvocation = Get-AllowImplicitInvocation -Directory $Directory
         role = Get-Role -Name $name -Description $description
         source = $Source; relativePath = $relativePath; skillPath = $skillPath; trigger = $description
     }

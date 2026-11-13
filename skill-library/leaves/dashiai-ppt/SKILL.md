@@ -1,6 +1,6 @@
 ---
 name: dashiai-ppt
-description: 制作 PPT、演示文稿、幻灯片、汇报材料时使用。DashiAI PPT 基于预置视觉主题组合页面,生成可离线打开、可在浏览器编辑的 HTML 演示,支持导出 PPTX / PDF 文件。
+description: "Use for an explicitly chosen DashiAI PPT workflow or an offline HTML presentation editable in the browser. Generic editable PowerPoint requests use the current Presentations skill."
 ---
 
 # DashiAI PPT

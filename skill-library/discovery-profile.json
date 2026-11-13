@@ -9,7 +9,10 @@
     "figma-create-design-system-rules",
     "figma-generate-design",
     "figma-implement-design",
-    "figma-use"
+    "figma-use",
+    "doc",
+    "slides",
+    "spreadsheet"
   ],
   "redirects": {
     "taste-skill": "frontend-design"
@@ -53,6 +56,15 @@
     "react-engineering": {
       "terms": [
         "React Next.js React组件 组件设计 组件组合 状态管理 客户端边界 请求瀑布 重复渲染 页面卡顿 前端性能 composition performance react nextjs"
+      ],
+      "requiresAny": [
+        "React",
+        "Next.js",
+        "Nextjs",
+        "JSX",
+        "TSX",
+        "Hooks",
+        "React组件"
       ]
     },
     "benchmark-optimization-loop": {
@@ -93,6 +105,11 @@
     "davinci-resolve-color": {
       "terms": [
         "达芬奇 DaVinci Resolve 视频调色 LUT 调色节点 色彩分级 时间线 导出检查 Resolve scripting"
+      ],
+      "explicitTerms": [
+        "DaVinci",
+        "Resolve",
+        "达芬奇"
       ]
     },
     "speech": {
@@ -108,6 +125,11 @@
     "photoshop-editing": {
       "terms": [
         "Photoshop PS修图 RAW修图 Camera Raw 人像精修 PSD图层 批量导出"
+      ],
+      "explicitTerms": [
+        "Photoshop",
+        "PS修图",
+        "PSD"
       ]
     },
     "photo-toolkit": {
@@ -128,6 +150,15 @@
     "api-design": {
       "terms": [
         "API接口设计 REST 分页 错误码 接口契约 接口版本 HTTP api contracts pagination"
+      ],
+      "requiresAny": [
+        "API",
+        "REST",
+        "HTTP",
+        "接口",
+        "错误码",
+        "状态码",
+        "契约"
       ]
     },
     "tdd-workflow": {
@@ -153,6 +184,16 @@
     "workspace-surface-audit": {
       "terms": [
         "Skill匹配 Skill审计 Skill配置 技能合集 工具能力盘点 路由优化 上下文 精简 触发条件 token消耗 加载成本 入口过长"
+      ],
+      "requiresAny": [
+        "Skill",
+        "技能",
+        "MCP",
+        "插件",
+        "工具能力",
+        "路由",
+        "token",
+        "上下文"
       ]
     },
     "answer-me-with-html": {
@@ -169,6 +210,13 @@
     "vue-engineering": {
       "terms": [
         "Vue Vue3 Vue.js 组件 响应式 ref reactive computed watch Pinia storeToRefs 状态不更新 路由守卫 VueRouter Vitest 组件测试"
+      ],
+      "requiresAny": [
+        "Vue",
+        "Pinia",
+        "VueRouter",
+        "Vue Router",
+        "Vitest"
       ]
     },
     "nextjs-engineering": {
@@ -195,6 +243,13 @@
     "external-browser": {
       "terms": [
         "已有浏览器 已登录 Edge Chrome 复用会话 当前标签页 浏览器操作 external browser authenticated session"
+      ],
+      "requiresAny": [
+        "浏览器",
+        "Edge",
+        "Chrome",
+        "标签页",
+        "browser"
       ]
     },
     "ui-image-parity": {
@@ -221,6 +276,166 @@
       "terms": [
         "源码讲解 代码走读 读懂项目源码 陌生项目代码 初学者学代码 文件类方法负责什么 谁调用这个方法 调用链 输入 输出 状态变化 为什么这样写 Java基础 C#源码 VS Code学习 source code walkthrough explain code flow beginner code learning",
         "从项目任务讲到具体代码 解释这个文件在项目中的作用 逐步理解代码 代码注释讲原因和业务规则"
+      ]
+    },
+    "mind-atlas": {
+      "terms": [
+        "思维导图 交互导图 脑图 项目全貌 全景梳理 mindmap mind-atlas"
+      ],
+      "requiresAny": [
+        "导图",
+        "脑图",
+        "全貌",
+        "全景梳理",
+        "mindmap",
+        "mind-atlas"
+      ]
+    },
+    "knowledge-ops": {
+      "terms": [
+        "知识库 检索知识 资料库 知识整理 保存知识 同步知识 knowledge wiki memory"
+      ],
+      "requiresAny": [
+        "知识库",
+        "知识",
+        "资料库",
+        "记忆",
+        "knowledge",
+        "wiki",
+        "memory"
+      ]
+    },
+    "douyin-upload": {
+      "requiresAny": [
+        "抖音",
+        "douyin",
+        "抖店"
+      ]
+    },
+    "cisco-ios-patterns": {
+      "requiresAny": [
+        "Cisco",
+        "IOS",
+        "思科",
+        "交换机",
+        "路由器",
+        "VLAN",
+        "BGP",
+        "OSPF",
+        "trunk",
+        "ACL"
+      ]
+    },
+    "超能力": {
+      "requiresAny": [
+        "超能力",
+        "superpowers",
+        "OpenClaw",
+        "创作",
+        "创意",
+        "设计审批"
+      ]
+    },
+    "office-remediator": {
+      "requiresAny": [
+        "无障碍",
+        "可访问",
+        "accessibility",
+        "WCAG",
+        "读屏",
+        "remediate"
+      ]
+    },
+    "dashiai-ppt": {
+      "requiresAny": [
+        "DashiAI",
+        "dashiai",
+        "大师AI",
+        "HTML演示",
+        "网页演示",
+        "浏览器编辑"
+      ]
+    },
+    "python-spreadsheet-fallback": {
+      "explicitTerms": [
+        "openpyxl",
+        "pandas"
+      ],
+      "fallback": true
+    },
+    "python-docx-local": {
+      "explicitTerms": [
+        "python-docx"
+      ],
+      "fallback": true
+    },
+    "pptxgenjs-slides": {
+      "explicitTerms": [
+        "PptxGenJS"
+      ],
+      "fallback": true
+    },
+    "artifact-tool-excel-legacy": {
+      "explicitTerms": [
+        "artifact_tool",
+        "artifact-tool-excel-legacy"
+      ]
+    },
+    "artifact-tool-pro-decks": {
+      "explicitTerms": [
+        "artifact-tool-pro-decks",
+        "pro-deck"
+      ]
+    },
+    "manim-video": {
+      "explicitTerms": [
+        "Manim"
+      ]
+    },
+    "moneyprinterturbo-video": {
+      "explicitTerms": [
+        "MoneyPrinterTurbo"
+      ]
+    },
+    "remotion-video-creation": {
+      "explicitTerms": [
+        "Remotion"
+      ]
+    },
+    "fal-ai-media": {
+      "explicitTerms": [
+        "fal.ai"
+      ]
+    },
+    "videodb": {
+      "explicitTerms": [
+        "VideoDB"
+      ]
+    },
+    "blender-motion-state-inspection": {
+      "explicitTerms": [
+        "Blender"
+      ]
+    },
+    "firecrawl-research-index": {
+      "explicitTerms": [
+        "Firecrawl"
+      ]
+    },
+    "firecrawl-build": {
+      "explicitTerms": [
+        "Firecrawl"
+      ]
+    },
+    "hipaa-compliance": {
+      "explicitTerms": [
+        "HIPAA"
+      ]
+    },
+    "semgrep-rule-creator": {
+      "explicitTerms": [
+        "Semgrep rule",
+        "Semgrep规则"
       ]
     }
   }

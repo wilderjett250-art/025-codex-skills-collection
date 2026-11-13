@@ -25,6 +25,7 @@ try {
     domain: option('--domain', '-Domain'),
     discipline: option('--discipline', '-Discipline'),
     family: option('--family', '-Family'),
+    primaryRuntimeUnavailable: args.includes('--primary-runtime-unavailable'),
   };
   const scoped = catalog.skills.filter(skill => (!options.plane || skill.plane === options.plane)
     && (!options.domain || skill.domain === options.domain)

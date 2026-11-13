@@ -13,3 +13,5 @@ skill-library/migration-manifest.json
 .test-mac-home/
 .test-bash-home/
 .test-*/
+__pycache__/
+*.pyc

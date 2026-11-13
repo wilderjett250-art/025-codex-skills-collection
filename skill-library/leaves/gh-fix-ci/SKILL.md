@@ -1,6 +1,6 @@
 ---
 name: "gh-fix-ci"
-description: "Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions; use `gh` to inspect checks and logs, summarize failure context, draft a fix plan, and implement only after explicit approval. Treat external providers (for example Buildkite) as out of scope and report only the details URL."
+description: "Use when a user asks to debug or fix failing GitHub PR checks that run in GitHub Actions; use `gh` to inspect checks and logs, summarize failure context, complete the requested fix and authorized verification; ask only about unresolved scope or consequential choices. Treat external providers (for example Buildkite) as out of scope and report only the details URL."
 ---
 
 
@@ -8,8 +8,8 @@ description: "Use when a user asks to debug or fix failing GitHub PR checks that
 
 ## Overview
 
-Use gh to locate failing PR checks, fetch GitHub Actions logs for actionable failures, summarize the failure snippet, then propose a fix plan and implement after explicit approval.
-- If a plan-oriented skill (for example `create-plan`) is available, use it; otherwise draft a concise plan inline and request approval before implementing.
+Use gh to locate failing PR checks, fetch GitHub Actions logs for actionable failures, summarize the failure snippet, then complete the requested narrow fix and its authorized verification.
+- A clear request to fix the failure authorizes ordinary local implementation and relevant checks. State a short plan when useful; do not add a mandatory planning skill or repeat approval for the same scope. Pushing, publishing and external CI writes retain their actual authorization boundaries.
 
 Prereq: authenticate with the standard GitHub CLI once (for example, run `gh auth login`), then confirm with `gh auth status` (repo + workflow scopes are typically required).
 
@@ -28,7 +28,7 @@ Prereq: authenticate with the standard GitHub CLI once (for example, run `gh aut
 
 1. Verify gh authentication.
    - Run `gh auth status` in the repo.
-   - If unauthenticated, ask the user to run `gh auth login` (ensuring repo + workflow scopes) before proceeding.
+   - If CLI authentication conflicts with an available GUI/connected account, first verify host, account and instance. Open an actual official login surface only when authentication is genuinely required; do not request new scopes without need.
 2. Resolve the PR.
    - Prefer the current branch PR: `gh pr view --json number,url`.
    - If the user provides a PR number or URL, use that directly.
@@ -50,12 +50,10 @@ Prereq: authenticate with the standard GitHub CLI once (for example, run `gh aut
 5. Summarize failures for the user.
    - Provide the failing check name, run URL (if any), and a concise log snippet.
    - Call out missing logs explicitly.
-6. Create a plan.
-   - Use the `create-plan` skill to draft a concise plan and request approval.
-7. Implement after approval.
-   - Apply the approved plan, summarize diffs/tests, and ask about opening a PR.
+6. Select the smallest source-backed fix within the user's request. Ask only if a material alternative or authority is unresolved.
+7. Preserve the pre-change files, implement, and run the related local checks. Continue authorized work through verification.
 8. Recheck status.
-   - After changes, suggest re-running the relevant tests and `gh pr checks` to confirm.
+   - Run the relevant tests and available read-only PR checks; rerun remote jobs only within existing authority. A local pass does not prove a remote CI pass. Report the exact commit/run and remaining unavailable checks. Do not turn a repair request into an unrequested release.
 
 ## Bundled Resources
 

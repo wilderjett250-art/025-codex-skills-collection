@@ -9,12 +9,14 @@ description: 'Implement production UI from Figma with visual fidelity when given
 
 This skill provides a structured workflow for translating Figma designs into production-ready code with pixel-perfect accuracy. It ensures consistent integration with the Figma MCP server, proper use of design tokens, and 1:1 visual parity with designs.
 
+Prefer the matching installed Figma plugin method and its current tool contract. This preserved local guide is a compatibility reference; see [current routing](../../references/current-figma-routing.md) before using historical API examples.
+
 ## Skill Boundaries
 
 - Use this skill when the deliverable is code in the user's repository.
 - If the user asks to create/edit/delete nodes inside Figma itself, switch to [figma-use](../figma-use/SKILL.md).
 - If the user asks to build or update a full-page screen in Figma from code or a description, switch to [figma-generate-design](../figma-generate-design/SKILL.md).
-- If the user asks only for Code Connect mappings, switch to [figma-code-connect-components](../figma-code-connect-components/SKILL.md).
+- If the user asks only for Code Connect mappings, switch to [current Code Connect route](../../references/current-figma-routing.md).
 - If the user asks to author reusable agent rules (`CLAUDE.md`/`AGENTS.md`), switch to [figma-create-design-system-rules](../figma-create-design-system-rules/SKILL.md).
 
 ## Prerequisites

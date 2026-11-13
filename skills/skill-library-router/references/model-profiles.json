@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "reviewed": "2026-11-13",
+  "sources": [
+    "https://developers.openai.com/api/docs/guides/model-selection",
+    "https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra"
+  ],
+  "shared": "Use one shared Skill library and the existing two-stage router. Match available Skills first; search metadata only when needed; read only the selected current-stage owner. Keep user scope, tools, permissions and acceptance criteria unchanged. Do not run model evaluations or infer model identity from prose.",
+  "models": {
+    "gpt-6-astra": "Astra",
+    "gpt-6.1-sol": "Sol",
+    "gpt-6-sol": "Sol",
+    "gpt-6.1-terra": "Terra",
+    "gpt-6-luna": "Luna"
+  },
+  "notes": {
+    "Astra": "Use clear outcomes and completion criteria; avoid duplicate coaching, broad mandatory prereading and unnecessary approval checkpoints.",
+    "Sol": "Use the shared workflow; balance task complexity and time without adding a mandatory per-Skill recipe.",
+    "Terra": "Use observed state and supported tools for visual or computer tasks; keep edits scoped and writing concise. Preserve the user's tool route.",
+    "Luna": "Keep the current work unit focused, with explicit inputs, outputs and a short set of necessary steps; do not split or shrink the user's overall objective."
+  }
+}

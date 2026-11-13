@@ -11,12 +11,14 @@ Use this skill to create or update full-page screens in Figma by **reusing the p
 
 **Always pass `skillNames: "figma-generate-design"` when calling `use_figma` as part of this skill.** This is a logging parameter — it does not affect execution.
 
+Prefer the matching installed Figma plugin method and its current tool contract. This preserved local guide is a compatibility reference; see [current routing](../../references/current-figma-routing.md) before using historical API examples.
+
 ## Skill Boundaries
 
 - Use this skill when the deliverable is a **Figma screen** (new or updated) composed of design system component instances.
 - If the user wants to generate **code from a Figma design**, switch to [figma-implement-design](../figma-implement-design/SKILL.md).
-- If the user wants to create **new reusable components or variants**, use [figma-use](../figma-use/SKILL.md) directly.
-- If the user wants to write **Code Connect mappings**, switch to [figma-code-connect-components](../figma-code-connect-components/SKILL.md).
+- If the user wants to create **new reusable components or variants**, follow the installed `figma:figma-generate-library` with `figma:figma-use`; see the [current routes](../../references/current-figma-routing.md).
+- If the user wants to write **Code Connect mappings**, switch to [current Code Connect route](../../references/current-figma-routing.md).
 
 ## Prerequisites
 

@@ -1,148 +1,20 @@
 ---
 name: "playwright"
-description: "Use for real-browser automation, form filling, screenshots, extraction, UI-flow debugging, Playwright CLI, or explicitly requested persistent browser or Electron interaction through js_repl."
+description: "Use an authorized Playwright CLI browser workflow for extraction, form interaction or UI debugging; an existing authenticated browser keeps its supported bridge and profile."
 ---
 
-# Playwright CLI Skill
+# Playwright CLI
 
-Drive a real browser from the terminal using `playwright-cli`. Prefer the bundled wrapper script so the CLI works even when it is not globally installed.
-Treat this skill as CLI-first automation. Do not pivot to `@playwright/test` unless the user explicitly asks for test files.
+Use this local CLI route for an authorized browser automation/debugging task when it fits the selected browser/session. Prefer an already-available official browser capability if it directly owns the task. Preserve any explicitly requested tool route.
 
-If the user explicitly requests persistent browser or Electron interaction through `js_repl`, read `canonical/playwright-interactive/SKILL.md` and follow that canonical interactive workflow instead of the CLI branch.
+- For an explicitly requested persistent session, read [playwright-interactive](../playwright-interactive/SKILL.md).
+- Existing authenticated Edge/Chrome sessions require their supported external-browser bridge; do not substitute a new Playwright profile or isolated browser silently.
 
-## Prerequisite check (required)
+## Local CLI route
+Resolve `scripts/playwright_cli.sh` from this SKILL.md's actual directory, rather than assuming it lives in `<home>/skills/playwright`. Inspect its options before use. It requires a supported Bash and Node/npm; on Windows verify the actual executables instead of running POSIX preflight in PowerShell.
 
-Before proposing commands, check whether `npx` is available (the wrapper depends on it):
+Use the existing installed toolchain. Do not auto-initialize a user's package, install globally, change sandbox policy or launch a different browser solely to meet this recipe. Resolve a genuinely missing prerequisite within the authorized project or report it precisely.
 
-```bash
-command -v npx >/dev/null 2>&1
-```
+The wrapper's normal sequence is `open <url>`, `snapshot`, then actions such as `click <returned-ref>`, `type <text>`, or `press <key>`. Use only observed element references, refresh stale references after navigation, and verify the action's real result. Check possibly completed submissions before retrying.
 
-If it is not available, pause and ask the user to install Node.js/npm (which provides `npx`). Provide these steps verbatim:
-
-```bash
-# Verify Node/npm are installed
-node --version
-npm --version
-
-# If missing, install Node.js/npm, then:
-npm install -g @playwright/cli@latest
-playwright-cli --help
-```
-
-Once `npx` is present, proceed with the wrapper script. A global install of `playwright-cli` is optional.
-
-## Skill path (set once)
-
-```bash
-export CODEX_HOME="${CODEX_HOME:-$HOME/.codex}"
-export PWCLI="$CODEX_HOME/skills/playwright/scripts/playwright_cli.sh"
-```
-
-User-scoped skills install under `$CODEX_HOME/skills` (default: `~/.codex/skills`).
-
-## Quick start
-
-Use the wrapper script:
-
-```bash
-"$PWCLI" open https://playwright.dev --headed
-"$PWCLI" snapshot
-"$PWCLI" click e15
-"$PWCLI" type "Playwright"
-"$PWCLI" press Enter
-"$PWCLI" screenshot
-```
-
-If the user prefers a global install, this is also valid:
-
-```bash
-npm install -g @playwright/cli@latest
-playwright-cli --help
-```
-
-## Core workflow
-
-1. Open the page.
-2. Snapshot to get stable element refs.
-3. Interact using refs from the latest snapshot.
-4. Re-snapshot after navigation or significant DOM changes.
-5. Capture artifacts (screenshot, pdf, traces) when useful.
-
-Minimal loop:
-
-```bash
-"$PWCLI" open https://example.com
-"$PWCLI" snapshot
-"$PWCLI" click e3
-"$PWCLI" snapshot
-```
-
-## When to snapshot again
-
-Snapshot again after:
-
-- navigation
-- clicking elements that change the UI substantially
-- opening/closing modals or menus
-- tab switches
-
-Refs can go stale. When a command fails due to a missing ref, snapshot again.
-
-## Recommended patterns
-
-### Form fill and submit
-
-```bash
-"$PWCLI" open https://example.com/form
-"$PWCLI" snapshot
-"$PWCLI" fill e1 "user@example.com"
-"$PWCLI" fill e2 "password123"
-"$PWCLI" click e3
-"$PWCLI" snapshot
-```
-
-### Debug a UI flow with traces
-
-```bash
-"$PWCLI" open https://example.com --headed
-"$PWCLI" tracing-start
-# ...interactions...
-"$PWCLI" tracing-stop
-```
-
-### Multi-tab work
-
-```bash
-"$PWCLI" tab-new https://example.com
-"$PWCLI" tab-list
-"$PWCLI" tab-select 0
-"$PWCLI" snapshot
-```
-
-## Wrapper script
-
-The wrapper script uses `npx --package @playwright/cli playwright-cli` so the CLI can run without a global install:
-
-```bash
-"$PWCLI" --help
-```
-
-Prefer the wrapper unless the repository already standardizes on a global install.
-
-## References
-
-Open only what you need:
-
-- CLI command reference: `references/cli.md`
-- Practical workflows and troubleshooting: `references/workflows.md`
-
-## Guardrails
-
-- Always snapshot before referencing element ids like `e12`.
-- Re-snapshot when refs seem stale.
-- Prefer explicit commands over `eval` and `run-code` unless needed.
-- When you do not have a fresh snapshot, use placeholder refs like `eX` and say why; do not bypass refs with `run-code`.
-- Use `--headed` when a visual check will help.
-- When capturing artifacts in this repo, use `output/playwright/` and avoid introducing new top-level artifact folders.
-- Default to CLI commands and workflows, not Playwright test specs.
+Keep task screenshots and output on the permitted artifact drive. Use screenshots for meaningful visual checks; retain compact observations when they remain valid. Tool credentials/storage are not exported to bridge sessions.

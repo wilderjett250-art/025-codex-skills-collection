@@ -1,5 +1,13 @@
 # Toolkit handoff
 
+## Current resume card — 2026-11-13
+
+- Read `presets/shared-library-model-routing-20261113.md`, `README.md` model setup and `skills/skill-library-router/references/model-profiles.json` first. The older sections below are historical.
+- Current scope: common-library repairs plus exact-id, next-prompt model-context selection; 10 active + 292 on-demand Skills. No MCP credentials, raw client config, sessions, knowledge stores or private recovery files are included.
+- Check: run the local model-context tests with an isolated `MODEL_CONTEXT_TEST_ROOT`, then inspect `hooks/list` for enabled/trusted definitions on the target client. Neither check proves real model task quality.
+- Implemented and deterministic checks passed; on the maintainer's client both new hooks are trusted. No inference-based switch test was run. Next ordinary user message is the remaining real delivery check; do not generate a paid test turn merely to close this item.
+- Recovery baseline for this change is Git revision `a9911e07cd2eb2981825d5a7effeb995595714e6`; exact local files/config have separate protected recovery coverage. Existing dirty checkout was left untouched; publication uses an isolated checkout.
+
 - Scope: portable personal Skills, on-demand routing, sanitized MCP/plugin/global presets; no knowledge-base data.
 - Evidence cutoff: 2026-10-11. Current change-set baseline revision: `8c0bc551b2ea2fbc32b9b0b103e6e88a5078cc99`.
 

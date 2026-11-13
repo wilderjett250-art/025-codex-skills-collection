@@ -4,7 +4,7 @@
 
 ## 项目内容
 
-- 9 个常驻 Skill 提供精确入口；292 个按需 Skill 保存在冷库中。
+- 10 个常驻 Skill 提供精确入口；292 个按需 Skill 保存在冷库中。
 - 元数据检索最多返回 3 个候选，只在选定后读取完整 Skill；本地读取器可记录元数据级的加载次数。
 - 33 个非知识库 MCP 条目按照开发、研究、设计、视频和工程场景分组；另附本机启停状态的无凭证快照。
 - 25 个插件预设用于恢复对应的官方能力来源。
@@ -57,6 +57,22 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\install.ps1 -P
 
 安装器会在覆盖同名内容前创建备份。大容量 Skill 库请先确认目标盘有足够的备份空间。
 
+### 切换模型后自动加载短说明
+
+保留一套公共库和原有二级路由。安装 Skill Library 后，在 Windows 上运行：
+
+```powershell
+node "$env:USERPROFILE/.codex/skill-library/scripts/install-model-hooks.mjs" --backup-root I:/codex-backups/model-routing
+```
+
+自定义 `CODEX_HOME` 时传入 `--target <codex-home>`；macOS 使用同一 Node 脚本，将备份目录换成批准的位置。安装器校验旧 `hooks.json` 的精确备份，仅合并自己的两个钩子，保留其他钩子和禁用设置，不复制信任哈希。
+
+首次安装后，在 Codex **Settings > Hooks**（CLI：`/hooks`）审核 `SessionStart` 和 `UserPromptSubmit` 两项 `model-context-hook.mjs`，再重新载入聊天。此后切换 Astra、Sol、Terra、Luna，下一条提交的消息自动使用当前型号的短说明，不需要每次提醒。钩子从 Codex 官方事件的 `model` 字段取值；未知型号直接使用公共规则，不读取聊天记录，也不把配置默认值当作当前型号。[官方钩子契约](https://learn.chatgpt.com/docs/hooks)
+
+每次提交检查一次；仅首次、切换型号或说明内容变化时注入，恢复/压缩上下文时重新注入。只发送选中的一段说明；型号映射在 [`model-profiles.json`](skills/skill-library-router/references/model-profiles.json)。未来版本不模糊猜测，核对官方信息后再扩展映射。Windows 的去重状态优先写 I 盘、其次 G 盘；没有数据盘则不写缓存，也不阻止对话。`MODEL_CONTEXT_STATE_DIR` 可指定批准的状态目录。
+
+本轮仅做无模型调用的确定性检查；不声称四个模型的任务质量或所有客户端版本已经实测。安装、信任和真实消息触发分别验收，见[本轮记录](presets/shared-library-model-routing-20261113.md)。模型短说明会占少量输入上下文，去重用于避免每条消息重复添加。
+
 ### 全局规则与设置
 
 本机 2026-10-11 的全局规则保存在 `presets/global/AGENTS.md`；机器用户名路径已改为 `<codex-home>`，安装时按目标电脑展开。规则内容保留当前版本，包括按需 Skill 路由、权限、备份、证据验证和知识采集开关。
@@ -94,7 +110,7 @@ node <codex-home>/skill-library/scripts/read-skill.mjs davinci-resolve-color
 
 ## 项目结构
 
-- `skills/` 保存 9 个常驻 Skill。
+- `skills/` 保存 10 个常驻 Skill。
 - `skill-library/` 保存 292 个按需 Skill、目录和路由脚本。
 - `mcp/` 保存 MCP Catalog 和 Profile。
 - `presets/` 保存插件来源预设。

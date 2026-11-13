@@ -6,6 +6,7 @@ param(
     [string]$Query = '', [ValidateRange(1, 20)][int]$Limit = 3,
     [string]$CatalogPath = (Join-Path $env:USERPROFILE '.codex\skill-library\catalog.json'),
     [string]$DiscoveryPath = (Join-Path $env:USERPROFILE '.codex\skill-library\discovery-profile.json'),
+    [switch]$PrimaryRuntimeUnavailable,
     [switch]$AsJson
 )
 $ErrorActionPreference = 'Stop'
@@ -22,7 +23,7 @@ if ($ListDisciplines -or $ListFamilies) {
     $groups | Format-Table -AutoSize; return
 }
 if ([string]::IsNullOrWhiteSpace($Query)) { throw 'Provide a task-focused -Query, or use a listing switch.' }
-$options = @{limit=$Limit;domain=$Domain;discipline=$Discipline;family=$Family}
+$options = @{limit=$Limit;domain=$Domain;discipline=$Discipline;family=$Family;primaryRuntimeUnavailable=[bool]$PrimaryRuntimeUnavailable}
 if ($PSBoundParameters.ContainsKey('Plane') -or $Domain) { $options.plane=$Plane }
 $request = @{query=$Query;catalogPath=$CatalogPath;discoveryPath=$DiscoveryPath;options=$options} | ConvertTo-Json -Compress
 # ASCII JSON escapes survive Windows PowerShell 5.1 native-pipeline encodings.

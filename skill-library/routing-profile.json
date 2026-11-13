@@ -668,12 +668,22 @@
     {
       "name": "code-maintainability",
       "discipline": "code-engineering",
-      "aliases": ["代码审查", "可维护性", "代码混乱", "code review"]
+      "aliases": [
+        "代码审查",
+        "可维护性",
+        "代码混乱",
+        "code review"
+      ]
     },
     {
       "name": "performance-measurement",
       "discipline": "code-engineering",
-      "aliases": ["应用性能", "前后端效率", "性能瓶颈", "benchmark"]
+      "aliases": [
+        "应用性能",
+        "前后端效率",
+        "性能瓶颈",
+        "benchmark"
+      ]
     }
   ],
   "routes": [
@@ -2268,9 +2278,17 @@
       "plane": "domain",
       "discipline": "code-engineering",
       "family": "code-maintainability",
-      "aliases": ["代码审查", "代码评审", "可维护性", "代码混乱"],
+      "aliases": [
+        "代码审查",
+        "代码评审",
+        "可维护性",
+        "代码混乱"
+      ],
       "projectTypes": [],
-      "phases": ["inspect", "verify"],
+      "phases": [
+        "inspect",
+        "verify"
+      ],
       "platforms": [],
       "riskTags": []
     },
@@ -2279,9 +2297,18 @@
       "plane": "domain",
       "discipline": "code-engineering",
       "family": "performance-measurement",
-      "aliases": ["应用性能", "前后端效率", "性能诊断", "性能瓶颈"],
+      "aliases": [
+        "应用性能",
+        "前后端效率",
+        "性能诊断",
+        "性能瓶颈"
+      ],
       "projectTypes": [],
-      "phases": ["inspect", "implement", "verify"],
+      "phases": [
+        "inspect",
+        "implement",
+        "verify"
+      ],
       "platforms": [],
       "riskTags": []
     },
@@ -2290,9 +2317,17 @@
       "plane": "domain",
       "discipline": "documents-media",
       "family": "visual-explanation",
-      "aliases": ["离线HTML说明", "图文解释页", "Markdown渲染网页"],
+      "aliases": [
+        "离线HTML说明",
+        "图文解释页",
+        "Markdown渲染网页"
+      ],
       "projectTypes": [],
-      "phases": ["inspect", "implement", "verify"],
+      "phases": [
+        "inspect",
+        "implement",
+        "verify"
+      ],
       "platforms": [],
       "riskTags": []
     },
@@ -2302,6 +2337,229 @@
       "discipline": "frontend-ui",
       "family": "visual-design",
       "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "edge-assistant",
+      "plane": "domain",
+      "discipline": "browser-desktop",
+      "family": "authenticated-session",
+      "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "playwright",
+      "plane": "domain",
+      "discipline": "browser-desktop",
+      "family": "browser-automation",
+      "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "dimensional-analysis",
+      "plane": "domain",
+      "discipline": "code-engineering",
+      "family": "code-architecture",
+      "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "spreadsheet",
+      "plane": "domain",
+      "discipline": "data-database",
+      "family": "analysis-reporting",
+      "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "data-scraper-agent",
+      "plane": "domain",
+      "discipline": "data-database",
+      "family": "collection-retrieval",
+      "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "figma-generate-design",
+      "plane": "domain",
+      "discipline": "frontend-ui",
+      "family": "design-system",
+      "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "figma-implement-design",
+      "plane": "domain",
+      "discipline": "frontend-ui",
+      "family": "design-system",
+      "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "figma-workflows",
+      "plane": "domain",
+      "discipline": "frontend-ui",
+      "family": "design-system",
+      "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "playwright-interactive",
+      "plane": "domain",
+      "discipline": "frontend-ui",
+      "family": "web-ui",
+      "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "gh-fix-ci",
+      "plane": "domain",
+      "discipline": "project-flow",
+      "family": "repo-execution",
+      "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "skill-scout",
+      "plane": "domain",
+      "discipline": "project-flow",
+      "family": "skill-system",
+      "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "超能力",
+      "plane": "domain",
+      "discipline": "project-flow",
+      "family": "skill-system",
+      "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "semgrep",
+      "plane": "domain",
+      "discipline": "security-quality",
+      "family": "security-analysis",
+      "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "dashiai-ppt",
+      "plane": "domain",
+      "discipline": "documents-media",
+      "family": "documents-pdf",
+      "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "doc",
+      "plane": "domain",
+      "discipline": "documents-media",
+      "family": "documents-pdf",
+      "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "pandoc-pdf-generation",
+      "plane": "domain",
+      "discipline": "documents-media",
+      "family": "documents-pdf",
+      "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "slides",
+      "plane": "domain",
+      "discipline": "documents-media",
+      "family": "documents-pdf",
+      "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "video",
+      "plane": "domain",
+      "discipline": "documents-media",
+      "family": "video-motion",
+      "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "knowledge-ops",
+      "plane": "domain",
+      "discipline": "research-knowledge",
+      "family": "retrieval-knowledge",
+      "aliases": [],
+      "projectTypes": [],
+      "phases": [],
+      "platforms": [],
+      "riskTags": []
+    },
+    {
+      "name": "mind-atlas",
+      "plane": "domain",
+      "discipline": "documents-media",
+      "family": "visual-explanation",
+      "aliases": [
+        "交互思维导图",
+        "脑图"
+      ],
       "projectTypes": [],
       "phases": [],
       "platforms": [],

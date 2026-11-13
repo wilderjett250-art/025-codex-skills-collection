@@ -6,8 +6,8 @@
     "name": "wilderjett250-art",
     "url": "https://github.com/wilderjett250-art"
   },
-  "homepage": "https://github.com/wilderjett250-art/codex-skills-collection",
-  "repository": "https://github.com/wilderjett250-art/codex-skills-collection",
+  "homepage": "https://github.com/wilderjett250-art/025-codex-skills-collection",
+  "repository": "https://github.com/wilderjett250-art/025-codex-skills-collection",
   "license": "MIT",
   "keywords": ["codex", "skills", "mcp", "windows", "context-engineering"],
   "skills": "./skills/",

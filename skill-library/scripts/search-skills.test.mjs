@@ -76,7 +76,7 @@ for (const query of ['用户访谈 MVP', 'taste-skill', 'literal $(echo unsafe) 
 if (process.platform === 'win32') {
   for (const shell of ['C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe', 'pwsh']) {
     for (const query of ['目标用户 首版范围', 'taste-skill', 'literal $(echo unsafe) `text` "quotes"']) {
-      const command = `$ProgressPreference='SilentlyContinue'; [Console]::OutputEncoding = New-Object Text.UTF8Encoding($false); & '${path.join(root, 'scripts/find-skills.ps1').replaceAll("'", "''")}' -Query '${query.replaceAll("'", "''")}' -AsJson`;
+      const command = `$ProgressPreference='SilentlyContinue'; [Console]::OutputEncoding = New-Object Text.UTF8Encoding($false); & '${path.join(root, 'scripts/find-skills.ps1').replaceAll("'", "''")}' -CatalogPath '${catalogPath.replaceAll("'", "''")}' -DiscoveryPath '${discoveryPath.replaceAll("'", "''")}' -Query '${query.replaceAll("'", "''")}' -AsJson`;
       const child = spawnSync(shell, ['-NoProfile', '-EncodedCommand', Buffer.from(command, 'utf16le').toString('base64')],
         { encoding: 'utf8', timeout: 20000, windowsHide: true });
       let result; try { result = JSON.parse(child.stdout); } catch {}

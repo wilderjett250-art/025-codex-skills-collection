@@ -1,9 +1,10 @@
 // On-demand metadata search. Never reads Skill bodies, calls a model, or writes task history.
 import fs from 'node:fs';
 import { pathToFileURL } from 'node:url';
+import { hasTerm } from './route-core.mjs';
 
 const segmenter = new Intl.Segmenter('zh', { granularity: 'word' });
-const stop = new Set(['the','and','for','with','this','that','from','skill','skills','帮我','一下','一个','我们','这个','如何','怎么','需要','可以','进行','是否','什么','的','了']);
+const stop = new Set(['the','and','for','with','this','that','from','skill','skills','帮我','一下','一个','我们','这个','如何','怎么','需要','可以','进行','是否','什么','的','了','帮助','用户','已有']);
 const normalize = (s) => String(s ?? '').normalize('NFKC').toLowerCase();
 function positiveDescription(text) {
   return String(text ?? '').split(/(?<=[.!?。！？;；])\s*/)
@@ -36,11 +37,19 @@ export function searchSkills(query, catalog, discovery = {}, options = {}) {
   const exactName = discovery.redirects?.[requested] ?? requested;
   const queryTokens = [...new Set(tokens(query))];
   const excluded = new Set(discovery.excludeDefault ?? []);
-  const docs = catalog.skills.filter((s) => (!options.plane || s.plane === options.plane)
-    && (!options.domain || s.domain === options.domain)
-    && (!options.discipline || s.discipline === options.discipline)
-    && (!options.family || s.family === options.family)
-    && (!excluded.has(s.name) || s.name === exactName)).map((skill) => {
+  const named = (skill) => normalize(skill.name) === exactName || hasTerm(query, `$${skill.name}`)
+    || (skill.name.includes('-') && hasTerm(query, skill.name));
+  const docs = catalog.skills.filter((s) => {
+    if ((options.plane && s.plane !== options.plane) || (options.domain && s.domain !== options.domain)
+      || (options.discipline && s.discipline !== options.discipline) || (options.family && s.family !== options.family)) return false;
+    const entry = discovery.entries?.[s.name] ?? {};
+    const explicit = named(s) || (entry.explicitTerms ?? []).some(term => hasTerm(query, term));
+    const fallback = entry.fallback === true && options.primaryRuntimeUnavailable === true;
+    if (excluded.has(s.name) && !named(s)) return false;
+    if (s.allowImplicitInvocation === false && !explicit && !fallback) return false;
+    if (entry.requiresAny?.length && !named(s) && !entry.requiresAny.some(term => hasTerm(query, term))) return false;
+    return true;
+  }).map((skill) => {
       const terms = discovery.entries?.[skill.name]?.terms ?? [];
       const weighted = [...tokens(skill.name), ...tokens(skill.name), ...tokens(positiveDescription(skill.trigger)),
         ...tokens(terms.join(' ')), ...tokens(terms.join(' ')), ...tokens((skill.aliases ?? []).join(' '))];
